@@ -1,0 +1,13 @@
+.filtro{
+    margin-top: 20px;
+}
+
+.botao{
+    margin-top: 10px;
+    float: left;
+}
+
+.btn-pesquisar{
+  float: right;
+  margin-left: 10px;
+}

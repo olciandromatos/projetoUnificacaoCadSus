@@ -1,0 +1,23 @@
+<div class="filtro">
+  <p-panel header="Filtro" [toggleable]="true" [style]="{'margin-bottom':'20px'}" collapsed="true">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12 ui-md-6">
+        <label>Por Nome</label>
+        <input type="text" pInputText />
+      </div>
+
+      <div class="ui-g-12 ui-md-6">
+        <label>Por CPF</label>
+        <p-inputMask type="text"mask="999.999.999-99"></p-inputMask>
+      </div>
+
+      <div class="formGroup">
+        <button pButtom class="btn btn-default">Limpar</button>
+      </div>
+      <div class="formGroup btn-pesquisar">
+          <button class="btn btn-primary" pTooltip="Pesquisar" tooltipPosition="top"><i class="pi pi-search"></i></button>
+      </div>
+
+    </div>
+  </p-panel>
+</div>

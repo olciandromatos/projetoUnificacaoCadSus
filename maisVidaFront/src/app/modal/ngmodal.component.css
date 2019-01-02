@@ -1,0 +1,19 @@
+.botao{
+    margin-top: 20px;
+    float: right;
+}
+
+.dialog{
+    width: 1000px;
+    height: 300px;
+}
+
+.ng-invalid.ng-touched:not(form){
+  border: 1px solid red;
+}
+.rodape{
+  float: right;
+}
+.btn-save{
+  margin-right: 10px;
+}
