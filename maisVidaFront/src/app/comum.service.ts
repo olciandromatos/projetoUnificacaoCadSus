@@ -45,23 +45,12 @@ export class ComumService {
     return this.httpClient.get<Estado[]>(`${this.API}/estado`);
   }
 
-  cadastrar(pessoa: Pessoa): Observable<Pessoa> {
-    console.log(pessoa);
-    return this.httpClient.post<Pessoa>('http://localhost:8080/api/pessoa', pessoa);
-  }
-
   public listarPessoa(): Observable<Pessoa[]> {
     return this.httpClient.get<Pessoa[]>(this.API + '/pessoa');
   }
 
-  cadastrarPessoa(pessoa: Pessoa): Observable<Pessoa> {
+  cadastrar(pessoa: Pessoa): Observable<Pessoa> {
     console.log(pessoa);
-    return this.httpClient.post<Pessoa>(
-      'http://localhost:8080/api/pessoa',
-      {
-        body: JSON.stringify(pessoa)
-      },
-      this.httpOptions
-    );
+    return this.httpClient.post<Pessoa>('http://localhost:8080/api/pessoa', pessoa);
   }
 }

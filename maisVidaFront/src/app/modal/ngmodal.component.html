@@ -12,12 +12,12 @@
 
       <div class="ui-g-12 ui-md-4">
         <label>Nº CPF</label>
-        <p-inputMask type="text" name="cpf" [(ngModel)]="pessoa.cpf" mask="999.999.999-99"></p-inputMask>
+        <p-inputMask type="text" name="cpf" [(ngModel)]="pessoa.cpf" required mask="999.999.999-99"></p-inputMask>
       </div>
 
       <div class="ui-g-12 ui-md-4">
         <label>Nº RG</label>
-        <input type="text" pInputText name="rg" [(ngModel)]="pessoa.rg" />
+        <input type="text" pInputText name="rg" [(ngModel)]="pessoa.rg" required />
       </div>
 
       <div class="ui-g-12 ui-md-4">
@@ -37,11 +37,11 @@
 
       <div class="ui-g-12 ui-md-4">
         <label for="estado">Estado de Nascimento</label>
-        <p-dropdown id="estado" placeholder="Selecione um estado" name="estado" [(ngModel)]="pessoa.estado.nome" [options]="estados"></p-dropdown>
+        <p-dropdown id="estado" placeholder="Selecione um estado" value="pessoa.estado.nome" name="estado" [(ngModel)]="pessoa.estado.nome" [options]="estados"></p-dropdown>
       </div>
     </div>
     <p-footer class="rodape">
-      <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+      <button pButton type="submit" class="btn-save" [disabled]="f.invalid" label="Cadastrar" ></button>
       <p-button type="button" styleClass="ui-button-danger" pTooltip="Sair" tooltipPosition="top" icon="pi pi-times" (click)="display=false" ></p-button>
     </p-footer>
   </form>
@@ -50,3 +50,5 @@
 <div class="botao">
   <button pButton type="button" label="Novo" pTooltip="Novo cadastro" tooltipPosition="top" icon="pi pi-plus" (click)="showDialog()" ></button>
 </div>
+
+<p-toast></p-toast>

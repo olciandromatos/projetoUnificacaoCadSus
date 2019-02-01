@@ -1,3 +1,5 @@
+import { MessageService } from 'primeng/components/common/messageservice';
+import { NgdataTableComponent } from './../data-table/ngdata-table.component';
 import { ComumService } from './../comum.service';
 import { Estado } from './../domain/estado';
 import { Pessoa } from './../domain/pessoa';
@@ -17,7 +19,10 @@ export class NgmodalComponent implements OnInit {
   pessoa: Pessoa = new Pessoa();
   display = false;
 
-  constructor(private comumService: ComumService) { }
+  constructor(
+    private comumService: ComumService,
+    private mensageService: MessageService
+  ) { }
 
   ngOnInit() {
     this.listarEstado();
@@ -28,16 +33,35 @@ export class NgmodalComponent implements OnInit {
   }
 
   listarEstado() {
-    return this.comumService.listarEstado().subscribe(estados => this.estados = estados);
+    return this.comumService.listarEstado().subscribe(resposta => this.estados = resposta);
   }
 
-  cadastrar(pessoa) {
-    console.log(pessoa);
-    this.comumService.cadastrarPessoa(this.pessoa).subscribe((pessoa) => {
-      console.log(pessoa);
-    }, (err) => {
-      console.log(err);
+  listarPessoa() {
+    this.comumService.listarPessoa().subscribe(pessoa => this.pessoas = pessoa);
+  }
+
+  cadastrar() {
+    console.log(this.pessoa);
+    this.comumService.cadastrar(this.pessoa).subscribe((pessoa) => {
+      this.pessoa = new Pessoa();
+      this.listarPessoa();
+      this.mensageService.add({
+        severity : 'success',
+        summary: 'Cadastro concluido com sucesso!'
+      },
+      resposta => {
+        let msg = 'Erro inesperado. Tente novamente.';
+
+        if (resposta.error.message) {
+          msg = resposta.error.message;
+        }
+
+        this.mensageService.add({
+          severity : msg,
+          summary: 'Cadastro concluido com sucesso!'
+        });
+      });
+      console.log(JSON.parse(JSON.stringify(this.pessoa)));
     });
   }
-
 }
