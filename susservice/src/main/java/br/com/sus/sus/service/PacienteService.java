@@ -1,4 +1,4 @@
-package br.com.sus.service;
+package br.com.sus.sus.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,18 +6,13 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.sus.domain.Paciente;
-import br.com.sus.repository.PacienteRepository;
+import br.com.sus.sus.domain.Paciente;
+import br.com.sus.sus.repository.PacienteRepository;
 
 @Service
 public class PacienteService {
 	
-	@Autowired
 	private PacienteRepository pacienteRepository;
-	
-	public PacienteService(PacienteRepository pacienteRepository) {
-		this.pacienteRepository = pacienteRepository;
-	}
 	
 	public Paciente cadastrar(Paciente paciente) {
 		return pacienteRepository.save(paciente);
@@ -31,5 +26,14 @@ public class PacienteService {
 	public List<Paciente> listarTodos(){
 		return pacienteRepository.findAll();
 	}
-
+	
+	public PacienteRepository getPacienteRepository() {
+		return pacienteRepository;
+	}
+	
+	@Autowired
+	public void setPacienteRepository(PacienteRepository pacienteRepository) {
+		this.pacienteRepository = pacienteRepository;
+	}
+	
 }
