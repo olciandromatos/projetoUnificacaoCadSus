@@ -1,4 +1,4 @@
-package br.com.sus.domain;
+package br.com.sus.sus.domain;
 
 import java.time.LocalDate;
 
@@ -13,8 +13,8 @@ public class Paciente {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="ID_PACIENTE")
 	private Long id;
+	
 	private String primeiroNome;
 	private String Sobrenome;
 	private String email;
