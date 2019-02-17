@@ -16,3 +16,9 @@ SISUNI-sistema de saúde unificada
 # susclient
 - lado do cliente(Frontend), criando usando Angular 6
 - PrimeNG é um framework da Primetek para ser usado para criar telas
+
+# Importante
+- rodar esses script no banco
+
+  CREATE DATABASE sus;
+  CREATE SCHEMA susservice;
