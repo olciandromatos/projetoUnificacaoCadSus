@@ -14,7 +14,7 @@ SISUNI-sistema de saúde unificada
 - Liquibase é um versionador de registros no banco de dados
 
 # susclient
-- lado do cliente(Frontend), criando usando Angular 6
+- lado do cliente(Frontend), criado usando Angular 6
 - PrimeNG é um framework da Primetek para ser usado para criar telas
 
 # Importante
