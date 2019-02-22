@@ -8,5 +8,6 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     
     <include file="db/changelog/01_create_table_paciente.xml"/>
+    <include file="db/changelog/02_create_table_medico.xml"/>
     
 </databaseChangeLog>
