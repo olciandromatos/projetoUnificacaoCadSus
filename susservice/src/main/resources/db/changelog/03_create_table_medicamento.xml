@@ -8,15 +8,15 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-	<changeSet id="02" author="olciandro.magalhaes">
+	<changeSet id="03" author="olciandro.magalhaes">
 		<sql>
-			CREATE TABLE MEDICO (
+			CREATE TABLE MEDICAMENTO (
 				id int,
 				nome varchar(100),
-				crm varchar(100),
-				relato_paciente varchar(255),
-				relato_medico varchar(255),
-				CONSTRAINT medico_pkey PRIMARY KEY (id)
+				quantidade int,
+				descricao varchar(255),
+				data_medicacao date,
+				CONSTRAINT medicamento_pkey PRIMARY KEY (id)
 			)
 		</sql>
 	</changeSet>
