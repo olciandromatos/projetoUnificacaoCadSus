@@ -9,5 +9,6 @@
     
     <include file="db/changelog/01_create_table_paciente.xml"/>
     <include file="db/changelog/02_create_table_medico.xml"/>
+    <include file="db/changelog/03_create_table_medicamento.xml"/>
     
 </databaseChangeLog>
