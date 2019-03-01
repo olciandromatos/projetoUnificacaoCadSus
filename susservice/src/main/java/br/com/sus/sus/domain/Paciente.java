@@ -3,6 +3,7 @@ package br.com.sus.sus.domain;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +17,7 @@ public class Paciente implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@Column(name="seq_paciente")
 	private Long id;
 	
 	private String primeiroNome;

@@ -2,10 +2,12 @@ package br.com.sus.sus.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Medico implements Serializable{
@@ -14,11 +16,10 @@ public class Medico implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	@Column(name="seq_medico")
 	private Long id;
 	private String nome;
 	private String crm;
-	private String relatoPaciente;
-	private String relatoMedico;
 
 	public Long getId() {
 		return id;
@@ -42,22 +43,6 @@ public class Medico implements Serializable{
 
 	public void setCrm(String crm) {
 		this.crm = crm;
-	}
-
-	public String getRelatoPaciente() {
-		return relatoPaciente;
-	}
-
-	public void setRelatoPaciente(String relatoPaciente) {
-		this.relatoPaciente = relatoPaciente;
-	}
-
-	public String getRelatoMedico() {
-		return relatoMedico;
-	}
-
-	public void setRelatoMedico(String relatoMedico) {
-		this.relatoMedico = relatoMedico;
 	}
 
 }

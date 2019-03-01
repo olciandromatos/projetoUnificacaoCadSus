@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	
+    <changeSet id="05" author="olciandro.magalhaes">
+    
+        <createTable tableName="CONSULTA">
+            <column name="seq_consulta" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_consulta"/>
+            </column>
+            <column name="hora_consulta" type="date">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="relato_paciente" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="relato_medico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="seq_medico" type="bigint" remarks="Campo identificador da tabela medico. Chave estrangeira importada da tabela MEDICO.">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="seq_paciente" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+        </createTable>
+
+    </changeSet>
+    
+</databaseChangeLog>

@@ -10,5 +10,8 @@
     <include file="db/changelog/01_create_table_paciente.xml"/>
     <include file="db/changelog/02_create_table_medico.xml"/>
     <include file="db/changelog/03_create_table_medicamento.xml"/>
+    <include file="db/changelog/04_add_constraint_table_paciente.xml"/>
+    <include file="db/changelog/05_create_table_consulta.xml"/>
+    <include file="db/changelog/06_add_constraint_table_consulta.xml"/>
     
 </databaseChangeLog>

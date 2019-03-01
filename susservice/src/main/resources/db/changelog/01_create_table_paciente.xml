@@ -9,17 +9,39 @@
 
 
 	<changeSet id="01" author="olciandro.magalhaes">
-		<sql>
-			CREATE TABLE PACIENTE (
-				id int,
-				primeiro_nome varchar(100),
-				sobrenome varchar(100),
-				email varchar(100),
-				telefone varchar(15),
-				data_nascimento date,
-				CONSTRAINT paciente_pkey PRIMARY KEY (id)
-			)
-		</sql>
+	
+		<createTable tableName="PACIENTE">
+		
+            <column name="seq_paciente" type="bigint" autoIncrement="${autoIncrement}"
+            remarks="Número sequencial que identifica unicamente um paciente. Chave primária da tabela.">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_paciente"/>
+            </column>
+            
+            <column name="primeiro_nome" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="sobrenome" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="email" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="telefone" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="data_nascimento" type="date">
+                <constraints nullable="true" />
+            </column>
+            
+             <column name="seq_medicamento" type="bigint" remarks="Campo identificador da tabela medicamento. Chave estrangeira importada da tabela MEDICAMENTO.">
+                <constraints nullable="true" />
+            </column>
+
+        </createTable>
 	</changeSet>
 
 </databaseChangeLog>
