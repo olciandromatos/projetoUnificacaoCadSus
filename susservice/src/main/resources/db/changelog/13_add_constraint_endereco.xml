@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    
+    
+    <changeSet id="13" author="olciandro.magalhaes">
+
+        <addForeignKeyConstraint baseColumnNames="seq_municipio"
+                                 baseTableName="ENDERECO"
+                                 constraintName="fk_endereco_endereco"
+                                 referencedColumnNames="seq_municipio"
+                                 referencedTableName="MUNICIPIO"/>
+
+        <addForeignKeyConstraint baseColumnNames="seq_estado"
+                                 baseTableName="ENDERECO"
+                                 constraintName="fk_municipio_endereco"
+                                 referencedColumnNames="seq_estado"
+                                 referencedTableName="ESTADO"/>
+
+        <addForeignKeyConstraint baseColumnNames="seq_pais"
+                                 baseTableName="ENDERECO"
+                                 constraintName="fk_pais_endereco"
+                                 referencedColumnNames="seq_pais"
+                                 referencedTableName="PAIS"/>
+
+    </changeSet>
+    
+</databaseChangeLog>

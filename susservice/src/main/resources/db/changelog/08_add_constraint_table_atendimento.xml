@@ -10,7 +10,7 @@
 
 	<changeSet id="08" author="olciandro.magalhaes">
 	
-        <addForeignKeyConstraint baseColumnNames="seq_atendimento"
+        <addForeignKeyConstraint baseColumnNames="seq_paciente"
                                  baseTableName="ATENDIMENTO"
                                  constraintName="fk_atendimento_paciente"
                                  referencedColumnNames="seq_paciente"
