@@ -18,5 +18,7 @@
     <include file="db/changelog/09_create_table_endereco.xml"/>
     <include file="db/changelog/10_create_table_estado.xml"/>
     <include file="db/changelog/11_create_table_municipio.xml"/>
+    <include file="db/changelog/12_create_table_pais.xml"/>
+    <include file="db/changelog/13_add_constraint_endereco.xml"/>
     
 </databaseChangeLog>
