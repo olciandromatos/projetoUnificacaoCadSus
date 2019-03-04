@@ -16,5 +16,6 @@
     <include file="db/changelog/07_create_table_atendimento.xml"/>
     <include file="db/changelog/08_add_constraint_table_atendimento.xml"/>
     <include file="db/changelog/09_create_table_endereco.xml"/>
+    <include file="db/changelog/10_create_table_estado.xml"/>
     
 </databaseChangeLog>

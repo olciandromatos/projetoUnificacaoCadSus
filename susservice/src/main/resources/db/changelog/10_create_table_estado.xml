@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <changeSet id="10" author="olciandro.magalhaes">
+    
+        <createTable tableName="ESTADO">
+            <column name="seq_estado" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_estado"/>
+            </column>
+            
+            <column name="nome" type="varchar(40)"
+            remarks="Nome do estado.">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="sigla" type="varchar(2)"
+            remarks="Sigla do estado.">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="seq_pais" type="bigint"
+            remarks="Número sequencial que identifica unicamente um país">
+                <constraints nullable="true" />
+            </column>
+
+        </createTable>
+        
+    </changeSet>
+
+</databaseChangeLog>
