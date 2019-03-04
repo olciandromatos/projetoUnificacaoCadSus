@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	
+	
+    <changeSet id="11" author="olciandro.magalhaes">
+    
+        <createTable tableName="MUNICIPIO">
+        
+            <column name="seq_municipio" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_municipio"/>
+            </column>
+            <column name="nome" type="varchar(100)" remarks="Nome do município.">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="seq_estado" type="bigint" remarks="Campo identificador da estado que o município pertence. Chave estrangeira importada da tabela ESTADO.">
+                <constraints nullable="true" />
+            </column>
+
+        </createTable>
+
+    </changeSet>
+    
+</databaseChangeLog>
