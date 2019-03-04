@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+                        
+
+    <changeSet id="09" author="olciandro.magalhaes">
+    
+        <createTable tableName="ENDERECO">
+            <column name="seq_endereco" type="bigint" autoIncrement="${autoIncrement}" remarks="PK número de sequência da tupla.">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_endereco"/>
+            </column>
+            <column name="logradouro" type="varchar(150)" remarks="Nome do logradouro.">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="bairro" type="varchar(150)" remarks="Nome do bairro.">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="numero" type="integer" remarks="Número de endereço.">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="complemento" type="varchar(150)" remarks="Complemento do endereço.">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cep" type="varchar(255)" remarks="Código de endereçamento postal.">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="seq_municipio" type="bigint" remarks="Número de sequência da tupla referenciada na tabela MUNICIPIO">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="seq_estado" type="bigint" remarks="Número de sequência da tupla referenciada na tabela ESTADO">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="seq_pais" type="bigint" remarks="Número de sequência da tupla referenciada na tabela PAIS">
+                <constraints nullable="true" />
+            </column>
+
+        </createTable>
+
+    </changeSet>
+     
+</databaseChangeLog>
