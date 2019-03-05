@@ -22,5 +22,9 @@
     <include file="db/changelog/13_add_constraint_endereco.xml"/>
     <include file="db/changelog/14_insert_table_pais_estado.xml"/>
     <include file="db/changelog/15_insert_table_municipio_acre.xml"/>
+    <include file="db/changelog/16_create_table_triagem.xml"/>
+    <include file="db/changelog/17_create_table_status_saude.xml"/>
+    <include file="db/changelog/18_insert_table_status_saude.xml"/>
+    <include file="db/changelog/19_add_constraint_table_triagem.xml"/>
     
 </databaseChangeLog>
