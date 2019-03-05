@@ -20,5 +20,7 @@
     <include file="db/changelog/11_create_table_municipio.xml"/>
     <include file="db/changelog/12_create_table_pais.xml"/>
     <include file="db/changelog/13_add_constraint_endereco.xml"/>
+    <include file="db/changelog/14_insert_table_pais_estado.xml"/>
+    <include file="db/changelog/15_insert_table_municipio_acre.xml"/>
     
 </databaseChangeLog>

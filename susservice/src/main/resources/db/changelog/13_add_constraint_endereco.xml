@@ -8,22 +8,22 @@
     <changeSet id="13" author="olciandro.magalhaes">
 
         <addForeignKeyConstraint baseColumnNames="seq_municipio"
-                                 baseTableName="ENDERECO"
+                                 baseTableName="endereco"
                                  constraintName="fk_endereco_endereco"
                                  referencedColumnNames="seq_municipio"
-                                 referencedTableName="MUNICIPIO"/>
+                                 referencedTableName="municipio"/>
 
         <addForeignKeyConstraint baseColumnNames="seq_estado"
-                                 baseTableName="ENDERECO"
+                                 baseTableName="endereco"
                                  constraintName="fk_municipio_endereco"
                                  referencedColumnNames="seq_estado"
-                                 referencedTableName="ESTADO"/>
+                                 referencedTableName="estado"/>
 
         <addForeignKeyConstraint baseColumnNames="seq_pais"
-                                 baseTableName="ENDERECO"
+                                 baseTableName="endereco"
                                  constraintName="fk_pais_endereco"
                                  referencedColumnNames="seq_pais"
-                                 referencedTableName="PAIS"/>
+                                 referencedTableName="pais"/>
 
     </changeSet>
     
