@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <changeSet id="16" author="olciandro.magalhaes">
+    
+        <createTable tableName="triagem">
+            <column name="seq_triagem" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_triagem"/>
+            </column>
+            
+            <column name="peso" type="double" remarks="peso do paciente.">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="altura" type="double" remarks="altura do paciente.">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="pressao" type="double" remarks="pressão do paciente.">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="seq_status_saude" type="bigint" remarks="Status de saúde do paciente.">
+                <constraints nullable="true" />
+            </column>
+
+        </createTable>
+
+    </changeSet>
+    
+</databaseChangeLog>
