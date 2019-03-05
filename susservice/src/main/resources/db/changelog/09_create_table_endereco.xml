@@ -9,7 +9,7 @@
 
     <changeSet id="09" author="olciandro.magalhaes">
     
-        <createTable tableName="ENDERECO">
+        <createTable tableName="endereco">
             <column name="seq_endereco" type="bigint" autoIncrement="${autoIncrement}" remarks="PK número de sequência da tupla.">
                 <constraints primaryKey="true" nullable="false" primaryKeyName="pk_endereco"/>
             </column>

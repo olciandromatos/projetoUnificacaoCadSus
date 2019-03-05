@@ -10,7 +10,7 @@
 
     <changeSet id="10" author="olciandro.magalhaes">
     
-        <createTable tableName="ESTADO">
+        <createTable tableName="estado">
             <column name="seq_estado" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false" primaryKeyName="pk_estado"/>
             </column>

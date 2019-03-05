@@ -11,20 +11,20 @@
 	<changeSet id="06-1" author="olciandro.magalhaes">
 	
         <addForeignKeyConstraint baseColumnNames="seq_paciente"
-                                 baseTableName="CONSULTA"
+                                 baseTableName="consulta"
                                  constraintName="fk_consulta_paciente"
                                  referencedColumnNames="seq_paciente"
-                                 referencedTableName="PACIENTE"/>
+                                 referencedTableName="paciente"/>
 
 	</changeSet>
 	
 	<changeSet id="06-2" author="olciandro.magalhaes">
 	
         <addForeignKeyConstraint baseColumnNames="seq_medico"
-                                 baseTableName="CONSULTA"
+                                 baseTableName="consulta"
                                  constraintName="fk_medico_consulta"
                                  referencedColumnNames="seq_medico"
-                                 referencedTableName="MEDICO"/>
+                                 referencedTableName="medico"/>
 
 	</changeSet>
 	

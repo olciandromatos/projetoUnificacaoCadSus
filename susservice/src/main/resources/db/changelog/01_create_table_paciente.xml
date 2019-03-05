@@ -10,7 +10,7 @@
 
 	<changeSet id="01" author="olciandro.magalhaes">
 	
-		<createTable tableName="PACIENTE">
+		<createTable tableName="paciente">
 		
             <column name="seq_paciente" type="bigint" autoIncrement="${autoIncrement}"
             remarks="Número sequencial que identifica unicamente um paciente. Chave primária da tabela.">

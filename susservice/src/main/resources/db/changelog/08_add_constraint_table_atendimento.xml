@@ -11,10 +11,10 @@
 	<changeSet id="08" author="olciandro.magalhaes">
 	
         <addForeignKeyConstraint baseColumnNames="seq_paciente"
-                                 baseTableName="ATENDIMENTO"
+                                 baseTableName="atendimento"
                                  constraintName="fk_atendimento_paciente"
                                  referencedColumnNames="seq_paciente"
-                                 referencedTableName="PACIENTE"/>
+                                 referencedTableName="paciente"/>
 
 	</changeSet>
 	

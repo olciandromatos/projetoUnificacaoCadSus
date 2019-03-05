@@ -10,7 +10,7 @@
 	
     <changeSet id="05" author="olciandro.magalhaes">
     
-        <createTable tableName="CONSULTA">
+        <createTable tableName="consulta">
             <column name="seq_consulta" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false" primaryKeyName="pk_consulta"/>
             </column>
