@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	
+	<changeSet id="21" author="olciandro.magalhaes">
+		<sql>
+			INSERT INTO "especialidade" VALUES(1, 'Alergia e Imunologia');
+			INSERT INTO "especialidade" VALUES(2, 'Anestesiologia');
+			INSERT INTO "especialidade" VALUES(3, 'Angiologia');
+			INSERT INTO "especialidade" VALUES(4, 'Cancerologia');
+			INSERT INTO "especialidade" VALUES(5, 'Cardiologia');
+			INSERT INTO "especialidade" VALUES(6, 'Cirurgia Cardiovascular');
+			INSERT INTO "especialidade" VALUES(7, 'Cirurgia Geral');
+			INSERT INTO "especialidade" VALUES(8, 'Cirurgia Pediátrica');
+			INSERT INTO "especialidade" VALUES(9, 'Clínica Médica');
+			INSERT INTO "especialidade" VALUES(10, 'Coloproctologia');
+			INSERT INTO "especialidade" VALUES(11, 'Endocrinologia e Metabologia');
+			INSERT INTO "especialidade" VALUES(12, 'Endoscopia');
+			INSERT INTO "especialidade" VALUES(13, 'Gastroenterologia');
+			INSERT INTO "especialidade" VALUES(14, 'Geriatria');
+			INSERT INTO "especialidade" VALUES(15, 'Ginecologia e Obstetrícia');
+			INSERT INTO "especialidade" VALUES(16, 'Hematologia e Hemoterapia');
+			INSERT INTO "especialidade" VALUES(17, 'Infectologia');
+			INSERT INTO "especialidade" VALUES(18, 'Nefrologia');
+			INSERT INTO "especialidade" VALUES(19, 'Neurocirurgia');
+			INSERT INTO "especialidade" VALUES(20, 'Neurologia');
+			INSERT INTO "especialidade" VALUES(21, 'Oftalmologia');
+			INSERT INTO "especialidade" VALUES(22, 'Ortopedia e Traumatologia');
+			INSERT INTO "especialidade" VALUES(23, 'Otorrinolaringologia');
+			INSERT INTO "especialidade" VALUES(24, 'Pediatria');
+			INSERT INTO "especialidade" VALUES(25, 'Pneumologia');
+			INSERT INTO "especialidade" VALUES(26, 'Psiquiatria');
+			INSERT INTO "especialidade" VALUES(27, 'Urologia');
+
+			
+		</sql>
+	</changeSet>
+
+</databaseChangeLog>
