@@ -26,5 +26,7 @@
     <include file="db/changelog/17_create_table_status_saude.xml"/>
     <include file="db/changelog/18_insert_table_status_saude.xml"/>
     <include file="db/changelog/19_add_constraint_table_triagem.xml"/>
+    <include file="db/changelog/20_create_table_especialidade.xml"/>
+    <include file="db/changelog/21_insert_table_especialidade.xml"/>
     
 </databaseChangeLog>
