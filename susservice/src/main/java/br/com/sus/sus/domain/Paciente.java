@@ -21,7 +21,7 @@ public class Paciente implements Serializable{
 	private Long id;
 	
 	private String primeiroNome;
-	private String Sobrenome;
+	private String sobrenome;
 	private String email;
 	private String telefone;
 	private LocalDate dataNascimento;
@@ -43,11 +43,11 @@ public class Paciente implements Serializable{
 	}
 
 	public String getSobrenome() {
-		return Sobrenome;
+		return sobrenome;
 	}
 
 	public void setSobrenome(String sobrenome) {
-		Sobrenome = sobrenome;
+		this.sobrenome = sobrenome;
 	}
 
 	public String getEmail() {
