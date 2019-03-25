@@ -7,26 +7,26 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     
-    <include file="db/changelog/01_create_table_paciente.xml"/>
-    <include file="db/changelog/02_create_table_medico.xml"/>
-    <include file="db/changelog/03_create_table_medicamento.xml"/>
-    <include file="db/changelog/04_add_constraint_table_paciente.xml"/>
-    <include file="db/changelog/05_create_table_consulta.xml"/>
-    <include file="db/changelog/06_add_constraint_table_consulta.xml"/>
-    <include file="db/changelog/07_create_table_atendimento.xml"/>
-    <include file="db/changelog/08_add_constraint_table_atendimento.xml"/>
-    <include file="db/changelog/09_create_table_endereco.xml"/>
-    <include file="db/changelog/10_create_table_estado.xml"/>
-    <include file="db/changelog/11_create_table_municipio.xml"/>
-    <include file="db/changelog/12_create_table_pais.xml"/>
-    <include file="db/changelog/13_add_constraint_endereco.xml"/>
-    <include file="db/changelog/14_insert_table_pais_estado.xml"/>
-    <include file="db/changelog/15_insert_table_municipio_acre.xml"/>
-    <include file="db/changelog/16_create_table_triagem.xml"/>
-    <include file="db/changelog/17_create_table_status_saude.xml"/>
-    <include file="db/changelog/18_insert_table_status_saude.xml"/>
-    <include file="db/changelog/19_add_constraint_table_triagem.xml"/>
-    <include file="db/changelog/20_create_table_especialidade.xml"/>
-    <include file="db/changelog/21_insert_table_especialidade.xml"/>
+    <include file="db/changelog/001_create_table_paciente.xml"/>
+    <include file="db/changelog/002_create_table_medico.xml"/>
+    <include file="db/changelog/003_create_table_medicamento.xml"/>
+    <include file="db/changelog/004_add_constraint_table_paciente.xml"/>
+    <include file="db/changelog/005_create_table_consulta.xml"/>
+    <include file="db/changelog/006_add_constraint_table_consulta.xml"/>
+    <include file="db/changelog/007_create_table_atendimento.xml"/>
+    <include file="db/changelog/008_add_constraint_table_atendimento.xml"/>
+    <include file="db/changelog/009_create_table_endereco.xml"/>
+    <include file="db/changelog/010_create_table_estado.xml"/>
+    <include file="db/changelog/011_create_table_municipio.xml"/>
+    <include file="db/changelog/012_create_table_pais.xml"/>
+    <include file="db/changelog/013_add_constraint_endereco.xml"/>
+    <include file="db/changelog/014_insert_table_pais_estado.xml"/>
+    <include file="db/changelog/015_insert_table_municipio_acre.xml"/>
+    <include file="db/changelog/016_create_table_triagem.xml"/>
+    <include file="db/changelog/017_create_table_status_saude.xml"/>
+    <include file="db/changelog/018_insert_table_status_saude.xml"/>
+    <include file="db/changelog/019_add_constraint_table_triagem.xml"/>
+    <include file="db/changelog/020_create_table_especialidade.xml"/>
+    <include file="db/changelog/021_insert_table_especialidade.xml"/>
     
 </databaseChangeLog>
