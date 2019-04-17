@@ -8,7 +8,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 	
-    <changeSet id="07" author="olciandro.magalhaes">
+    <changeSet id="007" author="olciandro.magalhaes">
     
         <createTable tableName="atendimento">
             <column name="seq_atendimento" type="bigint" autoIncrement="${autoIncrement}">

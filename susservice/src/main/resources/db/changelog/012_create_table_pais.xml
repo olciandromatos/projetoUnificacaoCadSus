@@ -8,7 +8,7 @@
 
     <property name="now" value="current_timestamp" dbms="postgresql"/>
 
-    <changeSet id="12" author="olciandro.magalhaes">
+    <changeSet id="012" author="olciandro.magalhaes">
     
         <createTable tableName="pais">
             <column name="seq_pais" type="bigint" autoIncrement="${autoIncrement}">

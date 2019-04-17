@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-	<changeSet id="14-1" author="olciandro.magalhaes">
+	<changeSet id="018" author="olciandro.magalhaes">
 		<sql >
 			INSERT INTO "pais" VALUES(1, 'Afeganistao');
 			INSERT INTO "pais" VALUES(2, 'Africa do sul');
@@ -241,38 +241,6 @@
 			INSERT INTO "pais" VALUES(234, 'Zimbabue');
 			INSERT INTO "pais" VALUES(235, 'Zona do Canal do Panama');
 			
-		</sql>
-	</changeSet>
-
-	<changeSet id="14-2" author="olciandro.magalhaes">
-		<sql>
-			INSERT INTO "estado" VALUES(1, 'Acre', 'AC', 29);
-			INSERT INTO "estado" VALUES(2, 'Alagoas', 'AL', 29);
-			INSERT INTO "estado" VALUES(3, 'Amazonas', 'AM', 29);
-			INSERT INTO "estado" VALUES(4, 'Amapá', 'AP', 29);
-			INSERT INTO "estado" VALUES(5, 'Bahia', 'BA', 29);
-			INSERT INTO "estado" VALUES(6, 'Ceará', 'CE', 29);
-			INSERT INTO "estado" VALUES(7, 'Distrito Federal', 'DF', 29);
-			INSERT INTO "estado" VALUES(8, 'Espírito Santo', 'ES', 29);
-			INSERT INTO "estado" VALUES(9, 'Goiás', 'GO', 29);
-			INSERT INTO "estado" VALUES(10, 'Maranhão', 'MA', 29);
-			INSERT INTO "estado" VALUES(11, 'Minas Gerais', 'MG', 29);
-			INSERT INTO "estado" VALUES(12, 'Mato Grosso do Sul', 'MS', 29);
-			INSERT INTO "estado" VALUES(13, 'Mato Grosso', 'MT', 29);
-			INSERT INTO "estado" VALUES(14, 'Pará', 'PA', 29);
-			INSERT INTO "estado" VALUES(15, 'Paraíba', 'PB', 29);
-			INSERT INTO "estado" VALUES(16, 'Pernambuco', 'PE', 29);
-			INSERT INTO "estado" VALUES(17, 'Piauí', 'PI', 29);
-			INSERT INTO "estado" VALUES(18, 'Paraná', 'PR', 29);
-			INSERT INTO "estado" VALUES(19, 'Rio de Janeiro', 'RJ', 29);
-			INSERT INTO "estado" VALUES(20, 'Rio Grande do Norte', 'RN', 29);
-			INSERT INTO "estado" VALUES(21, 'Rondônia', 'RO', 29);
-			INSERT INTO "estado" VALUES(22, 'Roraima', 'RR', 29);
-			INSERT INTO "estado" VALUES(23, 'Rio Grande do Sul', 'RS', 29);
-			INSERT INTO "estado" VALUES(24, 'Santa Catarina', 'SC', 29);
-			INSERT INTO "estado" VALUES(25, 'Sergipe', 'SE', 29);
-			INSERT INTO "estado" VALUES(26, 'São Paulo', 'SP', 29);
-			INSERT INTO "estado" VALUES(27, 'Tocantins', 'TO', 29);
 		</sql>
 	</changeSet>
 	

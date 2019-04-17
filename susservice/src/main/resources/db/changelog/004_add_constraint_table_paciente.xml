@@ -8,7 +8,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-	<changeSet id="04" author="olciandro.magalhaes">
+	<changeSet id="004" author="olciandro.magalhaes">
 	
         <addForeignKeyConstraint baseColumnNames="seq_medicamento"
                                  baseTableName="paciente"
