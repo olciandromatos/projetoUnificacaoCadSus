@@ -7,7 +7,7 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
                         
 
-    <changeSet id="09" author="olciandro.magalhaes">
+    <changeSet id="009" author="olciandro.magalhaes">
     
         <createTable tableName="endereco">
             <column name="seq_endereco" type="bigint" autoIncrement="${autoIncrement}" remarks="PK número de sequência da tupla.">

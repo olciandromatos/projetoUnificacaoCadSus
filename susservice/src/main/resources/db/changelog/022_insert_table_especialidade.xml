@@ -5,7 +5,7 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 	
-	<changeSet id="21" author="olciandro.magalhaes">
+	<changeSet id="022" author="olciandro.magalhaes">
 		<sql>
 			INSERT INTO "especialidade" VALUES(1, 'Alergia e Imunologia');
 			INSERT INTO "especialidade" VALUES(2, 'Anestesiologia');

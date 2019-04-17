@@ -5,7 +5,7 @@
                         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 	
-	<changeSet id="15-1" author="olciandro.magalhaes">
+	<changeSet id="015-1" author="olciandro.magalhaes">
 		<sql>
 			INSERT INTO "municipio" VALUES(3, 'Brasiléia', 1);
 			INSERT INTO "municipio" VALUES(4, 'Bujari', 1);
