@@ -30,5 +30,6 @@
     <include file="db/changelog/022_insert_table_especialidade.xml"/>
     <include file="db/changelog/023_add_comment_table_paciente.xml"/>
     <include file="db/changelog/025_insert_table_estado.xml"/>
+    <include file="db/changelog/026_documentar_table_paciente.xml"/>
     
 </databaseChangeLog>
