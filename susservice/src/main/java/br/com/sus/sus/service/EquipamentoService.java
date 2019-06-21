@@ -3,10 +3,12 @@ package br.com.sus.sus.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.sus.sus.domain.Equipamento;
 import br.com.sus.sus.repository.EquipamentoRepository;
 
+@Service
 public class EquipamentoService {
 	
 	private EquipamentoRepository repository;

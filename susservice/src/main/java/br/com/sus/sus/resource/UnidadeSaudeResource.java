@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.sus.sus.domain.Equipamento;
-import br.com.sus.sus.service.EquipamentoService;
+import br.com.sus.sus.domain.UnidadeSaude;
+import br.com.sus.sus.service.UnidadeSaudeService;
 
 @RestController
 @RequestMapping("/api")
-public class EquipamentoResource {
+public class UnidadeSaudeResource {
 	
 	@Autowired
-	private EquipamentoService service;
+	private UnidadeSaudeService service;
 	
-	@GetMapping("/equipamento")
-	public List<Equipamento> getEquipamento(){
-		return service.getEquipamentos();
+	@GetMapping("/unidadeSaude")
+	public List<UnidadeSaude> getUnidadeSaude(){
+		return service.getUnidadesSaude();
 	}
 
 }
