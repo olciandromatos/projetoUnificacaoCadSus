@@ -16,8 +16,8 @@ public class Endereco {
 	private String complemento;
 	private String cep;
 
-	private Estado estado;
-	private Municipio municipio;
+//	private Estado estado;
+//	private Municipio municipio;
 
 	public Long getId() {
 		return id;
@@ -59,20 +59,20 @@ public class Endereco {
 		this.cep = cep;
 	}
 
-	public Estado getEstado() {
-		return estado;
-	}
-
-	public void setEstado(Estado estado) {
-		this.estado = estado;
-	}
-
-	public Municipio getMunicipio() {
-		return municipio;
-	}
-
-	public void setMunicipio(Municipio municipio) {
-		this.municipio = municipio;
-	}
+//	public Estado getEstado() {
+//		return estado;
+//	}
+//
+//	public void setEstado(Estado estado) {
+//		this.estado = estado;
+//	}
+//
+//	public Municipio getMunicipio() {
+//		return municipio;
+//	}
+//
+//	public void setMunicipio(Municipio municipio) {
+//		this.municipio = municipio;
+//	}
 
 }

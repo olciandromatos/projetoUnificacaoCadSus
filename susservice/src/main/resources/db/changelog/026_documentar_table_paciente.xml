@@ -15,7 +15,7 @@
 				Descrição: Armazenam informações do paciente, o que aguarda atendimento.
 				Área Gestora do Sistema: Coordenadoria de Gestão de Sistemas
 				Sistemas Usuários: N/A
-				Classificação da Informação: Sigilosa
+				Classificação da Informação: Sigilosa;
 		</sql>		
 	</changeSet>
 
