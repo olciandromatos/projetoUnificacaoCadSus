@@ -1,0 +1,34 @@
+<p-menubar>
+    <button pButton label="Logout" icon="fa fa-sign-out"></button>
+</p-menubar>
+<p-panel header="Cadastro de Paciente" [toggleable]="false">
+    <form>
+    <div class="ui-g-12 ui-md-4">
+      <label for="float-input">Primeiro Nome: </label>
+      <input id="float-input" type="text" pInputText />
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <label for="float-input">Ultimo Nome: </label>
+      <input id="float-input" type="text" pInputText />
+    </div>
+
+    <div class="ui-g-12 ui-md-4">
+      <label for="float-input">E-mail: </label>
+      <input id="float-input" type="email" pInputText />
+    </div>
+
+    <div class="ui-g-12 ui-md-6">
+      <label for="float-input">Telefone: </label>
+      <p-inputMask type="text" name="telefone" mask="(99) 99999-9999" ></p-inputMask>
+    </div>
+
+    <div class="ui-g-12 ui-md-6">
+      <label for="float-input">Data de Nascimento: </label>
+      <p-inputMask type="text" name="nascimento" mask="99/99/9999" ></p-inputMask>
+    </div>
+    <div>
+      <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+    </div>
+  </form>
+</p-panel>
