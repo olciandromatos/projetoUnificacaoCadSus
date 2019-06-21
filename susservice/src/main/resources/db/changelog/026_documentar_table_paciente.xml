@@ -8,7 +8,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-	<changeSet id="001" author="olciandro.magalhaes">
+	<changeSet id="026" author="olciandro.magalhaes">
 		<sql>
 		COMMENT ON TABLE "paciente" IS 'Nome: PACIENTE
 				Esquema: susservice
