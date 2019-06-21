@@ -13,6 +13,6 @@ export class ComumServiceService {
   constructor(private http: HttpClient) { }
 
   public getPaciente(): Observable<Paciente[]> {
-    return this.http.get<Paciente[]>(this.API + 'paciente');
+    return this.http.get<Paciente[]>('http://localhost:8080/api/paciente');
   }
 }

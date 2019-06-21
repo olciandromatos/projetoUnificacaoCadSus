@@ -1,0 +1,33 @@
+<p-dataTable [value]="pacientes" paginator="true" [rows]="4" [style]="{'height':'100%'}">
+  <p-column header="Primeiro Nome">
+      <ng-template let-paciente="rowData" pTemplate="body">
+          {{paciente.primeiroNome}}
+      </ng-template>
+  </p-column>
+
+  <p-column header="Ultimo Nome">
+          <ng-template let-paciente="rowData" pTemplate="body">
+              {{paciente.sobrenome}}
+              <!-- {{pessoa.estado?.nome}} -->
+          </ng-template>
+  </p-column>
+
+  <p-column header="E-mail">
+      <ng-template let-paciente="rowData" pTemplate="body">
+          {{paciente.email}}
+      </ng-template>
+  </p-column>
+
+  <p-column header="Telefone">
+      <ng-template let-paciente="rowData" pTemplate="body">
+          {{paciente.telefone}}
+      </ng-template>
+  </p-column>
+
+  <p-column header="Ação">
+      <ng-template pTemplate="body">
+          <button pButtom class="btn btn-danger botao" pTooltip="Excluir" tooltipPosition="top"><i class="pi pi-trash"></i></button>
+          <button pButtom class="btn btn-primary"  pTooltip="Editar" tooltipPosition="top"><i class="pi pi-pencil"></i></button>
+    </ng-template>
+  </p-column>
+</p-dataTable>
