@@ -1,6 +1,6 @@
 <div class="container">
 <p-panel header="Lista de pacientes" [toggleable]="true">
-    <p-dataTable [value]="pacientes" paginator="true" [rows]="4" [style]="{'height':'100%'}">
+    <p-dataTable [value]="pacientes" paginator="true" [rows]="10" [style]="{'height':'100%'}">
         <p-column header="Primeiro Nome">
             <ng-template let-paciente="rowData" pTemplate="body">
                 {{paciente.primeiroNome}}
