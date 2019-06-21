@@ -1,11 +1,11 @@
 # sistema de cadastro unificado de saúde pública
 SISUNI-sistema de saúde unificada
 
-- Cadastro do paciente uma única vez, independente do hospital o posto de saúde público
-- o sistema busca seus dodos do ultimo atendimento, e seu histórico anterior de saúde registrados em outros outros postos/hospitais
-- recadastro, apenas adição dos dados atuais, se seu cadastro existir
-- atendimento com necessidade apenas de cpf 
-- cadastro disponível para os hospitais e postos de saúde publica
+- Cadastro do paciente uma única vez, independente do hospital ou postos de saúde pública
+- o sistema busca seus dodos do último atendimento, e seu histórico anterior de saúde registrado em outros postos/hospitais
+- recadastro, apenas com adição dos dados atuais, caso ele já exista
+- atendimento com necessidade apenas do cpf 
+- cadastro disponível para os hospitais e postos de saúde pública
 
 # susservice
 - lado do servidor(Backend), criado usando Spring boot, Spring Data JPA, Spring MVC e posteriormente Spring security
