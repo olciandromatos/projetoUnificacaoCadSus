@@ -24,7 +24,7 @@ public class Paciente implements Serializable{
 	private String sobrenome;
 	private String email;
 	private String telefone;
-	private LocalDate dataNascimento;
+	private String dataNascimento;
 
 	public Long getId() {
 		return id;
@@ -66,12 +66,12 @@ public class Paciente implements Serializable{
 		this.telefone = telefone;
 	}
 
-	public LocalDate getDataNascimento() {
+	public String getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(LocalDate dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setDataNascimento(String dataNascimento2) {
+		this.dataNascimento = dataNascimento2;
 	}
 
 }
