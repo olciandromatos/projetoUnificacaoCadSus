@@ -17,12 +17,16 @@ import { MenubarModule } from 'primeng/components/menubar/menubar';
 import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
 import { PacienteComponent } from './paciente/paciente.component';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import { ListarComponent } from './paciente/listar/listar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContainerComponent,
-    PacienteComponent
+    PacienteComponent,
+    MenuBarComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,

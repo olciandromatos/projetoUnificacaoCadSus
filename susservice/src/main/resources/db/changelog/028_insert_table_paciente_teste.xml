@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	
+	<changeSet id="028" author="olciandro.magalhaes">
+		<sql>
+			INSERT INTO "paciente" VALUES(1, 'Jose', 'Maria da Silva', 'jose@hotmail.com', '61 987545521');
+			INSERT INTO "paciente" VALUES(2, 'Maria', 'Santiago Rosa', 'maria@hotmail.com', '61 998855222');
+			INSERT INTO "paciente" VALUES(3, 'Túlio', 'Farias', 'tulio@hotmail.com', '61 995254515');
+		</sql>
+	</changeSet>
+	
+</databaseChangeLog>
