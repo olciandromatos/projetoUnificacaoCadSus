@@ -13,12 +13,12 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { MenubarModule } from 'primeng/components/menubar/menubar';
 
-
 import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
 import { PacienteComponent } from './paciente/paciente.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { ListarComponent } from './paciente/listar/listar.component';
+import { ListarMedicoComponent } from './medico/listar-medico/listar-medico.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { ListarComponent } from './paciente/listar/listar.component';
     ContainerComponent,
     PacienteComponent,
     MenuBarComponent,
-    ListarComponent
+    ListarComponent,
+    ListarMedicoComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,7 @@ import { ListarComponent } from './paciente/listar/listar.component';
     DropdownModule,
     InputTextModule,
     InputMaskModule,
-    MenubarModule
+    MenubarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

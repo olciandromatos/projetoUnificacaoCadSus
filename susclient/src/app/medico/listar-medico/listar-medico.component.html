@@ -1,0 +1,24 @@
+<p-panel header="Lista de medicos" [toggleable]="true">
+  <p-dataTable [value]="medicos" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+      <p-column header="Nome">
+          <ng-template let-medico="rowData" pTemplate="body">
+              {{medico.nome}}
+          </ng-template>
+      </p-column>
+
+      <p-column header="CRM">
+              <ng-template let-medico="rowData" pTemplate="body">
+                  {{medico.crm}}
+                  <!-- {{pessoa.estado?.nome}} -->
+              </ng-template>
+      </p-column>
+
+      <p-column header="Ação">
+          <ng-template pTemplate="body">
+              <button pButtom class="btn btn-danger botao" pTooltip="Excluir" tooltipPosition="top"><i class="pi pi-trash"></i></button>
+              <button pButtom class="btn btn-primary"  pTooltip="Editar" tooltipPosition="top"><i class="pi pi-pencil"></i></button>
+        </ng-template>
+      </p-column>
+    </p-dataTable>
+    {{ dt.totalRecords }} Registros
+</p-panel>
