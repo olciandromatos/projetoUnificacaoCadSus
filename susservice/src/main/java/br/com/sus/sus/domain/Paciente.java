@@ -1,7 +1,6 @@
 package br.com.sus.sus.domain;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,8 +19,8 @@ public class Paciente implements Serializable{
 	@Column(name="seq_paciente")
 	private Long id;
 	
-	private String primeiroNome;
-	private String sobrenome;
+	private String nome;
+	private String cpf;
 	private String email;
 	private String telefone;
 	private String dataNascimento;
@@ -34,20 +33,20 @@ public class Paciente implements Serializable{
 		this.id = id;
 	}
 
-	public String getPrimeiroNome() {
-		return primeiroNome;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setPrimeiroNome(String primeiroNome) {
-		this.primeiroNome = primeiroNome;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getSobrenome() {
-		return sobrenome;
+	public String getCpf() {
+		return cpf;
 	}
-
-	public void setSobrenome(String sobrenome) {
-		this.sobrenome = sobrenome;
+	
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	public String getEmail() {
