@@ -7,18 +7,18 @@
 	
 	<changeSet id="029" author="olciandro.magalhaes">
 		<sql>
-			INSERT INTO "medico" VALUES(1, 'Jose Maria da Silva', '3001');
-			INSERT INTO "medico" VALUES(2, 'Maria Santiago Rosa', '3002');
-			INSERT INTO "medico" VALUES(3, 'Túlio Farias', '3003');
-			INSERT INTO "medico" VALUES(4, 'Marcos Menezes da Silva', '3004');
-			INSERT INTO "medico" VALUES(5, 'Pedro Cavalcante Ribeiro', '3005');
-			INSERT INTO "medico" VALUES(6, 'Marta Constantine', '3006');
-			INSERT INTO "medico" VALUES(7, 'Cleiton Martinz', '3007');
-			INSERT INTO "medico" VALUES(8, 'Cinthian Melotão', '3008');
-			INSERT INTO "medico" VALUES(9, 'Patricia Melo de Cunha', '3009');
-			INSERT INTO "medico" VALUES(10, 'Leandro Marmelo Sigeira', '3010');
-			INSERT INTO "medico" VALUES(11, 'Homualdo Matelar Ribeiro', '3011');
-			INSERT INTO "medico" VALUES(12, 'Olciandro Matos', '3012');
+			INSERT INTO "medico" VALUES(1, 'Dr.(ª) Jose Maria da Silva', '3001');
+			INSERT INTO "medico" VALUES(2, 'Dr.(ª) Maria Santiago Rosa', '3002');
+			INSERT INTO "medico" VALUES(3, 'Dr.(ª) Túlio Farias', '3003');
+			INSERT INTO "medico" VALUES(4, 'Dr.(ª) Menezes da Silva', '3004');
+			INSERT INTO "medico" VALUES(5, 'Dr.(ª) Cavalcante Ribeiro', '3005');
+			INSERT INTO "medico" VALUES(6, 'Dr.(ª) Constantine', '3006');
+			INSERT INTO "medico" VALUES(7, 'Dr.(ª) Cleiton Martinz', '3007');
+			INSERT INTO "medico" VALUES(8, 'Dr.(ª) Cinthian Melotão', '3008');
+			INSERT INTO "medico" VALUES(9, 'Dr.(ª) Patricia Melo de Cunha', '3009');
+			INSERT INTO "medico" VALUES(10,'Dr.(ª) Leandro Marmelo Sigeira', '3010');
+			INSERT INTO "medico" VALUES(11,'Dr.(ª) Homualdo Matelar Ribeiro', '3011');
+			INSERT INTO "medico" VALUES(12,'Dr.(ª) Olciandro Matos', '3012');
 		</sql>
 	</changeSet>
 	
