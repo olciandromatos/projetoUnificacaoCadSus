@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	
+	<changeSet id="029" author="olciandro.magalhaes">
+		<sql>
+			INSERT INTO "medico" VALUES(1, 'Jose Maria da Silva', '3001');
+			INSERT INTO "medico" VALUES(2, 'Maria Santiago Rosa', '3002');
+			INSERT INTO "medico" VALUES(3, 'Túlio Farias', '3003');
+			INSERT INTO "medico" VALUES(4, 'Marcos Menezes da Silva', '3004');
+			INSERT INTO "medico" VALUES(5, 'Pedro Cavalcante Ribeiro', '3005');
+			INSERT INTO "medico" VALUES(6, 'Marta Constantine', '3006');
+			INSERT INTO "medico" VALUES(7, 'Cleiton Martinz', '3007');
+			INSERT INTO "medico" VALUES(8, 'Cinthian Melotão', '3008');
+			INSERT INTO "medico" VALUES(9, 'Patricia Melo de Cunha', '3009');
+			INSERT INTO "medico" VALUES(10, 'Leandro Marmelo Sigeira', '3010');
+			INSERT INTO "medico" VALUES(11, 'Homualdo Matelar Ribeiro', '3011');
+			INSERT INTO "medico" VALUES(12, 'Olciandro Matos', '3012');
+		</sql>
+	</changeSet>
+	
+</databaseChangeLog>
