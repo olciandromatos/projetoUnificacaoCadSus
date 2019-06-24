@@ -1,0 +1,70 @@
+<p-panel header="Consulta de paciente" [toggleable]="false">
+  <div class="container">
+    <form>
+      <div class="p-grid p-justify-end">
+        <div class="p-col-6">
+          <label for="float-input">CPF: </label>
+          <p-inputMask type="text" name="telefone" mask="999.999.999-99" ></p-inputMask>
+        </div>
+
+        <div class="p-col-6">
+            <button icon="pi pi-search" type="button" pButton pTooltip="Pesquisar" tooltipPosition="top" label="Buscar"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <p-dataTable  [style]="{'height':'100%'}">
+      <p-column header="Nome">
+          <ng-template let-paciente="rowData" pTemplate="body">
+              {{paciente.nome}}
+          </ng-template>
+      </p-column>
+
+      <p-column header="CPF">
+              <ng-template let-paciente="rowData" pTemplate="body">
+                  {{paciente.cpf}}
+              </ng-template>
+      </p-column>
+
+      <p-column header="E-mail">
+          <ng-template let-paciente="rowData" pTemplate="body">
+              {{paciente.email}}
+          </ng-template>
+      </p-column>
+
+      <p-column header="Telefone">
+          <ng-template let-paciente="rowData" pTemplate="body">
+              {{paciente.telefone}}
+          </ng-template>
+      </p-column>
+
+      <p-column header="Ação">
+          <ng-template pTemplate="body">
+              <button pButtom class="btn btn-primary"  pTooltip="Editar" tooltipPosition="top"><i class="pi pi-pencil"></i></button>
+        </ng-template>
+      </p-column>
+    </p-dataTable>
+</p-panel>
+
+<p-panel class="painel" header="Lista de pacientes prioritários" [toggleable]="false">
+    <p-dataTable [value]="pacientes" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+        <p-column header="Nome">
+            <ng-template let-paciente="rowData" pTemplate="body">
+                {{paciente.nome}}
+            </ng-template>
+        </p-column>
+
+        <p-column header="CPF">
+            <ng-template let-paciente="rowData" pTemplate="body">
+                {{paciente.cpf}}
+            </ng-template>
+        </p-column>
+
+        <p-column header="Status">
+            <ng-template let-paciente="rowData" pTemplate="body">
+            </ng-template>
+        </p-column>
+
+      </p-dataTable>
+      {{ dt.totalRecords }} Registros
+</p-panel>

@@ -7,18 +7,18 @@
 	
 	<changeSet id="028" author="olciandro.magalhaes">
 		<sql>
-			INSERT INTO "paciente" VALUES(1, 'Jose', 'Maria da Silva', 'jose@hotmail.com', '61 987545521');
-			INSERT INTO "paciente" VALUES(2, 'Maria', 'Santiago Rosa', 'maria@hotmail.com', '61 998855222');
-			INSERT INTO "paciente" VALUES(3, 'Túlio', 'Farias', 'tulio@hotmail.com', '61 995254515');
-			INSERT INTO "paciente" VALUES(4, 'Marcos', 'Menezes da Silva', 'marcos@hotmail.com', '61 985654421');
-			INSERT INTO "paciente" VALUES(5, 'Pedro', 'Cavalcante Ribeiro', 'pedro@hotmail.com', '61 995254585');
-			INSERT INTO "paciente" VALUES(6, 'Marta', 'Constantine', 'marta@hotmail.com', '61 985456599');
-			INSERT INTO "paciente" VALUES(7, 'Cleiton', 'Martinz', 'cleiton@hotmail.com', '61 985456599');
-			INSERT INTO "paciente" VALUES(8, 'Cinthian', 'Melotão', 'cinthian@hotmail.com', '61 983458745');
-			INSERT INTO "paciente" VALUES(9, 'Patricia', 'Melo de Cunha', 'patricia@hotmail.com', '61 982554595');
-			INSERT INTO "paciente" VALUES(10, 'Leandro', 'Marmelo Sigeira', 'leandro@hotmail.com', '61 985456599');
-			INSERT INTO "paciente" VALUES(11, 'Homualdo', 'Matelar Ribeiro', 'homualdo@hotmail.com', '61 985456599');
-			INSERT INTO "paciente" VALUES(12, 'Olciandro', 'Matos', 'olciandro@hotmail.com', '61 985456599');
+			INSERT INTO "paciente" VALUES(1, 'Jose Maria da Silva','025.356.485-96', 'jose@hotmail.com', '61 987545521');
+			INSERT INTO "paciente" VALUES(2, 'Maria Santiago Rosa','025.356.485-96', 'maria@hotmail.com', '61 998855222');
+			INSERT INTO "paciente" VALUES(3, 'Túlio Farias','025.356.485-96', 'tulio@hotmail.com', '61 995254515');
+			INSERT INTO "paciente" VALUES(4, 'Marcos Menezes da Silva','045.300.485-96', 'marcos@hotmail.com', '61 985654421');
+			INSERT INTO "paciente" VALUES(5, 'Pedro Cavalcante Ribeiro','085.200.485-96', 'pedro@hotmail.com', '61 995254585');
+			INSERT INTO "paciente" VALUES(6, 'Marta Constantine', '075.100.485-96','marta@hotmail.com', '61 985456599');
+			INSERT INTO "paciente" VALUES(7, 'Cleiton Martinz','023.356.485-96', 'cleiton@hotmail.com', '61 985456599');
+			INSERT INTO "paciente" VALUES(8, 'Cinthian Melotão','045.400.485-96', 'cinthian@hotmail.com', '61 983458745');
+			INSERT INTO "paciente" VALUES(9, 'Patricia Melo de Cunha','056.356.385-56', 'patricia@hotmail.com', '61 982554595');
+			INSERT INTO "paciente" VALUES(10, 'Leandro Marmelo Sigeira', '015.500.485-42','leandro@hotmail.com', '61 985456599');
+			INSERT INTO "paciente" VALUES(11, 'Homualdo Matelar Ribeiro','020.354.485-16', 'homualdo@hotmail.com', '61 985456599');
+			INSERT INTO "paciente" VALUES(12, 'Olciandro Matos','036.356.485-20', 'olciandro@hotmail.com', '61 985456599');
 		</sql>
 	</changeSet>
 	
