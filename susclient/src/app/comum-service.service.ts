@@ -1,3 +1,4 @@
+import { Especialidade } from './domain/Especialidade';
 import { Municipio } from './domain/Municipio';
 import { Estado } from './domain/Estado';
 import { Paciente } from './domain/Paciente';
@@ -29,5 +30,9 @@ export class ComumServiceService {
 
   public getMunicipios(): Observable<Municipio[]> {
     return this.http.get<Municipio[]>('http://localhost:8080/api/municipio');
+  }
+
+  public getEspecilalidade(): Observable<Especialidade[]> {
+    return this.http.get<Especialidade[]>('http://localhost:8080/api/especialidade');
   }
 }

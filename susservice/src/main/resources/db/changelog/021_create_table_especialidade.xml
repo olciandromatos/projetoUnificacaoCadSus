@@ -16,7 +16,7 @@
             </column>
             
             <column name="descricao" type="varchar(50)" remarks="nome da especialidade medica.">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
 
         </createTable>
