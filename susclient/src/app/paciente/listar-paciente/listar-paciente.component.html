@@ -1,19 +1,19 @@
 <p-panel header="Consulta de paciente" [toggleable]="false">
   <div class="container">
     <form>
-      <div class="p-grid p-justify-end">
-        <div class="p-col-6">
-          <label for="float-input">CPF: </label>
-          <p-inputMask type="text" name="telefone" mask="999.999.999-99" ></p-inputMask>
+      <div class="ui-g">
+        <div class="ui-g-6 ui-fluid">
+          <p-inputMask type="text" name="telefone" placeholder="Número do CPF" mask="999.999.999-99" ></p-inputMask>
         </div>
 
-        <div class="p-col-6">
+        <div class="ui-g-6">
             <button icon="pi pi-search" type="button" pButton pTooltip="Pesquisar" tooltipPosition="top" label="Buscar"></button>
         </div>
       </div>
     </form>
   </div>
-  <p-dataTable  [style]="{'height':'100%'}">
+
+  <p-dataTable class="tabela"  [style]="{'height':'100%'}">
       <p-column header="Nome">
           <ng-template let-paciente="rowData" pTemplate="body">
               {{paciente.nome}}
