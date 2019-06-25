@@ -1,3 +1,4 @@
+import { CadastrarPacienteComponent } from './../paciente/cadastrar-paciente/cadastrar-paciente.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
@@ -8,10 +9,13 @@ import { PanelModule } from 'primeng/panel';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
 
 import { ListarMedicoComponent } from './listar-medico/listar-medico.component';
+import { CadastrarMedicoComponent } from './cadastrar-medico/cadastrar-medico.component';
 
 @NgModule({
   declarations: [
-    ListarMedicoComponent
+    ListarMedicoComponent,
+    CadastrarPacienteComponent,
+    CadastrarMedicoComponent
   ],
   imports: [
     BrowserModule,

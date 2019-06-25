@@ -1,3 +1,4 @@
+import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadastrar-paciente.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +21,10 @@ import { PacienteComponent } from './paciente/paciente.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { ListarMedicoComponent } from './medico/listar-medico/listar-medico.component';
 import { ListarPacienteComponent } from './paciente/listar-paciente/listar-paciente.component';
+import { CadastrarMedicamentoComponent } from './medicamento/cadastrar-medicamento/cadastrar-medicamento.component';
+import { TriagemComponent } from './triagem/triagem.component';
+import { CadastrarUnidadeSaudeComponent } from './unidadeSaude/cadastrar-unidade-saude/cadastrar-unidade-saude.component';
+import { CadastrarEquipamentoComponent } from './equipamento/cadastrar-equipamento/cadastrar-equipamento.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { ListarPacienteComponent } from './paciente/listar-paciente/listar-pacie
     PacienteComponent,
     MenuBarComponent,
     ListarMedicoComponent,
-    ListarPacienteComponent
+    ListarPacienteComponent,
+    CadastrarPacienteComponent,
+    CadastrarMedicamentoComponent,
+    TriagemComponent,
+    CadastrarUnidadeSaudeComponent,
+    CadastrarEquipamentoComponent
   ],
   imports: [
     BrowserModule,
