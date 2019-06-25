@@ -1,3 +1,4 @@
+import { routing } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,7 +16,6 @@ import { MenubarModule } from 'primeng/components/menubar/menubar';
 import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
 
 import { AppComponent } from './app.component';
-import { ContainerComponent } from './container/container.component';
 import { PacienteComponent } from './paciente/paciente.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { ListarMedicoComponent } from './medico/listar-medico/listar-medico.component';
@@ -30,7 +30,6 @@ import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadast
 @NgModule({
   declarations: [
     AppComponent,
-    ContainerComponent,
     PacienteComponent,
     MenuBarComponent,
     ListarMedicoComponent,
@@ -56,7 +55,8 @@ import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadast
     InputTextModule,
     InputMaskModule,
     MenubarModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
