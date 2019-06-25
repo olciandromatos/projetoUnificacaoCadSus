@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Endereco {
@@ -16,9 +17,9 @@ public class Endereco {
 	private String complemento;
 	private String cep;
 
-//	private Estado estado;
-//	private Municipio municipio;
-
+	@ManyToOne
+	private Estado estado;
+	
 	public Long getId() {
 		return id;
 	}
@@ -59,20 +60,12 @@ public class Endereco {
 		this.cep = cep;
 	}
 
-//	public Estado getEstado() {
-//		return estado;
-//	}
-//
-//	public void setEstado(Estado estado) {
-//		this.estado = estado;
-//	}
-//
-//	public Municipio getMunicipio() {
-//		return municipio;
-//	}
-//
-//	public void setMunicipio(Municipio municipio) {
-//		this.municipio = municipio;
-//	}
+	public Estado getEstado() {
+		return estado;
+	}
+
+	public void setEstado(Estado estado) {
+		this.estado = estado;
+	}
 
 }

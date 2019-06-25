@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Medico } from './domain/Medico';
+import { Pais } from './domain/Pais';
 
 @Injectable({
   providedIn: 'root'
@@ -34,5 +35,9 @@ export class ComumServiceService {
 
   public getEspecilalidade(): Observable<Especialidade[]> {
     return this.http.get<Especialidade[]>('http://localhost:8080/api/especialidade');
+  }
+
+  public getPaises(): Observable<Pais[]> {
+    return this.http.get<Pais[]>('http://localhost:8080/api/pais');
   }
 }

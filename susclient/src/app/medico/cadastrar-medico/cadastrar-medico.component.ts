@@ -1,8 +1,9 @@
-import { Especialidade } from './../../domain/Especialidade';
-import { ComumServiceService } from './../../comum-service.service';
-import { Municipio } from './../../domain/Municipio';
-import { Estado } from './../../domain/Estado';
 import { Component, OnInit } from '@angular/core';
+import { ComumServiceService } from './../../comum-service.service';
+import { Especialidade } from './../../domain/Especialidade';
+import { Estado } from './../../domain/Estado';
+import { Municipio } from './../../domain/Municipio';
+import { Pais } from 'src/app/domain/Pais';
 
 @Component({
   selector: 'app-cadastrar-medico',
@@ -16,6 +17,7 @@ export class CadastrarMedicoComponent implements OnInit {
   municipio: Municipio = new Municipio;
   municipios: Municipio[] = new Array;
   especialidades: Especialidade[] = new Array;
+  paises: Pais[] = new Array;
 
   constructor(private servico: ComumServiceService) { }
 
@@ -23,6 +25,7 @@ export class CadastrarMedicoComponent implements OnInit {
     this.listarEstado();
     this.listarMunicipio();
     this.listarEspecialidade();
+    this.listarPais();
   }
 
   listarEstado() {
@@ -35,6 +38,10 @@ export class CadastrarMedicoComponent implements OnInit {
 
   listarEspecialidade() {
     this.servico.getEspecilalidade().subscribe(resposta => this.especialidades = resposta);
+  }
+
+  listarPais() {
+    this.servico.getPaises().subscribe(resposta => this.paises = resposta);
   }
 
 }

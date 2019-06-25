@@ -1,10 +1,13 @@
 package br.com.sus.sus.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Estado {
@@ -15,6 +18,9 @@ public class Estado {
 	private Long id;
 	private String nome;
 	private String sigla;
+	
+//	@OneToMany
+//	private List<Municipio> municipios;
 	
 	public Long getId() {
 		return id;
@@ -39,5 +45,13 @@ public class Estado {
 	public void setSigla(String sigla) {
 		this.sigla = sigla;
 	}
+	
+//	public void setMunicipio(List<Municipio> municipios) {
+//		this.municipios = municipios;
+//	}
+//	
+//	public List<Municipio> getMunicipio() {
+//		return municipios;
+//	}
 
 }
