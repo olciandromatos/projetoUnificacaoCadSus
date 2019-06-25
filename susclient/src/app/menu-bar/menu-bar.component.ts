@@ -18,8 +18,9 @@ export class MenuBarComponent implements OnInit {
         label: 'Cadastro',
         icon: 'pi pi-fw pi-plus',
         items: [
-          {label: 'Paciente', icon: 'pi pi-fw pi-save'},
-          {label: 'Medico', icon: 'pi pi-fw pi-save'}
+          {label: 'Home', routerLink: '/'},
+          {label: 'Paciente', icon: 'pi pi-fw pi-save', routerLink: '/paciente'},
+          {label: 'Medico', icon: 'pi pi-fw pi-save', routerLink: '/medico'}
         ]
       },
       {
