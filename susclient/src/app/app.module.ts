@@ -1,4 +1,3 @@
-import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadastrar-paciente.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -25,6 +24,8 @@ import { CadastrarMedicamentoComponent } from './medicamento/cadastrar-medicamen
 import { TriagemComponent } from './triagem/triagem.component';
 import { CadastrarUnidadeSaudeComponent } from './unidadeSaude/cadastrar-unidade-saude/cadastrar-unidade-saude.component';
 import { CadastrarEquipamentoComponent } from './equipamento/cadastrar-equipamento/cadastrar-equipamento.component';
+import { CadastrarMedicoComponent } from './medico/cadastrar-medico/cadastrar-medico.component';
+import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadastrar-paciente.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CadastrarEquipamentoComponent } from './equipamento/cadastrar-equipamen
     CadastrarMedicamentoComponent,
     TriagemComponent,
     CadastrarUnidadeSaudeComponent,
-    CadastrarEquipamentoComponent
+    CadastrarEquipamentoComponent,
+    CadastrarMedicoComponent
   ],
   imports: [
     BrowserModule,
