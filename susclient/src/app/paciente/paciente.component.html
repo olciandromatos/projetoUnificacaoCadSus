@@ -1,15 +1,17 @@
 <p-panel header="Cadastro de Paciente" [toggleable]="false">
-    <form>
-    <div class="ui-g-12 ui-md-4">
-      <label for="float-input">Primeiro Nome: </label>
-      <input id="float-input" type="text" pInputText />
-    </div>
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Nome completo: </label>
+        <input id="float-input" type="text" pInputText />
+      </div>
 
-    <div class="ui-g-12 ui-md-4">
-      <label for="float-input">Ultimo Nome: </label>
-      <input id="float-input" type="text" pInputText />
-    </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Telefone: </label>
+        <p-inputMask type="text" name="telefone" mask="(99) 99999-9999" ></p-inputMask>
+      </div>
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     <div class="ui-g-12 ui-md-4">
       <label for="float-input">E-mail: </label>
@@ -21,18 +23,51 @@
           <p-dropdown id="float-input" [options]="estados" placeholder="Selecione um dos estados abaixo" optionLabel="nome"></p-dropdown>
       </div>
 >>>>>>> Stashed changes
+=======
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Data de Nascimento: </label>
+        <p-inputMask type="text" name="nascimento" mask="99/99/9999" ></p-inputMask>
+      </div>
+>>>>>>> master
 
-    <div class="ui-g-12 ui-md-6">
-      <label for="float-input">Telefone: </label>
-      <p-inputMask type="text" name="telefone" mask="(99) 99999-9999" ></p-inputMask>
-    </div>
+      <div class="ui-g-6 ui-fluid">
+        <label for="float-input">E-mail: </label>
+        <input id="float-input" type="email" pInputText />
+      </div>
 
-    <div class="ui-g-12 ui-md-6">
-      <label for="float-input">Data de Nascimento: </label>
-      <p-inputMask type="text" name="nascimento" mask="99/99/9999" ></p-inputMask>
-    </div>
-    <div>
-      <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+      <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Nome do Acompanhate: </label>
+          <input id="float-input" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Logradouro: </label>
+          <input id="float-input" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Número: </label>
+          <input id="float-input" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Complemento: </label>
+          <input id="float-input" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Estado: </label>
+          <p-dropdown [options]="pacientes"></p-dropdown>
+      </div>
+
+      <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Municipio: </label>
+          <input id="float-input" type="text" pInputText />
+      </div>
+
+      <div>
+        <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+      </div>
     </div>
   </form>
 </p-panel>

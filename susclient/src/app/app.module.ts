@@ -12,13 +12,14 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { MenubarModule } from 'primeng/components/menubar/menubar';
+import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
 
 import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
 import { PacienteComponent } from './paciente/paciente.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { ListarComponent } from './paciente/listar/listar.component';
 import { ListarMedicoComponent } from './medico/listar-medico/listar-medico.component';
+import { ListarPacienteComponent } from './paciente/listar-paciente/listar-paciente.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,8 @@ import { ListarMedicoComponent } from './medico/listar-medico/listar-medico.comp
     ContainerComponent,
     PacienteComponent,
     MenuBarComponent,
-    ListarComponent,
-    ListarMedicoComponent
+    ListarMedicoComponent,
+    ListarPacienteComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +44,7 @@ import { ListarMedicoComponent } from './medico/listar-medico/listar-medico.comp
     InputTextModule,
     InputMaskModule,
     MenubarModule,
+    AutoCompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

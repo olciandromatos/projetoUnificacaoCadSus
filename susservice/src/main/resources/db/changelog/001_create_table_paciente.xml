@@ -17,12 +17,12 @@
                 <constraints primaryKey="true" nullable="false" primaryKeyName="pk_paciente"/>
             </column>
             
-            <column name="primeiro_nome" type="varchar(100)">
+            <column name="nome" type="varchar(100)">
                 <constraints nullable="false" />
             </column>
             
-            <column name="sobrenome" type="varchar(100)">
-                <constraints nullable="false" />
+            <column name="cpf" type="varchar(30)">
+                <constraints nullable="true" />
             </column>
 
             <column name="email" type="varchar(100)">
