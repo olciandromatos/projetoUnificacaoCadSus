@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+	<changeSet id="031" author="olciandro.magalhaes">
+	
+		<createTable tableName="sexo">
+		
+            <column name="seq_sexo" type="bigint" autoIncrement="${autoIncrement}"
+            remarks="Número sequencial que identifica unicamente o sexo. Chave primária da tabela.">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_sexo"/>
+            </column>
+            
+            <column name="descricao" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            
+        </createTable>
+	</changeSet>
+
+</databaseChangeLog>

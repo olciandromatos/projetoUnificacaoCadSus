@@ -37,6 +37,10 @@
                 <constraints nullable="true" />
             </column>
             
+            <column name="sexo_seq_sexo" type="bigint" remarks="Campo identificador da tabela sexo Chave estrangeira importada da tabela SEXO">
+                <constraints nullable="true" />
+            </column>
+            
              <column name="seq_medicamento" type="bigint" remarks="Campo identificador da tabela medicamento. Chave estrangeira importada da tabela MEDICAMENTO.">
                 <constraints nullable="true" />
             </column>

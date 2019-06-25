@@ -15,10 +15,19 @@ export class MenuBarComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
+        label: 'Home',
+        icon: 'pi pi-fw pi-search',
+        routerLink: '/'
+      },
+      {
+        label: 'Triagem',
+        icon: 'pi pi-fw pi-user-plus',
+        routerLink: '/triagem'
+      },
+      {
         label: 'Cadastro',
         icon: 'pi pi-fw pi-plus',
         items: [
-          {label: 'Home', routerLink: '/'},
           {label: 'Paciente', icon: 'pi pi-fw pi-save', routerLink: '/paciente'},
           {label: 'Medico', icon: 'pi pi-fw pi-save', routerLink: '/medico'}
         ]

@@ -35,5 +35,8 @@
    <include file="db/changelog/028_insert_table_paciente_teste.xml"/>
    <include file="db/changelog/029_insert_table_medico_teste.xml"/>
    <!--<include file="db/changelog/030_add_constraint_table_estado.xml"/>-->
+   <include file="db/changelog/031_create_table_sexo.xml"/>
+   <include file="db/changelog/032_insert_table_sexo.xml"/>
+   <include file="db/changelog/033_add_constraint_table_paciente.xml"/>
     
 </databaseChangeLog>

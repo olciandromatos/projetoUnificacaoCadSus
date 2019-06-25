@@ -8,14 +8,14 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-	<changeSet id="004" author="olciandro.magalhaes">
+	<changeSet id="033" author="olciandro.magalhaes">
 	
-        <addForeignKeyConstraint baseColumnNames="seq_medicamento"
+        <addForeignKeyConstraint baseColumnNames="sexo_seq_sexo"
                                  baseTableName="paciente"
-                                 constraintName="fk_medicamento_paciente"
-                                 referencedColumnNames="seq_medicamento"
-                                 referencedTableName="medicamento"/>
-                                 
+                                 constraintName="fk_sexo_paciente"
+                                 referencedColumnNames="seq_sexo"
+                                 referencedTableName="sexo"/>
+
 	</changeSet>
 
 </databaseChangeLog>

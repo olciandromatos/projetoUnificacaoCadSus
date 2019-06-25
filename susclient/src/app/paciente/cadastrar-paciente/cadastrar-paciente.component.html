@@ -41,14 +41,19 @@
             <input id="float-input" type="text" pInputText />
         </div>
 
-        <div class="ui-g-6 ui-fluid">
+        <div class="ui-g-4 ui-fluid">
             <label for="float-input">Estado: </label>
             <p-dropdown id="float-input" [options]="estados" placeholder="Selecione um dos estados abaixo" optionLabel="nome"></p-dropdown>
         </div>
 
-        <div class="ui-g-6 ui-fluid">
+        <div class="ui-g-4 ui-fluid">
             <label for="float-input">Municipio: </label>
             <p-dropdown id="float-input" [options]="municipios" placeholder="Selecione um dos municipios abaixo" optionLabel="nome"></p-dropdown>
+        </div>
+
+        <div class="ui-g-4 ui-fluid">
+            <label for="float-input">Sexo: </label>
+            <p-dropdown id="float-input" [options]="sexo" placeholder="Selecione um dos sexos" optionLabel="descricao"></p-dropdown>
         </div>
 
         <div class="botao">
