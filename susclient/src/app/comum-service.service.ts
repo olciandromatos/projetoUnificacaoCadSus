@@ -1,3 +1,4 @@
+import { Municipio } from './domain/Municipio';
 import { Estado } from './domain/Estado';
 import { Paciente } from './domain/Paciente';
 import { Injectable } from '@angular/core';
@@ -24,5 +25,9 @@ export class ComumServiceService {
 
   public getEstados(): Observable<Estado[]> {
     return this.http.get<Estado[]>('http://localhost:8080/api/estado');
+  }
+
+  public getMunicipios(): Observable<Municipio[]> {
+    return this.http.get<Municipio[]>('http://localhost:8080/api/municipio');
   }
 }
