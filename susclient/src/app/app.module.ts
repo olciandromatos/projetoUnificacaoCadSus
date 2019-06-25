@@ -14,6 +14,7 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { MenubarModule } from 'primeng/components/menubar/menubar';
 import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
+import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
 
 import { AppComponent } from './app.component';
 import { PacienteComponent } from './paciente/paciente.component';
@@ -56,7 +57,8 @@ import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadast
     InputMaskModule,
     MenubarModule,
     AutoCompleteModule,
-    routing
+    routing,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

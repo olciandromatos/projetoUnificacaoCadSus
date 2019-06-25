@@ -1,3 +1,4 @@
+import { Sexo } from './domain/Sexo';
 import { Especialidade } from './domain/Especialidade';
 import { Municipio } from './domain/Municipio';
 import { Estado } from './domain/Estado';
@@ -39,5 +40,9 @@ export class ComumServiceService {
 
   public getPaises(): Observable<Pais[]> {
     return this.http.get<Pais[]>('http://localhost:8080/api/pais');
+  }
+
+  public getSexo(): Observable<Sexo[]> {
+    return this.http.get<Sexo[]>('http://localhost:8080/api/sexo');
   }
 }

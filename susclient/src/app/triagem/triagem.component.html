@@ -1,3 +1,50 @@
-<p>
-  triagem works!
-</p>
+<p-panel header="Cadastro de Triagem" [toggleable]="false">
+    <form>
+      <div class="ui-g">
+        <div class="ui-g-12 ui-fluid">
+            <label for="float-input">Nome do paciente: </label>
+            <input id="float-input" name="nome" [disabled]="true" placeholder="aqui vem o nome do paciente não editavel" type="text" pInputText />
+          </div>
+
+        <div class="ui-g-3 ui-fluid">
+          <label for="float-input">Peso: </label>
+          <input id="float-input" name="nome" type="text" pInputText />
+        </div>
+
+        <div class="ui-g-3 ui-fluid">
+          <label for="float-input">Altura: </label>
+          <p-inputMask type="text" name="telefone" placeholder="(99) 99999-9999" mask="(99) 99999-9999" ></p-inputMask>
+        </div>
+
+        <div class="ui-g-3 ui-fluid">
+            <label for="float-input">Pressão: </label>
+            <p-inputMask type="text" name="nascimento"  mask="99/99/9999" ></p-inputMask>
+          </div>
+
+        <div class="ui-g-3 ui-fluid">
+            <label for="float-input">Status: </label>
+            <input id="float-input" name="crm" type="text" pInputText />
+        </div>
+
+        <div class="ui-g-4 ui-fluid">
+            <label for="float-input">Mais detalhes: </label>
+            <textarea [rows]="3" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+        </div>
+
+        <div class="ui-g-4 ui-fluid">
+            <label for="float-input">Número: </label>
+            <input id="float-input" name="numero" type="text" pInputText />
+        </div>
+
+        <div class="ui-g-4 ui-fluid">
+            <label for="float-input">Complemento: </label>
+            <input id="float-input" name="complemento" type="text" pInputText />
+        </div>
+
+        <div>
+          <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+        </div>
+      </div>
+    </form>
+  </p-panel>
+

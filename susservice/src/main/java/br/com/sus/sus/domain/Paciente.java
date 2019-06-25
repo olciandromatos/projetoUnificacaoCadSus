@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Paciente implements Serializable{
@@ -24,6 +25,9 @@ public class Paciente implements Serializable{
 	private String email;
 	private String telefone;
 	private String dataNascimento;
+	
+	@OneToOne
+	private Sexo sexo;
 
 	public Long getId() {
 		return id;
@@ -71,6 +75,14 @@ public class Paciente implements Serializable{
 
 	public void setDataNascimento(String dataNascimento2) {
 		this.dataNascimento = dataNascimento2;
+	}
+	
+	public void setSexo(Sexo sexo) {
+		this.sexo = sexo;
+	}
+	
+	public Sexo getSexo() {
+		return sexo;
 	}
 
 }

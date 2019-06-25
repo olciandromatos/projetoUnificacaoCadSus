@@ -1,3 +1,4 @@
+import { Sexo } from './../../domain/Sexo';
 import { ComumServiceService } from './../../comum-service.service';
 import { Estado } from './../../domain/Estado';
 import { Municipio } from './../../domain/Municipio';
@@ -16,12 +17,14 @@ export class CadastrarPacienteComponent implements OnInit {
   estado: Estado = new Estado;
   municipio: Municipio = new Municipio;
   municipios: Municipio[] = new Array;
+  sexo: Sexo[] = new Array;
 
   constructor(private servico: ComumServiceService) { }
 
   ngOnInit() {
     this.listarEstado();
     this.listarMunicipio();
+    this.listarSexo();
   }
 
   listarEstado() {
@@ -30,6 +33,10 @@ export class CadastrarPacienteComponent implements OnInit {
 
   listarMunicipio() {
     this.servico.getMunicipios().subscribe(resposta => this.municipios = resposta);
+  }
+
+  listarSexo() {
+    this.servico.getSexo().subscribe(resposta => this.sexo = resposta);
   }
 
 }
