@@ -12,6 +12,7 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
 import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { MenubarModule } from 'primeng/components/menubar/menubar';
+import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
 
 import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
@@ -43,6 +44,7 @@ import { ListarPacienteComponent } from './paciente/listar-paciente/listar-pacie
     InputTextModule,
     InputMaskModule,
     MenubarModule,
+    AutoCompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

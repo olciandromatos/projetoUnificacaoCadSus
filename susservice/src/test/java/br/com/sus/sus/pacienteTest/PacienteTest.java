@@ -24,7 +24,7 @@ public class PacienteTest {
 	@Ignore
 	public void listar() {
 		for (Paciente paciente : service.listarTodos()) {
-			System.out.println("Nome da pessoa: "+paciente.getPrimeiroNome());
+			System.out.println("Nome da pessoa: "+paciente.getNome());
 		}
 		
 	}
@@ -32,8 +32,7 @@ public class PacienteTest {
 	@Test
 	public void salvar() {
 		Paciente paciente = new Paciente();
-		paciente.setPrimeiroNome("Julio");
-		paciente.setSobrenome("Mendoça da Silva");
+		paciente.setNome("Julio Mendoça da Silva");
 		paciente.setTelefone("61 92285575");
 		String dataNascimento = LocalDate.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 		System.out.println(dataNascimento);
