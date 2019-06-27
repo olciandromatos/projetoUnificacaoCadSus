@@ -15,6 +15,7 @@ import { InputMaskModule } from 'primeng/components/inputmask/inputmask';
 import { MenubarModule } from 'primeng/components/menubar/menubar';
 import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
 import { InputTextareaModule } from 'primeng/components/inputtextarea/inputtextarea';
+import { CalendarModule } from 'primeng/components/calendar/calendar';
 
 import { AppComponent } from './app.component';
 import { PacienteComponent } from './paciente/paciente.component';
@@ -30,6 +31,7 @@ import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadast
 import { ConsultaComponent } from './consulta/consulta.component';
 import { RelatorioPacienteComponent } from './relatorio/relatorio-paciente/relatorio-paciente.component';
 import { RelatorioMedicoComponent } from './relatorio/relatorio-medico/relatorio-medico.component';
+
 
 @NgModule({
   declarations: [
@@ -64,7 +66,8 @@ import { RelatorioMedicoComponent } from './relatorio/relatorio-medico/relatorio
     MenubarModule,
     AutoCompleteModule,
     routing,
-    InputTextareaModule
+    InputTextareaModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
