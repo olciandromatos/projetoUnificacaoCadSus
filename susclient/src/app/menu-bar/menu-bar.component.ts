@@ -25,19 +25,26 @@ export class MenuBarComponent implements OnInit {
         routerLink: '/triagem'
       },
       {
+        label: 'Consulta',
+        icon: 'pi pi-fw pi-user-plus',
+        routerLink: '/consulta'
+      },
+      {
         label: 'Cadastro',
         icon: 'pi pi-fw pi-plus',
         items: [
           {label: 'Paciente', icon: 'pi pi-fw pi-save', routerLink: '/paciente'},
-          {label: 'Medico', icon: 'pi pi-fw pi-save', routerLink: '/medico'}
+          {label: 'Medico', icon: 'pi pi-fw pi-save', routerLink: '/medico'},
+          {label: 'Medicamento', icon: 'pi pi-fw pi-save', routerLink: '/medicamento'},
+          {label: 'Equipamento', icon: 'pi pi-fw pi-save', routerLink: '/equipamento'}
         ]
       },
       {
         label: 'Relatorio',
         icon: 'pi pi-fw pi-file',
         items: [
-            {label: 'Paciente', icon: 'pi pi-fw pi-eye'},
-            {label: 'Medico', icon: 'pi pi-fw pi-eye'}
+            {label: 'Paciente', icon: 'pi pi-fw pi-eye', routerLink: '/relatorio-paciente'},
+            {label: 'Medico', icon: 'pi pi-fw pi-eye', routerLink: '/relatorio-medico'}
         ]
     }];
   }
