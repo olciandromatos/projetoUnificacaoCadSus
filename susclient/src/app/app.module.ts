@@ -27,6 +27,9 @@ import { CadastrarUnidadeSaudeComponent } from './unidadeSaude/cadastrar-unidade
 import { CadastrarEquipamentoComponent } from './equipamento/cadastrar-equipamento/cadastrar-equipamento.component';
 import { CadastrarMedicoComponent } from './medico/cadastrar-medico/cadastrar-medico.component';
 import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadastrar-paciente.component';
+import { ConsultaComponent } from './consulta/consulta.component';
+import { RelatorioPacienteComponent } from './relatorio/relatorio-paciente/relatorio-paciente.component';
+import { RelatorioMedicoComponent } from './relatorio/relatorio-medico/relatorio-medico.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadast
     TriagemComponent,
     CadastrarUnidadeSaudeComponent,
     CadastrarEquipamentoComponent,
-    CadastrarMedicoComponent
+    CadastrarMedicoComponent,
+    ConsultaComponent,
+    RelatorioPacienteComponent,
+    RelatorioMedicoComponent
   ],
   imports: [
     BrowserModule,

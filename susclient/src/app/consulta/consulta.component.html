@@ -1,0 +1,46 @@
+<p-panel header="Cadastro de Triagem" [toggleable]="false">
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-12 ui-fluid">
+          <label for="float-input">Nome do paciente: </label>
+          <input id="float-input" name="nome" [disabled]="true" placeholder="aqui vem o nome do paciente não editavel" type="text" pInputText />
+        </div>
+
+      <div class="ui-g-3 ui-fluid">
+        <label for="float-input">Peso (KG):: </label>
+        <input id="float-input" name="peso" [disabled]="true" placeholder="85" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-3 ui-fluid">
+        <label for="float-input">Altura: </label>
+        <input id="float-input" name="altura" [disabled]="true" placeholder="1.75" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-3 ui-fluid">
+          <label for="float-input">Pressão: </label>
+          <input id="float-input" name="pressao" [disabled]="true" placeholder="11/12" type="text" pInputText />
+        </div>
+
+      <div class="ui-g-3 ui-fluid">
+          <label for="float-input">Status: </label>
+          <input id="float-input" name="status" [disabled]="true" placeholder="Emergência" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Relato do paciente: </label>
+          <textarea [rows]="4" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+      </div>
+
+      <div class="ui-g-6 ui-fluid">
+        <label for="float-input">Relato Médico: </label>
+        <textarea [rows]="4" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+    </div>
+
+      <div>
+        <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+      </div>
+    </div>
+  </form>
+</p-panel>
+
+
