@@ -1,3 +1,42 @@
-<p>
-  relatorio-paciente works!
-</p>
+<p-panel header="Relatório de paciente" [toggleable]="false">
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-6">
+        <h3>Data inicial</h3>
+        <p-calendar [showIcon]="true"></p-calendar>
+      </div>
+
+      <div class="ui-g-6">
+        <h3>Data final</h3>
+        <p-calendar [showIcon]="true"></p-calendar>
+      </div>
+
+      <div class="ui-g-12">
+        <button icon="pi pi-search" type="button" pButton pTooltip="Pesquisar" tooltipPosition="top" label="Buscar"></button>
+      </div>
+    </div>
+  </form>
+</p-panel>
+
+<p-panel header="Lista de pacientes" [toggleable]="false">
+  <p-dataTable  paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+      <p-column header="Nome">
+          <ng-template let-paciente="rowData" pTemplate="body">
+              {{paciente.nome}}
+          </ng-template>
+      </p-column>
+
+      <p-column header="CPF">
+          <ng-template let-paciente="rowData" pTemplate="body">
+              {{paciente.cpf}}
+          </ng-template>
+      </p-column>
+
+      <p-column header="Status">
+          <ng-template let-paciente="rowData" pTemplate="body">
+          </ng-template>
+      </p-column>
+
+    </p-dataTable>
+    {{ dt.totalRecords }} Registros
+</p-panel>
