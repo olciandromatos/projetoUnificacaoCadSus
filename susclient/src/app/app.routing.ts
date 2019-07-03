@@ -9,9 +9,10 @@ import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadast
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { RelatorioPacienteComponent } from './relatorio/relatorio-paciente/relatorio-paciente.component';
+import { LoginComponent } from './login/login.component';
 
 const APP_ROUTES: Routes = [
-  { path: '', component: ListarPacienteComponent},
+  { path: '', component: LoginComponent},
   { path: 'paciente', component: CadastrarPacienteComponent},
   { path: 'medico', component: CadastrarMedicoComponent},
   { path: 'triagem', component: TriagemComponent},
@@ -19,7 +20,9 @@ const APP_ROUTES: Routes = [
   { path: 'medicamento', component: CadastrarMedicamentoComponent},
   { path: 'relatorio-paciente', component: RelatorioPacienteComponent},
   { path: 'relatorio-medico', component: RelatorioMedicoComponent},
-  { path: 'equipamento', component: CadastrarEquipamentoComponent}
+  { path: 'equipamento', component: CadastrarEquipamentoComponent},
+  { path: 'logout', component: LoginComponent},
+  { path: 'login', component: ListarPacienteComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

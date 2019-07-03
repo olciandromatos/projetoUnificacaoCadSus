@@ -1,5 +1,7 @@
+import { AuthServiceService } from './../login/auth-service.service';
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/components/common/menuitem';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-bar',
@@ -9,15 +11,17 @@ import { MenuItem } from 'primeng/components/common/menuitem';
 export class MenuBarComponent implements OnInit {
 
   items: MenuItem[];
+  mostrarMenu = false;
 
-  constructor() { }
+  constructor(private router: Router, private auth: AuthServiceService) { }
 
   ngOnInit() {
+    this.auth.mostrarMenuEmitter.subscribe(mostrar => this.mostrarMenu = mostrar);
     this.items = [
       {
         label: 'Home',
         icon: 'pi pi-fw pi-search',
-        routerLink: '/'
+        routerLink: '/login'
       },
       {
         label: 'Triagem',
@@ -47,6 +51,18 @@ export class MenuBarComponent implements OnInit {
             {label: 'Medico', icon: 'pi pi-fw pi-eye', routerLink: '/relatorio-medico'}
         ]
     }];
+
   }
+
+  logout() {
+    if (this.auth.usuarioAutenticado === true) {
+      this.mostrarMenu = false;
+      this.router.navigate(['/logout']);
+    } else {
+      this.mostrarMenu = true;
+      this.router.navigate(['/logout']);
+    }
+  }
+
 
 }

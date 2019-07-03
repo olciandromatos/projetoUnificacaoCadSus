@@ -1,0 +1,10 @@
+.main_content {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 48px;
+}
+
+hr{
+  height: 0px;
+  visibility: hidden;
+}

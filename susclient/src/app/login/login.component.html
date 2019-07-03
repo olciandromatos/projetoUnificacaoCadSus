@@ -1,0 +1,18 @@
+<div class="main_content">
+  <div>
+    <span>Usuário</span>
+    <hr/>
+    <div>
+      <input type="text" [(ngModel)]="usuario.usuario" placeholder="fulando@gmail.com" pInputText />
+    </div>
+    <hr/>
+    <span>Senha</span>
+    <hr/>
+    <div>
+      <input type="password" [(ngModel)]="usuario.senha" placeholder="**************" pInputText />
+    </div>
+  </div>
+  <hr/>
+  <button pButton type="submit" (click)="login()" class="btn-save" label="Entrar" ></button>
+</div>
+

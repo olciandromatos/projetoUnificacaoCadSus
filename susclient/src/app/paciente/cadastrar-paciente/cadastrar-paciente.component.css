@@ -2,3 +2,7 @@
   margin-top: 20px;
   float: right;
 }
+
+label{
+  display: block;
+}
