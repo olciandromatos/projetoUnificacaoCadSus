@@ -31,6 +31,7 @@ import { CadastrarPacienteComponent } from './paciente/cadastrar-paciente/cadast
 import { ConsultaComponent } from './consulta/consulta.component';
 import { RelatorioPacienteComponent } from './relatorio/relatorio-paciente/relatorio-paciente.component';
 import { RelatorioMedicoComponent } from './relatorio/relatorio-medico/relatorio-medico.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { RelatorioMedicoComponent } from './relatorio/relatorio-medico/relatorio
     CadastrarMedicoComponent,
     ConsultaComponent,
     RelatorioPacienteComponent,
-    RelatorioMedicoComponent
+    RelatorioMedicoComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
