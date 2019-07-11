@@ -6,7 +6,7 @@ SISUNI-sistema de saúde unificada (apelido)
 - recadastro, apenas com adição dos dados atuais, caso ele já exista, haverá necessidade apenas do cpf.
 - cadastro disponível para os hospitais e postos de saúde pública.
 
-# Sistema de Cadastro Unificado de Saúde Pública (SUS 2.0)
+# documentacao
 - reservado para adicionar documentos importantes que facilite a comprienção dos envolvidos no projeto.
 
 # susservice
