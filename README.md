@@ -27,7 +27,7 @@ SISUNI-sistema de saúde unificada (apelido)
   
   Antes de executar o backend, executar 'update project' do maven em seu diretório, para baixar as dependências do projeto.
   
-  A tela de login foi cadastrado para teste o seguinte usuário; 
+  Para logar foi cadastrado o seguinte usuário teste: 
   
   usuário: root@gmail.com 
   
