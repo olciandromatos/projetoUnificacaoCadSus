@@ -31,6 +31,8 @@ SISUNI-sistema de saúde unificada (apelido)
   
   -Instalar nodejs na versão 8 -  https://nodejs.org/de/download/
   
+  -Caso queira baixar o gerenciador de pacotes do node - https://github.com/nvm-sh/nvm
+  
   Antes de executar o frontend, executar 'npm install' em seu diretório, para baixar as dependências do projeto.
   
   Antes de executar o backend, executar 'update project' do maven em seu diretório, para baixar as dependências do projeto.
