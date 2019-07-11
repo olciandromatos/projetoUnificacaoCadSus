@@ -1,3 +1,26 @@
-<p>
-  cadastrar-medicamento works!
-</p>
+<div class="margin-top">
+  <p-panel header="Cadastro de medicamentos" [toggleable]="false">
+    <form>
+      <div class="ui-g">
+        <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Nome do medicamento: </label>
+          <input id="float-input" name="peso" number="true" type="text" pInputText />
+        </div>
+
+        <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Quantidade: </label>
+          <input id="float-input" name="peso" type="number" pInputText />
+        </div>
+
+        <div class="ui-g-12 ui-fluid">
+          <label for="float-input">Descrição: </label>
+          <textarea [rows]="4" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+        </div>
+
+        <div>
+          <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+        </div>
+      </div>
+    </form>
+  </p-panel>
+</div>
