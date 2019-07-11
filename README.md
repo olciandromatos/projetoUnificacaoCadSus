@@ -22,7 +22,9 @@ SISUNI-sistema de saúde unificada
 
   CREATE DATABASE sus;
   CREATE SCHEMA susservice;
+  
   antes de executar o frontend, executar 'npm install' em seu diretório, para baixar as dependências do projeto.
+  
   antes de executar o backend, executar 'update project' do maven em seu diretório.
   
   na tela de login foi cadastrado para teste o seguinte usuario; usuario: root@gmail.com senha: root
