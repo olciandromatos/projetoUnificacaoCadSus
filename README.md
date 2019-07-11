@@ -1,24 +1,23 @@
 # Sistema de Cadastro Unificado de Saúde Pública (SUS 2.0)
 SISUNI-sistema de saúde unificada (apelido)
 
-- Cadastro do paciente uma única vez, independente do hospital ou postos de saúde pública
-- o sistema busca seus dodos do último atendimento, e seu histórico anterior de saúde registrado em outros postos/hospitais
-- recadastro, apenas com adição dos dados atuais, caso ele já exista
-- atendimento com necessidade apenas do cpf 
-- cadastro disponível para os hospitais e postos de saúde pública
+- Cadastro do paciente uma única vez, independente do hospital ou postos de saúde pública.
+- o sistema busca os dados do seu histórico anterior de saúde registrado em outros postos/hospitais.
+- recadastro, apenas com adição dos dados atuais, caso ele já exista, haverá necessidade apenas do cpf.
+- cadastro disponível para os hospitais e postos de saúde pública.
 
 # susservice
-- lado do servidor(Backend), criado usando Spring boot 2.1.2, Spring Data JPA, Spring MVC e posteriormente Spring security
-- Postgres é o banco de dados usado 
-- H2 é um banco em memoria usado para teste 
-- Liquibase é um versionador de registros no banco de dados
+- lado do servidor(Backend), criado usando Spring boot 2.1.2, Spring Data JPA, Spring MVC e posteriormente Spring security.
+- Postgres é o banco de dados usado, há também como utilizar o mysql, apenas comentando os dados do postgres e descomentando os dados do mysql.
+- H2 é um banco em memoria usado para teste.
+- Liquibase é um versionador de registros no banco de dados.
 
 # susclient
-- lado do cliente(Frontend), criado usando Angular versão 6
-- PrimeNG versão 7 - é um framework da Primetek para ser usado para criar telas
+- lado do cliente(Frontend), criado usando Angular versão 6.
+- PrimeNG versão 7 - é um framework da Primetek para ser usado para criar telas do frontend.
 
 # Importante
-- rodar esses script no banco
+- rodar esses script no banco:
 
   CREATE DATABASE sus;
   
