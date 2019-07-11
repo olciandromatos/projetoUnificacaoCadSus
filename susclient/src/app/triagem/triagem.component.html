@@ -8,7 +8,7 @@
 
         <div class="ui-g-3 ui-fluid">
           <label for="float-input">Peso (KG): </label>
-          <input id="float-input" name="peso" placeholder="85" type="text" pInputText />
+          <input id="float-input" name="peso" placeholder="85" type="number" pInputText />
         </div>
 
         <div class="ui-g-3 ui-fluid">
@@ -19,11 +19,11 @@
         <div class="ui-g-3 ui-fluid">
             <label for="float-input">Pressão: </label>
             <p-inputMask type="text" name="pressao"  mask="99/99" ></p-inputMask>
-          </div>
+        </div>
 
         <div class="ui-g-3 ui-fluid">
-            <label for="float-input">Status: </label>
-            <input id="float-input" name="status" type="text" pInputText />
+          <label for="float-input" class="label">Status de saúde: </label>
+          <p-dropdown id="float-input" [options]="status" placeholder="Selecione um dos status abaixo" optionLabel="descricao"></p-dropdown>
         </div>
 
         <div class="ui-g-12 ui-fluid">
