@@ -21,6 +21,7 @@ SISUNI-sistema de saúde unificada (apelido)
 - rodar esses script no banco
 
   CREATE DATABASE sus;
+  
   CREATE SCHEMA susservice;
   
   antes de executar o frontend, executar 'npm install' em seu diretório, para baixar as dependências do projeto.
