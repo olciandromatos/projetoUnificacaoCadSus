@@ -1,5 +1,4 @@
 # Sistema de Cadastro Unificado de Saúde Pública (SUS 2.0)
-SISUNI-sistema de saúde unificada (apelido)
 
 Informação do sistema: Projeto para restruturação do sus atual, usado no serviço público de saúde. A ideia desse projeto, é usar de forma efetiva, um sistema onde o paciente possa, usando apenas o CPF, se consultar no sistema de saúde público - hospitais e postos, e se cadastrarem caso não possuam registro no sistema, e ainda manter o histórico de cada paciente de forma a servir de insumos para uma consulta médica, onde através desses dados o médico possa ter um diagnóstico mais preciso, com o paciente.
 
