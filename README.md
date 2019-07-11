@@ -6,6 +6,9 @@ SISUNI-sistema de saúde unificada (apelido)
 - recadastro, apenas com adição dos dados atuais, caso ele já exista, haverá necessidade apenas do cpf.
 - cadastro disponível para os hospitais e postos de saúde pública.
 
+# Sistema de Cadastro Unificado de Saúde Pública (SUS 2.0)
+- reservado para adicionar documentos importantes que facilite a comprienção dos envolvidos no projeto.
+
 # susservice
 - lado do servidor(Backend), criado usando Spring boot 2.1.2, Spring Data JPA, Spring MVC e posteriormente Spring security.
 - Postgres é o banco de dados usado, há também como utilizar o mysql, apenas comentando os dados do postgres e descomentando os dados do mysql.
