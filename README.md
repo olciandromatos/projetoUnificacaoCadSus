@@ -26,6 +26,10 @@ SISUNI-sistema de saúde unificada (apelido)
   
   CREATE SCHEMA susservice;
   
+  Caso use linux baseado no ubuntu:
+  -Instalar angular na versão 6 - npm install @angular/cli@6.0.0 e visite a pagina https://cli.angular.io/ e siga os passos.
+  -Instalar nodejs na versão 8 -  https://nodejs.org/de/download/
+  
   Antes de executar o frontend, executar 'npm install' em seu diretório, para baixar as dependências do projeto.
   
   Antes de executar o backend, executar 'update project' do maven em seu diretório, para baixar as dependências do projeto.
