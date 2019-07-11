@@ -1,4 +1,4 @@
-# sistema de cadastro unificado de saúde pública
+# Sistema de Cadastro Unificado de Saúde Pública (SUS 2.0)
 SISUNI-sistema de saúde unificada
 
 - Cadastro do paciente uma única vez, independente do hospital ou postos de saúde pública
