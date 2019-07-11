@@ -1,10 +1,12 @@
-<p-panel header="Cadastro de Triagem" [toggleable]="false">
+<p-panel header="Consulta" [toggleable]="false">
   <form>
     <div class="ui-g">
+
       <div class="ui-g-12 ui-fluid">
-          <label for="float-input">Nome do paciente: </label>
-          <input id="float-input" name="nome" [disabled]="true" placeholder="aqui vem o nome do paciente não editavel" type="text" pInputText />
-        </div>
+          <label for="float-input" class="label">Nome do paciente: </label>
+          <!-- <input id="float-input" name="nome" [disabled]="true" placeholder="aqui vem o nome do paciente não editavel" type="text" pInputText /> -->
+          <p-dropdown id="float-input" [options]="pacientes" placeholder="Selecione um dos estados abaixo" optionLabel="nome"></p-dropdown>
+      </div>
 
       <div class="ui-g-3 ui-fluid">
         <label for="float-input">Peso (KG):: </label>
@@ -43,4 +45,25 @@
   </form>
 </p-panel>
 
+<div class="margin-top">
+  <p-panel header="Atestado" [toggleable]="false">
+    <form>
+      <div class="ui-g">
+        <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Quantidade de dias: </label>
+          <input id="float-input" name="peso" number="true" type="text" pInputText />
+        </div>
+
+        <div class="ui-g-6 ui-fluid">
+          <label for="float-input">Peso (KG): </label>
+          <input id="float-input" name="peso" type="text" pInputText />
+        </div>
+
+        <div>
+          <button pButton type="submit" (click)="imprimirPDF()" class="btn-save" label="Gerar Atestado" ></button>
+        </div>
+      </div>
+    </form>
+  </p-panel>
+</div>
 

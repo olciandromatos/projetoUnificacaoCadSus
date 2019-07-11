@@ -45,27 +45,27 @@
   </div>
 </p-panel>
 
-<div class="painel">
-<p-panel header="Lista de pacientes prioritários" [toggleable]="false">
-    <p-dataTable [value]="pacientes" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
-        <p-column header="Nome">
-            <ng-template let-paciente="rowData" pTemplate="body">
-                {{paciente.nome}}
-            </ng-template>
-        </p-column>
+<div class="margin-top">
+    <p-panel header="Lista de pacientes prioritários" [toggleable]="false">
+        <p-dataTable [value]="pacientes" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+            <p-column header="Nome">
+                <ng-template let-paciente="rowData" pTemplate="body">
+                    {{paciente.nome}}
+                </ng-template>
+            </p-column>
 
-        <p-column header="CPF">
-            <ng-template let-paciente="rowData" pTemplate="body">
-                {{paciente.cpf}}
-            </ng-template>
-        </p-column>
+            <p-column header="CPF">
+                <ng-template let-paciente="rowData" pTemplate="body">
+                    {{paciente.cpf}}
+                </ng-template>
+            </p-column>
 
-        <p-column header="Status">
-            <ng-template let-paciente="rowData" pTemplate="body">
-            </ng-template>
-        </p-column>
+            <p-column header="Status">
+                <ng-template let-paciente="rowData" pTemplate="body">
+                </ng-template>
+            </p-column>
 
-      </p-dataTable>
-      {{ dt.totalRecords }} Registros
-</p-panel>
+        </p-dataTable>
+        {{ dt.totalRecords }} Registros
+    </p-panel>
 </div>
