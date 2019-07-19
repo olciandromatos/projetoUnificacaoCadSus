@@ -4,11 +4,18 @@ import { Municipio } from './domain/Municipio';
 import { Estado } from './domain/Estado';
 import { Paciente } from './domain/Paciente';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Medico } from './domain/Medico';
 import { Pais } from './domain/Pais';
 import { StatusSaude } from './domain/StatusSaude';
+import { Medicamento } from './domain/Medicamento';
+
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type':  'application/json',
+  })
+};
 
 @Injectable({
   providedIn: 'root'
@@ -49,5 +56,14 @@ export class ComumServiceService {
 
   public getStatus(): Observable<StatusSaude[]> {
     return this.http.get<StatusSaude[]>('http://localhost:8080/api/statusSaude');
+  }
+
+  public getMedicamento(): Observable<Medicamento[]> {
+    return this.http.get<Medicamento[]>('http://localhost:8080/api/medicamento');
+  }
+
+  public cadastrar(medicamento: Medicamento): Observable<Medicamento> {
+    console.log(medicamento);
+    return this.http.post<Medicamento>('http://localhost:8080/api/medicamento', medicamento, httpOptions);
   }
 }

@@ -16,6 +16,10 @@ public class MedicamentoService {
 	public List<Medicamento> allMedicamentos(){
 		return repository.findAll();
 	}
+	
+	public void salvar(Medicamento medicamento) {
+		repository.save(medicamento);
+	}
 
 	public MedicamentoRepository getRepository() {
 		return repository;
