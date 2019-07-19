@@ -10,3 +10,12 @@ body{
 .margin-top{
   margin-top: 60px !important;
 }
+
+.botao-direita{
+  margin-top: 20px;
+  float: right !important;
+}
+
+.botao-direita-padrao{
+  float: right;
+}

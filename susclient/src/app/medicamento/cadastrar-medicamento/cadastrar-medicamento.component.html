@@ -4,23 +4,59 @@
       <div class="ui-g">
         <div class="ui-g-6 ui-fluid">
           <label for="float-input">Nome do medicamento: </label>
-          <input id="float-input" name="peso" number="true" type="text" pInputText />
+          <input id="float-input" name="nome" [(ngModel)]="medicamento.nome"  number="true" type="text" pInputText />
         </div>
 
         <div class="ui-g-6 ui-fluid">
           <label for="float-input">Quantidade: </label>
-          <input id="float-input" name="peso" type="number" pInputText />
+          <input id="float-input" name="quantidade" [(ngModel)]="medicamento.quantidade"  type="number" pInputText />
         </div>
 
         <div class="ui-g-12 ui-fluid">
           <label for="float-input">Descrição: </label>
-          <textarea [rows]="4" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+          <textarea [rows]="4" [(ngModel)]="medicamento.descricao" name="descricao"  [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
         </div>
 
-        <div>
-          <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+        <div class="botao-direita-padrao">
+          <button pButton type="submit" class="btn-save" (click)="salvar()"  label="Cadastrar" ></button>
         </div>
       </div>
     </form>
   </p-panel>
+</div>
+
+<div class="margin-top">
+  <p-panel header="Lista de medicamentos" [toggleable]="false">
+    <p-dataTable  paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+
+        <ng-template pTemplate="caption">
+            <div class="ui-helper-clearfix">
+                <button type="button" pButton icon="fa fa-file" iconPos="left" label="Selection Only"  style="float:right"></button>
+            </div>
+        </ng-template>
+
+        <p-column header="Código">
+            <ng-template let-medicamento="rowData" pTemplate="body">
+                {{medicamento.id}}
+            </ng-template>
+        </p-column>
+
+        <p-column header="Nome">
+            <ng-template let-medicamento="rowData" pTemplate="body">
+                {{medicamento.nome}}
+            </ng-template>
+        </p-column>
+
+        <p-column header="Quantidade">
+            <ng-template let-medicamento="rowData" pTemplate="body">
+                {{medicamento.quantidade}}
+            </ng-template>
+        </p-column>
+
+      </p-dataTable>
+      {{ dt.totalRecords }} Registros
+  </p-panel>
+  <div class="botao-direita">
+      <button pButton type="submit" (click)="imprimirPDF()" class="btn-save" label="Imprimir" ></button>
+  </div>
 </div>
