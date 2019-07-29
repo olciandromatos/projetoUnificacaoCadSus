@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="olciandro.matos" id="hibernate-sequence">
+		<sql>
+		   CREATE SEQUENCE IF NOT EXISTS id_sequence
+	       INCREMENT 1 
+	       MINVALUE 1 
+	       MAXVALUE 999999999
+	       START 1 
+	       CACHE 1;
+	    </sql>
+	</changeSet>
+
+</databaseChangeLog>

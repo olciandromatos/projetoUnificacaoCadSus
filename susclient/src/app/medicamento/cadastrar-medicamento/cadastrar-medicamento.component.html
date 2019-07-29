@@ -27,7 +27,7 @@
 
 <div class="margin-top">
   <p-panel header="Lista de medicamentos" [toggleable]="false">
-    <p-dataTable  paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+    <p-dataTable [value]="medicamentos" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
 
         <ng-template pTemplate="caption">
             <div class="ui-helper-clearfix">

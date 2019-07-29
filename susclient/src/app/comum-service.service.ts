@@ -63,7 +63,10 @@ export class ComumServiceService {
   }
 
   public cadastrar(medicamento: Medicamento): Observable<Medicamento> {
-    console.log(medicamento);
+    console.log('Codigo ' + medicamento.id);
+    console.log('Nome ' + medicamento.nome);
+    console.log('Quantidade ' + medicamento.quantidade);
+    console.log('Descricao ' + medicamento.descricao);
     return this.http.post<Medicamento>('http://localhost:8080/api/medicamento', medicamento, httpOptions);
   }
 }
