@@ -39,4 +39,8 @@ export class CadastrarPacienteComponent implements OnInit {
     this.servico.getSexo().subscribe(resposta => this.sexo = resposta);
   }
 
+  cadastrar() {
+
+  }
+
 }

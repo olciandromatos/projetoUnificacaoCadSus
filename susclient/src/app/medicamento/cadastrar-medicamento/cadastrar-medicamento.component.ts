@@ -16,6 +16,7 @@ export class CadastrarMedicamentoComponent implements OnInit {
   constructor(private service: ComumServiceService) { }
 
   ngOnInit() {
+    this.listarMedicamento();
   }
 
   imprimirPDF() {
