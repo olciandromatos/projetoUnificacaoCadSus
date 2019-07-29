@@ -1,24 +1,25 @@
 <div class="margin-top">
   <p-panel header="Cadastro de medicamentos" [toggleable]="false">
-    <form>
+
+    <form method="post" (ngSubmit)="salvar()" [formGroup]="formulario">
       <div class="ui-g">
         <div class="ui-g-6 ui-fluid">
-          <label for="float-input">Nome do medicamento: </label>
-          <input id="float-input" name="nome" [(ngModel)]="medicamento.nome"  number="true" type="text" pInputText />
+          <label for="nome">Nome do medicamento: </label>
+          <input id="nome" name="nome" formControlName="nome"  number="true" type="text" pInputText />
         </div>
 
         <div class="ui-g-6 ui-fluid">
-          <label for="float-input">Quantidade: </label>
-          <input id="float-input" name="quantidade" [(ngModel)]="medicamento.quantidade"  type="number" pInputText />
+          <label for="quantidade">Quantidade: </label>
+          <input id="quantidade" name="quantidade" formControlName="quantidade"  type="number" pInputText />
         </div>
 
         <div class="ui-g-12 ui-fluid">
-          <label for="float-input">Descrição: </label>
-          <textarea [rows]="4" [(ngModel)]="medicamento.descricao" name="descricao"  [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+          <label for="descricao">Descrição: </label>
+          <textarea id="descricao" [rows]="4" formControlName="descricao" name="descricao"  [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
         </div>
 
         <div class="botao-direita-padrao">
-          <button pButton type="submit" class="btn-save" (click)="salvar()"  label="Cadastrar" ></button>
+          <button pButton type="submit" class="btn-save" (click)="salvar()" [disabled]="formulario.invalid" label="Cadastrar" ></button>
         </div>
       </div>
     </form>

@@ -36,11 +36,10 @@ public class MedicamentoResource {
 		if(medicamento.getId() == null) {
 			System.out.println("Id do objeto nulo '"+ medicamento.getId()+"'");
 			medicamento.setDataMedicacao(LocalDate.now());
-//			medicamento.setId(1L);
 			service.salvar(medicamento);
 			System.out.println("Medicamento criado com sucesso");
 		}else {
-			service.salvar(medicamento);
+			System.out.println("O Objeto nulo");
 		}
 		
 		return new ResponseEntity<>(HttpStatus.CREATED);
