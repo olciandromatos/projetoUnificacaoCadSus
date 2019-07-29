@@ -2,11 +2,11 @@
     <form>
       <div class="ui-g">
         <div class="ui-g-6 ui-fluid">
-          <p-inputMask type="text" name="telefone" placeholder="Número do CPF" mask="999.999.999-99" ></p-inputMask>
+          <p-inputMask type="text" name="cpf" [(ngModel)]="paciente.cpf"  placeholder="Número do CPF" mask="999.999.999-99" ></p-inputMask>
         </div>
 
         <div class="ui-g-6">
-            <button icon="pi pi-search" type="button" pButton pTooltip="Pesquisar" tooltipPosition="top" label="Buscar"></button>
+            <button icon="pi pi-search" type="button" (click)="porCPF()" pButton pTooltip="Pesquisar" tooltipPosition="top" label="Buscar"></button>
         </div>
       </div>
     </form>

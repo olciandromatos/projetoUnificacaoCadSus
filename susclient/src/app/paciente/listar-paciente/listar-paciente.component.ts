@@ -22,4 +22,12 @@ export class ListarPacienteComponent implements OnInit {
     this.servico.getPaciente().subscribe(resposta => this.pacientes = resposta);
   }
 
+  porCPF() {
+    this.servico.getPacientePorCPF(this.paciente.cpf).subscribe(resposta => {
+      console.log('Resultado ' + resposta);
+      console.log('CPF ' + this.paciente.cpf.replace(/\D+/g, ''));
+
+    });
+  }
+
 }
