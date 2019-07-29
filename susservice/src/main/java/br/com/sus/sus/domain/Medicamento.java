@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Medicamento implements Serializable {
@@ -16,8 +15,7 @@ public class Medicamento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@SequenceGenerator(name="seq-gen",sequenceName="id_sequence")
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq-gen")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="seq_medicamento", unique=true, nullable=false)
 	private Long id;
 	

@@ -9,31 +9,16 @@
 
 
 	<changeSet id="003" author="olciandro.magalhaes">
-	
-		<createTable tableName="medicamento">
-		
-            <column name="seq_medicamento" type="bigint" autoIncrement="${autoIncrement}"
-            remarks="Número sequencial que identifica unicamente um medicamento. Chave primária da tabela.">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_medicamento"/>
-            </column>
-            
-            <column name="nome" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-            
-            <column name="quantidade" type="bigint">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="descricao" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="data_medicacao" type="date">
-                <constraints nullable="true" />
-            </column>
-            
-        </createTable>
+		<sql>
+			CREATE TABLE susservice.medicamento (
+				seq_medicamento SERIAL NOT NULL,
+				nome character varying(100) NOT NULL,
+				quantidade BIGINT NOT NULL,
+				descricao character varying(255),
+				data_medicacao date,
+				CONSTRAINT pk_medicamento PRIMARY KEY (seq_medicamento)
+			);
+		</sql>	
 	</changeSet>
 
 </databaseChangeLog>
