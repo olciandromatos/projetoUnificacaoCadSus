@@ -11,6 +11,7 @@ export class ListarPacienteComponent implements OnInit {
 
   paciente: Paciente = new Paciente;
   pacientes: Paciente[] = new Array;
+  cpfFormatado: string;
 
   constructor(private servico: ComumServiceService) { }
 
@@ -23,9 +24,10 @@ export class ListarPacienteComponent implements OnInit {
   }
 
   porCPF() {
-    this.servico.getPacientePorCPF(this.paciente.cpf).subscribe(resposta => {
+    // this.paciente.cpf = this.paciente.cpf.replace(/\D+/g, '');
+    this.servico.getPacientePorCPF(this.paciente).subscribe(resposta => {
       console.log('Resultado ' + resposta);
-      console.log('CPF ' + this.paciente.cpf.replace(/\D+/g, ''));
+      console.log('CPF ' + this.paciente.cpf);
 
     });
   }

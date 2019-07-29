@@ -70,7 +70,7 @@ export class ComumServiceService {
     return this.http.post<Medicamento>('http://localhost:8080/api/medicamento', medicamento, httpOptions);
   }
 
-  public getPacientePorCPF(cpf: string) {
-    return this.http.post('http://localhost:8080/api/paciente/cpf', cpf);
+  public getPacientePorCPF(paciente: Paciente) {
+    return this.http.post('http://localhost:8080/api/paciente', paciente);
   }
 }

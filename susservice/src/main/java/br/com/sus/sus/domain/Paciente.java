@@ -85,4 +85,12 @@ public class Paciente implements Serializable{
 		return sexo;
 	}
 
+	@Override
+	public String toString() {
+		return "Paciente [nome=" + nome + ", cpf=" + cpf + ", email=" + email + ", telefone=" + telefone
+				+ ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + "]";
+	}
+	
+	
+
 }
