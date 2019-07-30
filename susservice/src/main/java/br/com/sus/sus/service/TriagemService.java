@@ -16,6 +16,10 @@ public class TriagemService {
 	public List<Triagem> findAllTriagem(){
 		return repository.findAll();
 	}
+	
+	public Triagem save(Triagem triagem) {
+		return repository.save(triagem);
+	}
 
 	public TriagemRepository getRepository() {
 		return repository;

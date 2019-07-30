@@ -1,3 +1,4 @@
+import { Triagem } from './domain/Triagem';
 import { Sexo } from './domain/Sexo';
 import { Especialidade } from './domain/Especialidade';
 import { Municipio } from './domain/Municipio';
@@ -60,6 +61,14 @@ export class ComumServiceService {
 
   public getMedicamento(): Observable<Medicamento[]> {
     return this.http.get<Medicamento[]>('http://localhost:8080/api/medicamento');
+  }
+
+  public cadastrarTriagem(triagem: Triagem): Observable<Triagem> {
+    console.log('Codigo ' + triagem.id);
+    console.log('Altura ' + triagem.altura);
+    console.log('peso ' + triagem.peso);
+    console.log('descrcao ' + triagem.descricao);
+    return this.http.post<Triagem>('http://localhost:8080/api/triagem', triagem);
   }
 
   public cadastrar(medicamento: Medicamento): Observable<Medicamento> {
