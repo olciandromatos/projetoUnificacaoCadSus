@@ -2,37 +2,37 @@
     <form>
       <div class="ui-g">
         <div class="ui-g-12 ui-fluid">
-            <label for="float-input">Nome do paciente: </label>
-            <input id="float-input" name="nome" [disabled]="true" placeholder="aqui vem o nome do paciente não editavel" type="text" pInputText />
+            <label for="nome">Nome do paciente: </label>
+            <input id="nome" name="nome" [disabled]="true" placeholder="aqui vem o nome do paciente não editavel" type="text" pInputText />
           </div>
 
         <div class="ui-g-3 ui-fluid">
-          <label for="float-input">Peso (KG): </label>
-          <input id="float-input" name="peso" placeholder="85" type="number" pInputText />
+          <label for="peso">Peso (KG): </label>
+          <input id="peso" name="peso" [(ngModel)]="triagem.peso" placeholder="85" pInputText />
         </div>
 
         <div class="ui-g-3 ui-fluid">
-          <label for="float-input">Altura: </label>
-          <p-inputMask type="text" name="altura" placeholder="1.75" mask="9.99" ></p-inputMask>
+          <label for="altura">Altura: </label>
+          <p-inputMask id="altura" name="altura" [(ngModel)]="triagem.altura" placeholder="1.75" mask="9.99" ></p-inputMask>
         </div>
 
         <div class="ui-g-3 ui-fluid">
-            <label for="float-input">Pressão: </label>
-            <p-inputMask type="text" name="pressao"  mask="99/99" ></p-inputMask>
+            <label for="pressao">Pressão: </label>
+            <p-inputMask id="pressao" name="pressao" [(ngModel)]="triagem.pressao" mask="99/99" ></p-inputMask>
         </div>
 
         <div class="ui-g-3 ui-fluid">
-          <label for="float-input" class="label">Status de saúde: </label>
-          <p-dropdown id="float-input" [options]="status" placeholder="Selecione um dos status abaixo" optionLabel="descricao"></p-dropdown>
+          <label for="status" class="label">Status de saúde: </label>
+          <p-dropdown id="status" [options]="status" placeholder="Selecione um dos status abaixo" optionLabel="descricao"></p-dropdown>
         </div>
 
         <div class="ui-g-12 ui-fluid">
-            <label for="float-input">Mais detalhes: </label>
-            <textarea [rows]="3" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+            <label for="detalhes">Mais detalhes: </label>
+            <textarea id="detalhes" [rows]="3" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
         </div>
 
         <div>
-          <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+          <button pButton type="submit" class="btn-save" (click)="save()" label="Cadastrar" ></button>
         </div>
       </div>
     </form>
