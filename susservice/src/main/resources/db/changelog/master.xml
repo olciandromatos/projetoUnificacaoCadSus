@@ -20,7 +20,7 @@
     <include file="db/changelog/011_create_table_municipio.xml"/>
     <include file="db/changelog/012_create_table_pais.xml"/>
     <include file="db/changelog/013_add_constraint_endereco.xml"/>
-    <!-- <include file="db/changelog/014_insert_table_municipio_estado_1_ao_4.xml"/> -->
+    <include file="db/changelog/014_insert_table_municipio_estado_2_ao_4.xml"/>
     <include file="db/changelog/015_insert_table_municipio_acre.xml"/>
     <include file="db/changelog/016_create_table_triagem.xml"/>
     <include file="db/changelog/017_create_table_status_saude.xml"/>
@@ -40,5 +40,6 @@
    <include file="db/changelog/032_insert_table_sexo.xml"/>
    <include file="db/changelog/033_add_constraint_table_paciente.xml"/>
    <include file="db/changelog/034_create_table_unidade_saude.xml"/>
+   <include file="db/changelog/035_insert_table_municipio_estado_5_ao_7.xml"/>
     
 </databaseChangeLog>
