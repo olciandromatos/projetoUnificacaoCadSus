@@ -5,4 +5,6 @@ export class Paciente {
   email: string;
   telefone: string;
   dataNascimento: string;
+  endereco: Endereco;
+  sexo: Sexo;
 }

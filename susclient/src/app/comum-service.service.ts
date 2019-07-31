@@ -80,6 +80,10 @@ export class ComumServiceService {
   }
 
   public getPacientePorCPF(paciente: Paciente) {
+    return this.http.post('http://localhost:8080/api/paciente/cpf', paciente.cpf);
+  }
+
+  public cadastrarPaciente(paciente: Paciente) {
     return this.http.post('http://localhost:8080/api/paciente', paciente);
   }
 }

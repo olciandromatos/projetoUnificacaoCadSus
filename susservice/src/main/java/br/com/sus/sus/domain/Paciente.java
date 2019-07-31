@@ -25,6 +25,7 @@ public class Paciente implements Serializable{
 	private String email;
 	private String telefone;
 	private String dataNascimento;
+	private boolean emAtendimento;
 	
 	@OneToOne
 	private Sexo sexo;
@@ -83,6 +84,14 @@ public class Paciente implements Serializable{
 	
 	public Sexo getSexo() {
 		return sexo;
+	}
+	
+	public boolean isEmAtendimento() {
+		return emAtendimento;
+	}
+
+	public void setEmAtendimento(boolean emAtendimento) {
+		this.emAtendimento = emAtendimento;
 	}
 
 	@Override
