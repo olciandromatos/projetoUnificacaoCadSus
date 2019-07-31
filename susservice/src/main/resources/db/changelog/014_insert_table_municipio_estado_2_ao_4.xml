@@ -7,31 +7,6 @@
 	
 	<changeSet id="15-1" author="olciandro.magalhaes">
 		<sql>
-			INSERT INTO "municipio" VALUES(3, 'Brasiléia', 1);
-			INSERT INTO "municipio" VALUES(4, 'Bujari', 1);
-			INSERT INTO "municipio" VALUES(5, 'Capixaba', 1);
-			INSERT INTO "municipio" VALUES(6, 'Cruzeiro do Sul', 1);
-			INSERT INTO "municipio" VALUES(7, 'Epitaciolândia', 1);
-			INSERT INTO "municipio" VALUES(8, 'Feijó', 1);
-			INSERT INTO "municipio" VALUES(9, 'Jordão', 1);
-			INSERT INTO "municipio" VALUES(10, 'Mancio Lima', 1);
-			INSERT INTO "municipio" VALUES(11, 'Manoel Urbano', 1);
-			INSERT INTO "municipio" VALUES(12, 'Marechal Thaumaturgo', 1);
-			INSERT INTO "municipio" VALUES(13, 'Plácido de Castro', 1);
-			INSERT INTO "municipio" VALUES(14, 'Porto Acre', 1);
-			INSERT INTO "municipio" VALUES(15, 'Porto Walter', 1);
-			INSERT INTO "municipio" VALUES(16, 'Rio Branco', 1);
-			INSERT INTO "municipio" VALUES(17, 'Rodrigues Alves', 1);
-			INSERT INTO "municipio" VALUES(18, 'Santa Rosa do Purus', 1);
-			INSERT INTO "municipio" VALUES(19, 'Sena Madureira', 1);
-			INSERT INTO "municipio" VALUES(20, 'Senador Guiomard', 1);
-			INSERT INTO "municipio" VALUES(21, 'Tarauaca', 1);
-			INSERT INTO "municipio" VALUES(22, 'Xapuri', 1);
-		</sql>
-	</changeSet> 
-
-    <changeSet id="15-2" author="olciandro.magalhaes">
-        <sql>
             INSERT INTO "municipio" VALUES (0023, 'Agua Branca', 02);
             INSERT INTO "municipio" VALUES (0024, 'Alazao', 02);
             INSERT INTO "municipio" VALUES (0025, 'Alecrim', 02);
