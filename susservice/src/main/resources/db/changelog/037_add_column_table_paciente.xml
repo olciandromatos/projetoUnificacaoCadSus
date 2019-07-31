@@ -8,19 +8,10 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-	<changeSet id="001" author="olciandro.magalhaes">
+	<changeSet id="037" author="olciandro.magalhaes">
          <sql>
-			CREATE TABLE susservice.paciente (
-				seq_paciente SERIAL NOT NULL,
-				nome character varying(100),
-				cpf character varying(20),
-				email character varying(100),
-				telefone character varying(100),
-				data_nascimento character varying(100),
-				sexo_seq_sexo bigint,
-				seq_medicamento bigint,
-				CONSTRAINT pk_paciente PRIMARY KEY (seq_paciente)
-			);
+			ALTER TABLE susservice.paciente
+            ADD COLUMN "em_atendimento" boolean;
 		</sql>
 	</changeSet>
 

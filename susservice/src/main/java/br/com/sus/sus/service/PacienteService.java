@@ -32,6 +32,10 @@ public class PacienteService {
 		return objetoPorCPF;
 	}
 	
+	public Paciente save(Paciente paciente) {
+		return pacienteRepository.save(paciente);
+	}
+	
 	public PacienteRepository getPacienteRepository() {
 		return pacienteRepository;
 	}

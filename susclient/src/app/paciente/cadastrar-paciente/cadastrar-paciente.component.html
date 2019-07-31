@@ -2,62 +2,67 @@
   <form>
     <div class="ui-g">
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Nome completo: </label>
-        <input id="float-input" type="text" pInputText />
+        <label for="nome">Nome completo: </label>
+        <input id="nome" type="text" [(ngModel)]="paciente.nome" name="nome" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Telefone: </label>
-        <p-inputMask type="text" name="telefone" placeholder="(99) 99999-9999" mask="(99) 99999-9999" ></p-inputMask>
+        <label for="telefone">Telefone: </label>
+        <p-inputMask id="telefone" type="text" [(ngModel)]="paciente.telefone" name="telefone" placeholder="(99) 99999-9999" mask="(99) 99999-9999" ></p-inputMask>
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Data de Nascimento: </label>
-        <p-inputMask type="text" name="nascimento"  mask="99/99/9999" ></p-inputMask>
-      </div>
-
-      <div class="ui-g-6 ui-fluid">
-        <label for="float-input">E-mail: </label>
-        <input id="float-input" type="email" placeholder="Ex:fulano@gmail.com" pInputText />
-      </div>
-
-      <div class="ui-g-6 ui-fluid">
-        <label for="float-input">Nome do Acompanhate: </label>
-        <input id="float-input" type="text" pInputText />
+        <label for="nascimento">Data de Nascimento: </label>
+        <p-inputMask id="nascimento" type="text" name="nascimento" [(ngModel)]="paciente.dataNascimento" mask="99/99/9999" ></p-inputMask>
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Logradouro: </label>
-        <input id="float-input" type="text" placeholder="Ex: Rua, quadra" pInputText />
+        <label for="cpf">CPF: </label>
+        <p-inputMask id="cpf" type="text" name="cpf" [(ngModel)]="paciente.cpf" mask="999.999.999-99" ></p-inputMask>
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Número: </label>
-        <input id="float-input" type="text" pInputText />
+        <label for="email">E-mail: </label>
+        <input id="email" type="email" [(ngModel)]="paciente.email" placeholder="Ex:fulano@gmail.com" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Complemento: </label>
-        <input id="float-input" type="text" pInputText />
+        <label for="acompanhante">Nome do Acompanhate: </label>
+        <input id="acompanhante" type="text" name="acompanhante" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Estado: </label>
-        <p-dropdown id="float-input" [options]="estados" placeholder="Selecione um dos estados abaixo" optionLabel="nome"></p-dropdown>
+        <label for="logradouro">Logradouro: </label>
+        <input id="logradouro" type="text" name="logradouro" placeholder="Ex: Rua, quadra" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Municipio: </label>
-        <p-dropdown id="float-input" [options]="municipios" placeholder="Selecione um dos municipios abaixo" optionLabel="nome"></p-dropdown>
+        <label for="numero">Número: </label>
+        <input id="numero" type="text" name="numero" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
-        <label for="float-input">Sexo: </label>
-        <p-dropdown id="float-input" [options]="sexo" placeholder="Selecione um dos sexos" optionLabel="descricao"></p-dropdown>
+        <label for="complemento">Complemento: </label>
+        <input id="complemento" type="text" name="complemento" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label for="estado">Estado: </label>
+        <p-dropdown id="estado" [options]="estados" name="estado" placeholder="Selecione um dos estados abaixo" optionLabel="nome"></p-dropdown>
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label for="municipio">Municipio: </label>
+        <p-dropdown id="municipio" [options]="municipios" name="municipio" placeholder="Selecione um dos municipios abaixo" optionLabel="nome"></p-dropdown>
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label for="sexo">Sexo: </label>
+        <p-dropdown id="sexo" [options]="sexo" [(ngModel)]="paciente.sexo" name="sexo" placeholder="Selecione um dos sexos" optionLabel="descricao"></p-dropdown>
       </div>
 
       <div class="botao">
-        <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+        <button pButton type="submit" class="btn-save" (click)="cadastrar()" label="Cadastrar" ></button>
       </div>
     </div>
   </form>

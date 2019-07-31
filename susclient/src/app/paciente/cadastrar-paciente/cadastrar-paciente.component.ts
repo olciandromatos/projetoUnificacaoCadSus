@@ -40,7 +40,9 @@ export class CadastrarPacienteComponent implements OnInit {
   }
 
   cadastrar() {
-
+    this.servico.cadastrarPaciente(this.paciente).subscribe(resultado => {
+        console.log(this.paciente);
+    });
   }
 
 }
