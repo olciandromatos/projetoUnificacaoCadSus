@@ -14,9 +14,10 @@ import javax.persistence.ManyToOne;
 public class Atendimento {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="seq_atendimento")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_atendimento", unique=true, nullable=false)
 	private Long id;
+	
 	private String nomeAtendente;
 	private LocalDateTime horaAtendimento = LocalDateTime.now();
 	private String prontuario;

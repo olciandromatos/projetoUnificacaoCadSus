@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class Estado {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="seq_estado")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_estado", unique=true, nullable=false)
 	private Long id;
 	private String nome;
 	private String sigla;

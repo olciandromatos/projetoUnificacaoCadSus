@@ -1,5 +1,6 @@
 package br.com.sus.sus.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,7 +10,8 @@ import javax.persistence.Id;
 public class UnidadeSaude {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_unidade_saude", unique=true, nullable=false)
 	private Long id;
 	private String nomeUnidade;
 //	private List<Medico> medicoPlantao;

@@ -16,8 +16,8 @@ public class Paciente implements Serializable{
 	
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="seq_paciente")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_paciente", unique=true, nullable=false)
 	private Long id;
 	
 	private String nome;

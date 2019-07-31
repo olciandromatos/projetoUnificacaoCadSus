@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class Especialidade {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name = "seq_especialidade")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_especialidade", unique=true, nullable=false)
 	private Long id;
 	private String descricao;
 

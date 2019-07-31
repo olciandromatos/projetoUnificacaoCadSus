@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class Sexo {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name="seq_sexo")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_sexo", unique=true, nullable=false)
 	private Long id;
 	private String descricao;
 

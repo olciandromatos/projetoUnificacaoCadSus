@@ -9,33 +9,12 @@
 
 
 	<changeSet id="027" author="olciandro.magalhaes">
-	
-		<createTable tableName="equipamento">
-		
-            <column name="seq_equipamento" type="bigint" autoIncrement="${autoIncrement}"
-            remarks="Número sequencial que identifica unicamente um equipamento. Chave primária da tabela.">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_equipamento"/>
-            </column>
-            
-            <column name="tipoEquipamento" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-            
-            <column name="destino" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="tempoUso" type="varchar(100)">
-                <constraints nullable="true" />
-            </column>
-
-        </createTable>
          <sql>
 			CREATE TABLE susservice.equipamento (
 				seq_equipamento SERIAL NOT NULL,
-				tipoEquipamento character varying(100),
+				tipo_equipamento character varying(100),
 				destino character varying(100),
-				tempoUso character varying(100),
+				tempo_uso character varying(100),
 				data_retirada date,
 				CONSTRAINT pk_equipamento PRIMARY KEY (seq_equipamento)
 			);

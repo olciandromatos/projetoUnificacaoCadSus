@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class Pais {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="seq_pais")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_pais", unique=true, nullable=false)
 	private Long id;
 	private String nome;
 	public Long getId() {

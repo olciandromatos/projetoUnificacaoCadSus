@@ -22,7 +22,7 @@ public class Medicamento implements Serializable {
 	private String nome;
 	private Long quantidade;
 	private String descricao;
-	private LocalDate dataMedicacao;
+	private LocalDate dataMedicacao = LocalDate.now();
 
 	public Long getId() {
 		return id;

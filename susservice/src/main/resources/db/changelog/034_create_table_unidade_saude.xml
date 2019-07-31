@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <databaseChangeLog
 	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -6,15 +7,17 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-	<changeSet author="olciandro.matos" id="hibernate-sequence">
-		<sql>
-		   CREATE SEQUENCE IF NOT EXISTS id_sequence
-	       INCREMENT 1 
-	       MINVALUE 1 
-	       MAXVALUE 999999999
-	       START 1 
-	       CACHE 1;
-	    </sql>
+
+	<changeSet id="027" author="olciandro.magalhaes">
+         <sql>
+			CREATE TABLE susservice.unidade_saude (
+				seq_unidade_saude SERIAL NOT NULL,
+				nome_unidade character varying(100),
+				status_plantao boolean,
+				medico_plantao bigint,
+				CONSTRAINT pk_unidade_saude PRIMARY KEY (seq_unidade_saude)
+			);
+		</sql>
 	</changeSet>
 
 </databaseChangeLog>

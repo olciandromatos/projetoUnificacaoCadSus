@@ -10,8 +10,8 @@ import javax.persistence.Id;
 public class StatusSaude {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@Column(name = "seq_status_saude")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_status_saude", unique=true, nullable=false)
 	private Long id;
 	private String descricao;
 

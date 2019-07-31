@@ -32,11 +32,13 @@
     <include file="db/changelog/023_add_comment_table_paciente.xml"/>
     <include file="db/changelog/025_insert_table_estado.xml"/>
    <!-- <include file="db/changelog/026_documentar_table_paciente.xml"/>-->
+   <include file="db/changelog/027_create_table_equipamento.xml"/>
    <include file="db/changelog/028_insert_table_paciente_teste.xml"/>
    <include file="db/changelog/029_insert_table_medico_teste.xml"/>
    <!--<include file="db/changelog/030_add_constraint_table_estado.xml"/>-->
    <include file="db/changelog/031_create_table_sexo.xml"/>
    <include file="db/changelog/032_insert_table_sexo.xml"/>
    <include file="db/changelog/033_add_constraint_table_paciente.xml"/>
+   <include file="db/changelog/034_create_table_unidade_saude.xml"/>
     
 </databaseChangeLog>

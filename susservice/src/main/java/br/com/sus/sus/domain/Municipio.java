@@ -12,8 +12,8 @@ import javax.persistence.ManyToOne;
 public class Municipio {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="seq_municipio")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_municipio", unique=true, nullable=false)
 	private Long id;
 	private String nome;
 	

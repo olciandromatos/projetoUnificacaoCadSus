@@ -14,8 +14,8 @@ import javax.persistence.ManyToOne;
 public class Consulta {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="seq_consulta")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_consulta", unique=true, nullable=false)
 	private Long id;
 	private LocalDate horaConsulta = LocalDate.now();
 	private String relatoMedico;

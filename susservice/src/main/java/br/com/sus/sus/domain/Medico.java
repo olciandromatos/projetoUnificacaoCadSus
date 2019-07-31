@@ -15,8 +15,8 @@ public class Medico implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE)
-	@Column(name="seq_medico")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="seq_medico", unique=true, nullable=false)
 	private Long id;
 	private String nome;
 	private String crm;
