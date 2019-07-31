@@ -44,5 +44,5 @@ Informação do sistema: Projeto para restruturação do sus atual, usado no ser
   
   senha: root
   
-  Para quem deseja contribuir no código, temos também um backlog de demandas ou contribua após rodar a aplicação e verifique alguma necessidade no sistema, que seja de cordo com sua proposta final.
+  Para quem deseja contribuir no código, temos também um backlog de demandas ou contribua após rodar a aplicação e verificar alguma necessidade no sistema, que seja de cordo com sua proposta final.
   link: https://trello.com/b/M0I4ONQg/sus
