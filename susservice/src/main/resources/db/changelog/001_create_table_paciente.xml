@@ -9,43 +9,19 @@
 
 
 	<changeSet id="001" author="olciandro.magalhaes">
-	
-		<createTable tableName="paciente">
-		
-            <column name="seq_paciente" type="bigint" autoIncrement="${autoIncrement}"
-            remarks="Número sequencial que identifica unicamente um paciente. Chave primária da tabela.">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_paciente"/>
-            </column>
-            
-            <column name="nome" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-            
-            <column name="cpf" type="varchar(30)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="email" type="varchar(100)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="telefone" type="varchar(100)">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="data_nascimento" type="date">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="sexo_seq_sexo" type="bigint" remarks="Campo identificador da tabela sexo Chave estrangeira importada da tabela SEXO">
-                <constraints nullable="true" />
-            </column>
-            
-             <column name="seq_medicamento" type="bigint" remarks="Campo identificador da tabela medicamento. Chave estrangeira importada da tabela MEDICAMENTO.">
-                <constraints nullable="true" />
-            </column>
-
-        </createTable>
+         <sql>
+			CREATE TABLE susservice.paciente (
+				seq_paciente SERIAL NOT NULL,
+				nome character varying(100),
+				cpf character varying(20),
+				email character varying(100),
+				telefone character varying(100),
+				data_nascimento date,
+				sexo_seq_sexo bigint,
+				seq_medicamento bigint,
+				CONSTRAINT pk_paciente PRIMARY KEY (seq_paciente)
+			);
+		</sql>
 	</changeSet>
 
 </databaseChangeLog>

@@ -9,33 +9,18 @@
 
 	
     <changeSet id="005" author="olciandro.magalhaes">
-    
-        <createTable tableName="consulta">
-            <column name="seq_consulta" type="bigint" autoIncrement="${autoIncrement}">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_consulta"/>
-            </column>
-            <column name="hora_consulta" type="date">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="relato_paciente" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="relato_medico" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="seq_medico" type="bigint" remarks="Campo identificador da tabela medico. Chave estrangeira importada da tabela MEDICO.">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="seq_paciente" type="bigint">
-                <constraints nullable="true" />
-            </column>
-
-        </createTable>
-
+        <sql>
+			CREATE TABLE susservice.consulta (
+				seq_consulta SERIAL NOT NULL,
+				hora_consulta date,
+				relato_paciente character varying(255),
+				relato_medico character varying(255),
+				telefone character varying(100),
+				seq_medico bigint,
+				seq_paciente bigint,
+				CONSTRAINT pk_consulta PRIMARY KEY (seq_consulta)
+			);
+		</sql>
     </changeSet>
     
 </databaseChangeLog>

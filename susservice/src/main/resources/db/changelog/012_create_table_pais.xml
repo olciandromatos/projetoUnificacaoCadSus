@@ -9,18 +9,13 @@
     <property name="now" value="current_timestamp" dbms="postgresql"/>
 
     <changeSet id="012" author="olciandro.magalhaes">
-    
-        <createTable tableName="pais">
-            <column name="seq_pais" type="bigint" autoIncrement="${autoIncrement}">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_pais"/>
-            </column>
-            
-            <column name="nome" type="varchar(50)">
-                <constraints nullable="false" />
-            </column>
-
-        </createTable>
-
+        <sql>
+			CREATE TABLE susservice.pais (
+				seq_pais SERIAL NOT NULL,
+				nome character varying(50),
+				CONSTRAINT pk_pais PRIMARY KEY (seq_pais)
+			);
+		</sql>
     </changeSet>
     
 </databaseChangeLog>

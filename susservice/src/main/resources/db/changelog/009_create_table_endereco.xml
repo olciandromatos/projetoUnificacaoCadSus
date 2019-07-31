@@ -8,45 +8,20 @@
                         
 
     <changeSet id="009" author="olciandro.magalhaes">
-    
-        <createTable tableName="endereco">
-            <column name="seq_endereco" type="bigint" autoIncrement="${autoIncrement}" remarks="PK número de sequência da tupla.">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_endereco"/>
-            </column>
-            <column name="logradouro" type="varchar(150)" remarks="Nome do logradouro.">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="bairro" type="varchar(150)" remarks="Nome do bairro.">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="numero" type="integer" remarks="Número de endereço.">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="complemento" type="varchar(150)" remarks="Complemento do endereço.">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="cep" type="varchar(255)" remarks="Código de endereçamento postal.">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="seq_municipio" type="bigint" remarks="Número de sequência da tupla referenciada na tabela MUNICIPIO">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="seq_estado" type="bigint" remarks="Número de sequência da tupla referenciada na tabela ESTADO">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="seq_pais" type="bigint" remarks="Número de sequência da tupla referenciada na tabela PAIS">
-                <constraints nullable="true" />
-            </column>
-
-        </createTable>
-
+        <sql>
+			CREATE TABLE susservice.endereco (
+				seq_endereco SERIAL NOT NULL,
+				logradouro character varying(200),
+				bairro character varying(200),
+				numero character varying(100),
+				complemento character varying(150),
+				cep character varying(150),
+				seq_municipio bigint,
+				seq_estado bigint,
+				seq_pais bigint,
+				CONSTRAINT pk_endereco PRIMARY KEY (seq_endereco)
+			);
+		</sql>
     </changeSet>
      
 </databaseChangeLog>

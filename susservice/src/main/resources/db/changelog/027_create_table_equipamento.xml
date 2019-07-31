@@ -30,6 +30,16 @@
             </column>
 
         </createTable>
+         <sql>
+			CREATE TABLE susservice.equipamento (
+				seq_equipamento SERIAL NOT NULL,
+				tipoEquipamento character varying(100),
+				destino character varying(100),
+				tempoUso character varying(100),
+				data_retirada date,
+				CONSTRAINT pk_equipamento PRIMARY KEY (seq_equipamento)
+			);
+		</sql>
 	</changeSet>
 
 </databaseChangeLog>

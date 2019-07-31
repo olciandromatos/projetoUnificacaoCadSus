@@ -9,30 +9,16 @@
 
 	
     <changeSet id="007" author="olciandro.magalhaes">
-    
-        <createTable tableName="atendimento">
-            <column name="seq_atendimento" type="bigint" autoIncrement="${autoIncrement}">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_atendimento"/>
-            </column>
-            
-            <column name="nome_atendente" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="hora_atendimento" type="date">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="prontuario" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="seq_paciente" type="bigint" remarks="Campo identificador da tabela paciente. Chave estrangeira importada da tabela PACIENTE.">
-                <constraints nullable="true" />
-            </column>
-            
-        </createTable>
-
+        <sql>
+			CREATE TABLE susservice.atendimento (
+				seq_atendimento SERIAL NOT NULL,
+				nome_atendente character varying(255),
+				hora_atendimento date,
+				prontuario character varying(255),
+				seq_paciente bigint,
+				CONSTRAINT pk_atendimento PRIMARY KEY (seq_atendimento)
+			);
+		</sql>
     </changeSet>
     
 </databaseChangeLog>

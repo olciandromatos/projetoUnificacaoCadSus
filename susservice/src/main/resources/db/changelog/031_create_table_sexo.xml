@@ -9,19 +9,13 @@
 
 
 	<changeSet id="031" author="olciandro.magalhaes">
-	
-		<createTable tableName="sexo">
-		
-            <column name="seq_sexo" type="bigint" autoIncrement="${autoIncrement}"
-            remarks="Número sequencial que identifica unicamente o sexo. Chave primária da tabela.">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_sexo"/>
-            </column>
-            
-            <column name="descricao" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-            
-        </createTable>
+        <sql>
+			CREATE TABLE susservice.sexo (
+				seq_sexo SERIAL NOT NULL,
+				descricao character varying(100),
+				CONSTRAINT pk_sexo PRIMARY KEY (seq_sexo)
+			);
+		</sql>
 	</changeSet>
 
 </databaseChangeLog>

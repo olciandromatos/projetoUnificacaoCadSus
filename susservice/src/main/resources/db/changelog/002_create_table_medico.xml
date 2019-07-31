@@ -9,23 +9,14 @@
 
 
 	<changeSet id="002" author="olciandro.magalhaes">
-	
-		<createTable tableName="medico">
-		
-            <column name="seq_medico" type="bigint" autoIncrement="${autoIncrement}"
-            remarks="Número sequencial que identifica unicamente um medico. Chave primária da tabela.">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_medico"/>
-            </column>
-            
-            <column name="nome" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-            
-            <column name="crm" type="varchar(100)">
-                <constraints nullable="false" />
-            </column>
-
-        </createTable>
+        <sql>
+			CREATE TABLE susservice.medico (
+				seq_medico SERIAL NOT NULL,
+				nome character varying(100),
+				crm character varying(100),
+				CONSTRAINT pk_medico PRIMARY KEY (seq_medico)
+			);
+		</sql>
 	</changeSet>
 
 </databaseChangeLog>

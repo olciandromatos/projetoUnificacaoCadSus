@@ -9,29 +9,15 @@
 
 
     <changeSet id="010" author="olciandro.magalhaes">
-    
-        <createTable tableName="estado">
-            <column name="seq_estado" type="bigint" autoIncrement="${autoIncrement}">
-                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_estado"/>
-            </column>
-            
-            <column name="nome" type="varchar(40)"
-            remarks="Nome do estado.">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="sigla" type="varchar(2)"
-            remarks="Sigla do estado.">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="seq_pais" type="bigint"
-            remarks="Número sequencial que identifica unicamente um país">
-                <constraints nullable="true" />
-            </column>
-
-        </createTable>
-        
+        <sql>
+			CREATE TABLE susservice.estado (
+				seq_estado SERIAL NOT NULL,
+				nome character varying(80),
+				sigla character varying(3),
+				seq_pais bigint,
+				CONSTRAINT pk_estado PRIMARY KEY (seq_estado)
+			);
+		</sql>
     </changeSet>
 
 </databaseChangeLog>
