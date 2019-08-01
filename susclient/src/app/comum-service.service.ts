@@ -1,3 +1,4 @@
+import { Consulta } from './domain/Consulta';
 import { Triagem } from './domain/Triagem';
 import { Sexo } from './domain/Sexo';
 import { Especialidade } from './domain/Especialidade';
@@ -89,5 +90,9 @@ export class ComumServiceService {
 
   public cadastrarPaciente(paciente: Paciente) {
     return this.http.post('http://localhost:8080/api/paciente', paciente);
+  }
+
+  public cadastrarConsulta(consulta: Consulta) {
+    return this.http.post('http://localhost:8080/api/consulta', consulta);
   }
 }

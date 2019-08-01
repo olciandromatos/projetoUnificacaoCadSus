@@ -16,6 +16,10 @@ public class ConsultaService {
 	public List<Consulta> allConsultas(){
 		return repository.findAll();
 	}
+	
+	public Consulta cadastrar(Consulta consulta) {
+		return repository.save(consulta);
+	}
 
 	public ConsultaRepository getRepository() {
 		return repository;
