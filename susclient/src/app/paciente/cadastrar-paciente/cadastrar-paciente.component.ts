@@ -41,6 +41,7 @@ export class CadastrarPacienteComponent implements OnInit {
 
   cadastrar() {
     this.servico.cadastrarPaciente(this.paciente).subscribe(resultado => {
+        alert('Cadastro salvo com sucesso!');
         console.log(this.paciente);
     });
   }

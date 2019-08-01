@@ -23,12 +23,12 @@
 
       <div class="ui-g-4 ui-fluid">
         <label for="email">E-mail: </label>
-        <input id="email" type="email" [(ngModel)]="paciente.email" placeholder="Ex:fulano@gmail.com" pInputText />
+        <input id="email" type="email" name="email" [(ngModel)]="paciente.email" placeholder="Ex:fulano@gmail.com" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
         <label for="acompanhante">Nome do Acompanhate: </label>
-        <input id="acompanhante" type="text" name="acompanhante" pInputText />
+        <input id="acompanhante" type="text" name="acompanhante" [(ngModel)]="paciente.acompanhante" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
