@@ -28,17 +28,17 @@
       </div>
 
       <div class="ui-g-6 ui-fluid">
-          <label for="float-input">Relato do paciente: </label>
-          <textarea [rows]="4" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+          <label for="relatoPaciente">Relato do paciente: </label>
+          <textarea [rows]="4" id="relatoPaciente" [cols]="30" name="relatoPaciente" [(ngModel)]="consulta.relatoPaciente" pInputTextarea autoResize="autoResize"></textarea>
       </div>
 
       <div class="ui-g-6 ui-fluid">
-        <label for="float-input">Relato Médico: </label>
-        <textarea [rows]="4" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+        <label for="relatoMedico">Relato Médico: </label>
+        <textarea [rows]="4" id="relatoMedico" [cols]="30" name="relatoMedico" [(ngModel)]="consulta.relatoMedico" pInputTextarea autoResize="autoResize"></textarea>
       </div>
 
       <div>
-        <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+        <button pButton type="submit" class="btn-save" (click)="cadastrar()"  label="Cadastrar" ></button>
       </div>
     </div>
   </form>

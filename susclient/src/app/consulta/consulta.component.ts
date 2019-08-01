@@ -1,3 +1,4 @@
+import { Consulta } from './../domain/Consulta';
 import { Component, OnInit } from '@angular/core';
 import { ComumServiceService } from '../comum-service.service';
 import { Paciente } from '../domain/Paciente';
@@ -12,6 +13,7 @@ export class ConsultaComponent implements OnInit {
 
   pacientes: Paciente[] = new Array;
   paciente: Paciente = new Paciente;
+  consulta: Consulta = new Consulta;
 
   constructor(private service: ComumServiceService) { }
 
@@ -23,15 +25,21 @@ export class ConsultaComponent implements OnInit {
     this.service.getPaciente().subscribe( result => this.pacientes = result);
   }
 
-  imprimirPDF(){
+  cadastrar() {
+    this.service.cadastrarConsulta(this.consulta).subscribe(resultado => {
+      alert('Cadastrado com sucesso!');
+    });
+  }
+
+  imprimirPDF() {
     console.log('imprimindo');
     const doc = new jsPDF();
     doc.text('Atestado Médico', 80, 15);
     doc.setFont('Courier');
     doc.setFontStyle('bold');
     doc.setFontSize(10);
-    doc.setFillColor(50,50,50);
-    doc.text('Atesto que o sr.(a) '+ this.paciente.nome+' foi atendido em nosso consultório pela manhã', 10, 50);
+    doc.setFillColor(50, 50, 50);
+    doc.text('Atesto que o sr.(a) ' + this.paciente.nome + ' foi atendido em nosso consultório pela manhã', 10, 50);
     doc.save('Atestado');
     // doc.output("dataurlnewwindow");
   }
