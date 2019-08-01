@@ -20,7 +20,7 @@ public class Endereco {
 	private String cep;
 
 	@ManyToOne
-	private Estado estado;
+	private Estado seq_endereco;
 	
 	public Long getId() {
 		return id;
@@ -63,11 +63,11 @@ public class Endereco {
 	}
 
 	public Estado getEstado() {
-		return estado;
+		return seq_endereco;
 	}
 
 	public void setEstado(Estado estado) {
-		this.estado = estado;
+		this.seq_endereco = estado;
 	}
 
 }

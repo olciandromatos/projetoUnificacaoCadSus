@@ -45,5 +45,7 @@
    <include file="db/changelog/038_add_column_table_paciente_acompanhate.xml"/>
    <include file="db/changelog/039_add_column_table_paciente_endereco.xml"/>
    <include file="db/changelog/040_alter_column_table_paciente_cpf.xml"/>
+   <include file="db/changelog/041_rename_column_table_paciente_seq_estado.xml"/>
+   <include file="db/changelog/042_add_column_table_triagem_paciente.xml"/>
     
 </databaseChangeLog>

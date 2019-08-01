@@ -2,9 +2,12 @@ package br.com.sus.sus.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -21,6 +24,10 @@ public class Triagem {
 	
 	@OneToOne
 	private StatusSaude status;
+	
+//	@ManyToMany
+//	@JoinColumn(foreignKey = @ForeignKey(name = "seq_paciente"))
+//	private Paciente seq_paciente;
 
 	public Long getId() {
 		return id;
@@ -66,9 +73,17 @@ public class Triagem {
 		return descricao;
 	}
 	
-	public void setDescrcao(String descrcao) {
-		this.descricao = descrcao;
+	public void setDescrcao(String descricao) {
+		this.descricao = descricao;
 	}
+	
+//	public Paciente getSeq_paciente() {
+//		return seq_paciente;
+//	}
+//	
+//	public void setSeq_paciente(Paciente seq_paciente) {
+//		this.seq_paciente = seq_paciente;
+//	}
 
 	@Override
 	public String toString() {
