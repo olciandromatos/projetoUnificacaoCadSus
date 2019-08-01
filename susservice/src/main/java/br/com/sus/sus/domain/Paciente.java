@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -27,6 +28,9 @@ public class Paciente implements Serializable{
 	private String dataNascimento;
 	private String acompanhante;
 	private boolean emAtendimento;
+	
+	@ManyToOne
+	private Endereco endereco;
 	
 	@OneToOne
 	private Sexo sexo;
@@ -101,6 +105,14 @@ public class Paciente implements Serializable{
 
 	public void setEmAtendimento(boolean emAtendimento) {
 		this.emAtendimento = emAtendimento;
+	}
+	
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	@Override
