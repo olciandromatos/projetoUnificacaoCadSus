@@ -16,11 +16,11 @@ export class ListarPacienteComponent implements OnInit {
   constructor(private servico: ComumServiceService) { }
 
   ngOnInit() {
-    this.listarPaciente();
+    this.listarPacienteAtendimento();
   }
 
-  listarPaciente() {
-    this.servico.getPaciente().subscribe(resposta => this.pacientes = resposta);
+  listarPacienteAtendimento() {
+    this.servico.getPacienteEmAtendimento().subscribe(resposta => this.pacientes = resposta);
   }
 
   porCPF() {

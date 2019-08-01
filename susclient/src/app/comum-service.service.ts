@@ -31,6 +31,10 @@ export class ComumServiceService {
     return this.http.get<Paciente[]>('http://localhost:8080/api/paciente');
   }
 
+  public getPacienteEmAtendimento(): Observable<Paciente[]> {
+    return this.http.get<Paciente[]>('http://localhost:8080/api/paciente/emAtendimento');
+  }
+
   public getMedicos(): Observable<Medico[]> {
     return this.http.get<Medico[]>('http://localhost:8080/api/medico');
   }

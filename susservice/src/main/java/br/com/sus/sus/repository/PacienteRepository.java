@@ -1,5 +1,6 @@
 package br.com.sus.sus.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,5 +15,8 @@ public interface PacienteRepository extends JpaRepository<Paciente, Long>{
 	
 	@Query("SELECT p FROM Paciente p WHERE p.cpf = :cpf")
 	public Optional<Paciente> findByCPF(@Param("cpf") String cpf);
+	
+	@Query(value = "SELECT p FROM Paciente p WHERE p.emAtendimento = true")
+	public List<Paciente> buscarPacienteEmAtendimento();
 
 }

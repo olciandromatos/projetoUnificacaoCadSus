@@ -45,5 +45,10 @@ public class PacienteResource {
 		pacienteService.cadastrar(paciente);
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
+	
+	@GetMapping("/paciente/emAtendimento")
+	public List<Paciente> todosEmAtendimento(){
+		return pacienteService.pacientesEmAtendimento();
+	}
 
 }
