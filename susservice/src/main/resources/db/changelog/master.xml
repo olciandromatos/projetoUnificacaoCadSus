@@ -42,5 +42,6 @@
    <include file="db/changelog/034_create_table_unidade_saude.xml"/>
    <include file="db/changelog/035_insert_table_municipio_estado_5_ao_7.xml"/>
    <include file="db/changelog/037_add_column_table_paciente.xml"/>
+   <include file="db/changelog/038_add_column_table_paciente_acompanhate.xml"/>
     
 </databaseChangeLog>

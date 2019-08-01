@@ -25,6 +25,7 @@ public class Paciente implements Serializable{
 	private String email;
 	private String telefone;
 	private String dataNascimento;
+	private String acompanhante;
 	private boolean emAtendimento;
 	
 	@OneToOne
@@ -84,6 +85,14 @@ public class Paciente implements Serializable{
 	
 	public Sexo getSexo() {
 		return sexo;
+	}
+	
+	public String getAcompanhante() {
+		return acompanhante;
+	}
+	
+	public void setAcompanhante(String acompanhante) {
+		this.acompanhante = acompanhante;
 	}
 	
 	public boolean isEmAtendimento() {

@@ -1,3 +1,5 @@
+import { Sexo } from './Sexo';
+import { Endereco } from './Endereco';
 export class Paciente {
 
   nome: string;
@@ -5,6 +7,7 @@ export class Paciente {
   email: string;
   telefone: string;
   dataNascimento: string;
+  acompanhante: string;
   endereco: Endereco;
   sexo: Sexo;
 }
