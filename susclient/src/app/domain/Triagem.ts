@@ -1,3 +1,4 @@
+import { Paciente } from './Paciente';
 import { StatusSaude } from './StatusSaude';
 export class Triagem {
   id: string;
@@ -6,4 +7,5 @@ export class Triagem {
   pressao: string;
   status: StatusSaude;
   descricao: string;
+  paciente: Paciente;
 }
