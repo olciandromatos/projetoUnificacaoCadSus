@@ -8,14 +8,21 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-	<changeSet id="020" author="olciandro.magalhaes">
-	
-        <addForeignKeyConstraint baseColumnNames="seq_status_saude"
-                                 baseTableName="triagem"
-                                 constraintName="fk_status_saude_triagem"
-                                 referencedColumnNames="seq_status_saude"
-                                 referencedTableName="status_saude"/>
-
+	<changeSet id="043" author="olciandro.magalhaes">
+         <sql>
+            ALTER TABLE susservice.medico
+            ADD COLUMN "telefone" varchar(20);
+		</sql>
+		
+		<sql>
+            ALTER TABLE susservice.medico
+            ADD COLUMN "email" varchar(100);
+		</sql>
+		
+		<sql>
+            ALTER TABLE susservice.medico
+            ADD COLUMN "data_nascimento" varchar(50);
+		</sql>
 	</changeSet>
-	
+
 </databaseChangeLog>

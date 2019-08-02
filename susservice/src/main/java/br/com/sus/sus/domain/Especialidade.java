@@ -14,7 +14,7 @@ public class Especialidade {
 	@Column(name="seq_especialidade", unique=true, nullable=false)
 	private Long id;
 	private String descricao;
-
+	
 	public Long getId() {
 		return id;
 	}
@@ -30,5 +30,5 @@ public class Especialidade {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
+	
 }

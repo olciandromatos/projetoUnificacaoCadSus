@@ -34,7 +34,7 @@
    <!-- <include file="db/changelog/026_documentar_table_paciente.xml"/>-->
    <include file="db/changelog/027_create_table_equipamento.xml"/>
    <!-- <include file="db/changelog/028_insert_table_paciente_teste.xml"/> -->
-   <include file="db/changelog/029_insert_table_medico_teste.xml"/>
+   <!-- <include file="db/changelog/029_insert_table_medico_teste.xml"/> -->
    <!--<include file="db/changelog/030_add_constraint_table_estado.xml"/>-->
    <include file="db/changelog/031_create_table_sexo.xml"/>
    <include file="db/changelog/032_insert_table_sexo.xml"/>
@@ -47,5 +47,8 @@
    <include file="db/changelog/040_alter_column_table_paciente_cpf.xml"/>
    <include file="db/changelog/041_rename_column_table_paciente_seq_estado.xml"/>
    <include file="db/changelog/042_add_column_table_triagem_paciente.xml"/>
+   <include file="db/changelog/043_add_column_table_medico.xml"/>
+   <include file="db/changelog/044_add_column_table_medico_especialidade.xml"/>
+   <include file="db/changelog/045_add_column_table_medico_endereco.xml"/>
     
 </databaseChangeLog>
