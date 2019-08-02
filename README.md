@@ -37,6 +37,8 @@ Informação do sistema: Projeto para restruturação do sus atual, usado no ser
   Antes de executar o frontend, executar 'npm install' em seu diretório, para baixar as dependências do projeto.
   
   Antes de executar o backend, executar 'update project' do maven em seu diretório, para baixar as dependências do projeto.
+  Recomendado o uso do eclipse STS (Spring Suit Tools) - https://spring.io/tools, 
+  pois já vem com plugins e as configurações do    spring instaladas.
   
   Para logar foi cadastrado o seguinte usuário teste: 
   
