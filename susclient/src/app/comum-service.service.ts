@@ -95,4 +95,8 @@ export class ComumServiceService {
   public cadastrarConsulta(consulta: Consulta) {
     return this.http.post('http://localhost:8080/api/consulta', consulta);
   }
+
+  public cadastrarMedico(medico: Medico) {
+    return this.http.post('http://localhost:8080/api/medico', medico);
+  }
 }

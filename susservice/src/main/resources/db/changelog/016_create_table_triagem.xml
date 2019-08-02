@@ -17,7 +17,7 @@
 				altura character varying(10),
 				pressao character varying(10),
 				descricao character varying(255),
-				status_seq_status_saude bigint,
+				seq_status_saude bigint,
 				CONSTRAINT pk_triagem PRIMARY KEY (seq_triagem)
 			);
 		</sql>	

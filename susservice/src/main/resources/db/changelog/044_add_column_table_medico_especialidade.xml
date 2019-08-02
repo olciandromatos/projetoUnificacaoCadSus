@@ -8,14 +8,11 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
 
-	<changeSet id="020" author="olciandro.magalhaes">
-	
-        <addForeignKeyConstraint baseColumnNames="seq_status_saude"
-                                 baseTableName="triagem"
-                                 constraintName="fk_status_saude_triagem"
-                                 referencedColumnNames="seq_status_saude"
-                                 referencedTableName="status_saude"/>
-
+	<changeSet id="044" author="olciandro.magalhaes">
+         <sql>
+            ALTER TABLE susservice.medico
+            ADD COLUMN "seq_especialidade" BIGINT REFERENCES susservice.especialidade(seq_especialidade);
+		</sql>
 	</changeSet>
-	
+
 </databaseChangeLog>

@@ -2,29 +2,29 @@
     <form>
       <div class="ui-g">
         <div class="ui-g-4 ui-fluid">
-          <label for="float-input">Nome completo: </label>
-          <input id="float-input" name="nome" type="text" pInputText />
+          <label for="nome">Nome completo: </label>
+          <input id="nome" name="nome" [(ngModel)]="medico.nome" type="text" pInputText />
         </div>
 
         <div class="ui-g-4 ui-fluid">
-          <label for="float-input">Telefone: </label>
-          <p-inputMask type="text" name="telefone" placeholder="(99) 99999-9999" mask="(99) 99999-9999" ></p-inputMask>
+          <label for="crm">CRM: </label>
+          <input id="crm" [(ngModel)]="medico.crm" name="crm" type="text" pInputText />
         </div>
 
         <div class="ui-g-4 ui-fluid">
-            <label for="float-input">Data de Nascimento: </label>
-            <p-inputMask type="text" name="nascimento"  mask="99/99/9999" ></p-inputMask>
+          <label for="telefone">Telefone: </label>
+          <p-inputMask id="telefone" type="text" name="telefone" [(ngModel)]="medico.telefone" placeholder="(99) 99999-9999" mask="(99) 99999-9999" ></p-inputMask>
+        </div>
+
+        <div class="ui-g-6 ui-fluid">
+          <label for="email">E-mail: </label>
+          <input id="email" type="email" name="email" [(ngModel)]="medico.email" placeholder="Ex:fulano@gmail.com" pInputText />
+        </div>
+
+        <div class="ui-g-6 ui-fluid">
+            <label for="nascimento">Data de Nascimento: </label>
+            <p-inputMask id="nascimento" name="nascimento"  type="text" [(ngModel)]="medico.dataNascimento" mask="99/99/9999" ></p-inputMask>
           </div>
-
-        <div class="ui-g-6 ui-fluid">
-          <label for="float-input">E-mail: </label>
-          <input id="float-input" type="email" placeholder="Ex:fulano@gmail.com" pInputText />
-        </div>
-
-        <div class="ui-g-6 ui-fluid">
-            <label for="float-input">CRM: </label>
-            <input id="float-input" name="crm" type="text" pInputText />
-        </div>
 
         <div class="ui-g-4 ui-fluid">
             <label for="float-input">Logradouro: </label>
@@ -57,12 +57,12 @@
         </div>
 
         <div class="ui-g-3 ui-fluid">
-            <label for="float-input">Especialidade: </label>
-            <p-dropdown id="float-input" [options]="especialidades" placeholder="Selecione um das especialidades" optionLabel="descricao"></p-dropdown>
+            <label for="especialidade">Especialidade: </label>
+            <p-dropdown id="especialidade" name="especialidade" [(ngModel)]="medico.especialidade" [options]="especialidades" placeholder="Selecione um das especialidades" optionLabel="descricao"></p-dropdown>
         </div>
 
         <div>
-          <button pButton type="submit" class="btn-save" label="Cadastrar" ></button>
+          <button pButton type="submit" class="btn-save" (click)="cadastrar()" label="Cadastrar" ></button>
         </div>
       </div>
     </form>

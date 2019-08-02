@@ -1,3 +1,4 @@
+import { Medico } from './../../domain/Medico';
 import { Component, OnInit } from '@angular/core';
 import { ComumServiceService } from './../../comum-service.service';
 import { Especialidade } from './../../domain/Especialidade';
@@ -18,6 +19,7 @@ export class CadastrarMedicoComponent implements OnInit {
   municipios: Municipio[] = new Array;
   especialidades: Especialidade[] = new Array;
   paises: Pais[] = new Array;
+  medico: Medico = new Medico;
 
   constructor(private servico: ComumServiceService) { }
 
@@ -42,6 +44,16 @@ export class CadastrarMedicoComponent implements OnInit {
 
   listarPais() {
     this.servico.getPaises().subscribe(resposta => this.paises = resposta);
+  }
+
+  cadastrar() {
+    this.servico.cadastrarMedico(this.medico).subscribe(resultado => {
+      alert('Cadastrado com sucesso!');
+      console.log(this.medico.nome);
+      console.log(this.medico.crm);
+      console.log(this.medico.telefone);
+      console.log(this.medico.dataNascimento);
+    });
   }
 
 }
