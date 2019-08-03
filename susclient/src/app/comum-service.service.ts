@@ -94,8 +94,6 @@ export class ComumServiceService {
 
   public cadastrarPaciente(paciente: Paciente) {
     console.log('Id Paciente ' + paciente.id);
-    console.log('Id Endereço ' + paciente.endereco.estado);
-    console.log('Estado ' + paciente.endereco.estado);
     return this.http.post('http://localhost:8080/api/paciente', paciente);
   }
 
@@ -110,8 +108,6 @@ export class ComumServiceService {
   public cadastrarEndereco(endereco: Endereco) {
     console.log('Codigo ' + endereco.id);
     console.log('Nome ' + endereco.logradouro);
-    console.log('Quantidade ' + endereco.estado.nome);
-    console.log('Descricao ' + endereco.estado.municipio.nome);
     return this.http.post('http://localhost:8080/api/endereco', endereco);
   }
 }
