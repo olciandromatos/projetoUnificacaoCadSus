@@ -18,7 +18,7 @@ public class Municipio {
 	private String nome;
 	
 	@ManyToOne
-	@JoinColumn(name="seq_estado")
+	@JoinColumn(name = "seq_estado", referencedColumnName = "seq_estado")
 	private Estado estado;
 
 	public Long getId() {

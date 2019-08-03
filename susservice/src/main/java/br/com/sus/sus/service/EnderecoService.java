@@ -17,6 +17,10 @@ public class EnderecoService {
 		return repository.findAll();
 	}
 	
+	public Endereco save(Endereco endereco) {
+		return repository.save(endereco);
+	}
+	
 	@Autowired
 	public void setRepository(EnderecoRepository repository) {
 		this.repository = repository;

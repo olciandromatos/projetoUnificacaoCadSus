@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
@@ -30,6 +31,7 @@ public class Paciente implements Serializable{
 	private boolean emAtendimento;
 	
 	@ManyToOne
+	@JoinColumn(name = "seq_endereco", referencedColumnName = "seq_endereco")
 	private Endereco endereco;
 	
 	@OneToOne

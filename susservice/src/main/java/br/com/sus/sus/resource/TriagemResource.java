@@ -30,8 +30,13 @@ public class TriagemResource {
 	
 	@PostMapping("/triagem")
 	public ResponseEntity<Triagem> cadastrar(@RequestBody Triagem triagem) {
-		service.save(triagem);
-		System.out.println("Triagem criado com sucesso");
+		if(triagem.getPaciente().getId() != null){
+			triagem.getPaciente().setEmAtendimento(true);
+			System.out.println("Paciente em atendimento? "+ triagem.getPaciente().isEmAtendimento());
+			service.save(triagem);
+			System.out.println("Triagem criado com sucesso");
+		}
+		
 		return new ResponseEntity<>(HttpStatus.CREATED);
 	}
 }
