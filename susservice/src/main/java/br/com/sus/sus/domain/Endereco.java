@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -12,7 +13,7 @@ public class Endereco {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="seq_endereco", unique=true, nullable=false)
+	@Column(name="seq_endereco")
 	private Long id;
 	private String logradouro;
 	private String numero;
@@ -20,7 +21,12 @@ public class Endereco {
 	private String cep;
 
 	@ManyToOne
-	private Estado seq_endereco;
+	@JoinColumn(name = "seq_estado", referencedColumnName = "seq_estado")
+	private Estado estado;
+	
+	@ManyToOne
+	@JoinColumn(name = "seq_municipio", referencedColumnName = "seq_municipio")
+	private Municipio municipio;
 	
 	public Long getId() {
 		return id;
@@ -63,11 +69,19 @@ public class Endereco {
 	}
 
 	public Estado getEstado() {
-		return seq_endereco;
+		return estado;
 	}
 
 	public void setEstado(Estado estado) {
-		this.seq_endereco = estado;
+		this.estado = estado;
+	}
+	
+	public Municipio getMunicipio() {
+		return municipio;
+	}
+	
+	public void setMunicipio(Municipio municipio) {
+		this.municipio = municipio;
 	}
 
 }

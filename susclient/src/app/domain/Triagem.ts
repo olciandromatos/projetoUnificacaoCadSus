@@ -5,7 +5,7 @@ export class Triagem {
   peso: string;
   altura: string;
   pressao: string;
-  status: StatusSaude;
   descricao: string;
+  status: StatusSaude;
   paciente: Paciente;
 }

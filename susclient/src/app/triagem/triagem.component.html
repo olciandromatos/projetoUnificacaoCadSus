@@ -1,34 +1,35 @@
 <p-panel header="Cadastro de Triagem" [toggleable]="false">
     <form>
       <div class="ui-g">
+
         <div class="ui-g-12 ui-fluid">
             <label for="nome">Nome do paciente: </label>
-            <p-dropdown id="nome" name="nome" [options]="pacientes" placeholder="Selecione um dos nomes abaixo" optionLabel="nome"></p-dropdown>
+            <p-dropdown id="nome" name="nome" [(ngModel)]="triagem.paciente" [options]="pacientes" placeholder="Selecione um dos nomes abaixo" optionLabel="nome"></p-dropdown>
         </div>
 
-        <div class="ui-g-3 ui-fluid">
+        <div class="ui-g-4 ui-fluid">
           <label for="peso">Peso (KG): </label>
           <input id="peso" name="peso" [(ngModel)]="triagem.peso" placeholder="85" pInputText />
         </div>
 
-        <div class="ui-g-3 ui-fluid">
+        <div class="ui-g-4 ui-fluid">
           <label for="altura">Altura: </label>
           <p-inputMask id="altura" name="altura" [(ngModel)]="triagem.altura" placeholder="1.75" mask="9.99" ></p-inputMask>
         </div>
 
-        <div class="ui-g-3 ui-fluid">
+        <div class="ui-g-4 ui-fluid">
             <label for="pressao">Pressão: </label>
             <p-inputMask id="pressao" name="pressao" [(ngModel)]="triagem.pressao" mask="99/99" ></p-inputMask>
         </div>
 
-        <div class="ui-g-3 ui-fluid">
-          <label for="status" class="label">Status de saúde: </label>
-          <p-dropdown id="status" [options]="status" placeholder="Selecione um dos status abaixo" optionLabel="descricao"></p-dropdown>
+        <div class="ui-g-12 ui-fluid">
+            <label for="descricao">Mais detalhes: </label>
+            <textarea id="descricao" [rows]="3" name="descricao" [cols]="30" [(ngModel)]="triagem.descricao" pInputTextarea autoResize="autoResize"></textarea>
         </div>
 
         <div class="ui-g-12 ui-fluid">
-            <label for="detalhes">Mais detalhes: </label>
-            <textarea id="detalhes" [rows]="3" [cols]="30" pInputTextarea autoResize="autoResize"></textarea>
+          <label for="status" class="label">Status de saúde: </label>
+          <p-dropdown id="status" [options]="status" name="status" [(ngModel)]="triagem.status" placeholder="Selecione um dos status abaixo" optionLabel="descricao"></p-dropdown>
         </div>
 
         <div>

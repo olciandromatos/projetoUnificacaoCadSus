@@ -33,27 +33,27 @@
 
       <div class="ui-g-4 ui-fluid">
         <label for="logradouro">Logradouro: </label>
-        <input id="logradouro" type="text" name="logradouro" placeholder="Ex: Rua, quadra" pInputText />
+        <input id="logradouro" type="text" name="logradouro" [(ngModel)]="endereco.logradouro" placeholder="Ex: Rua, quadra" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
         <label for="numero">Número: </label>
-        <input id="numero" type="text" name="numero" pInputText />
+        <input id="numero" type="text" name="numero" [(ngModel)]="endereco.numero" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
         <label for="complemento">Complemento: </label>
-        <input id="complemento" type="text" name="complemento" pInputText />
+        <input id="complemento" type="text" name="complemento" [(ngModel)]="endereco.complemento" pInputText />
       </div>
 
       <div class="ui-g-4 ui-fluid">
         <label for="estado">Estado: </label>
-        <p-dropdown id="estado" [options]="estados" name="estado" placeholder="Selecione um dos estados abaixo" optionLabel="nome"></p-dropdown>
+        <p-dropdown id="estado" [options]="estados" name="estado" [(ngModel)]="estado" placeholder="Selecione um dos estados abaixo" optionLabel="nome"></p-dropdown>
       </div>
 
       <div class="ui-g-4 ui-fluid">
         <label for="municipio">Municipio: </label>
-        <p-dropdown id="municipio" [options]="municipios" name="municipio" placeholder="Selecione um dos municipios abaixo" optionLabel="nome"></p-dropdown>
+        <p-dropdown id="municipio" [options]="municipios" name="municipio" [(ngModel)]="endereco.municipio" placeholder="Selecione um dos municipios abaixo" optionLabel="nome"></p-dropdown>
       </div>
 
       <div class="ui-g-4 ui-fluid">
