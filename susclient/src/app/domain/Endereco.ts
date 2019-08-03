@@ -1,4 +1,5 @@
 import { Estado } from './Estado';
+import { Municipio } from './Municipio';
 export class Endereco {
   id: number;
   logradouro: string;
