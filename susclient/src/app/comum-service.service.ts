@@ -1,3 +1,4 @@
+import { Endereco } from './domain/Endereco';
 import { Consulta } from './domain/Consulta';
 import { Triagem } from './domain/Triagem';
 import { Sexo } from './domain/Sexo';
@@ -70,9 +71,12 @@ export class ComumServiceService {
 
   public cadastrarTriagem(triagem: Triagem): Observable<Triagem> {
     console.log('Codigo ' + triagem.id);
-    console.log('Altura ' + triagem.altura);
     console.log('peso ' + triagem.peso);
-    console.log('descrcao ' + triagem.descricao);
+    console.log('Altura ' + triagem.altura);
+    console.log('Altura ' + triagem.pressao);
+    console.log('descricao ' + triagem.descricao);
+    console.log('descricao ' + triagem.status.descricao);
+    console.log('Codigo Paciente ' + triagem.paciente.id);
     return this.http.post<Triagem>('http://localhost:8080/api/triagem', triagem);
   }
 
@@ -89,6 +93,9 @@ export class ComumServiceService {
   }
 
   public cadastrarPaciente(paciente: Paciente) {
+    console.log('Id Paciente ' + paciente.id);
+    console.log('Id Endereço ' + paciente.endereco.estado);
+    console.log('Estado ' + paciente.endereco.estado);
     return this.http.post('http://localhost:8080/api/paciente', paciente);
   }
 
@@ -98,5 +105,13 @@ export class ComumServiceService {
 
   public cadastrarMedico(medico: Medico) {
     return this.http.post('http://localhost:8080/api/medico', medico);
+  }
+
+  public cadastrarEndereco(endereco: Endereco) {
+    console.log('Codigo ' + endereco.id);
+    console.log('Nome ' + endereco.logradouro);
+    console.log('Quantidade ' + endereco.estado.nome);
+    console.log('Descricao ' + endereco.estado.municipio.nome);
+    return this.http.post('http://localhost:8080/api/endereco', endereco);
   }
 }

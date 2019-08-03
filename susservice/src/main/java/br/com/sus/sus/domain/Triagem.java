@@ -2,12 +2,11 @@ package br.com.sus.sus.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -23,11 +22,12 @@ public class Triagem {
 	private String descricao;
 	
 	@OneToOne
+	@JoinColumn(name = "seq_status_saude", referencedColumnName = "seq_status_saude")
 	private StatusSaude status;
 	
-//	@ManyToMany
-//	@JoinColumn(foreignKey = @ForeignKey(name = "seq_paciente"))
-//	private Paciente seq_paciente;
+	@ManyToOne
+	@JoinColumn(name = "seq_paciente", referencedColumnName = "seq_paciente")
+	private Paciente paciente;
 
 	public Long getId() {
 		return id;
@@ -77,13 +77,13 @@ public class Triagem {
 		this.descricao = descricao;
 	}
 	
-//	public Paciente getSeq_paciente() {
-//		return seq_paciente;
-//	}
-//	
-//	public void setSeq_paciente(Paciente seq_paciente) {
-//		this.seq_paciente = seq_paciente;
-//	}
+	public Paciente getPaciente() {
+		return paciente;
+	}
+	
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
 
 	@Override
 	public String toString() {

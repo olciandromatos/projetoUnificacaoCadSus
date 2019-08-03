@@ -6,4 +6,5 @@ export class Endereco {
   complemento: string;
   cep: string;
   estado: Estado;
+  municipio: Municipio;
 }

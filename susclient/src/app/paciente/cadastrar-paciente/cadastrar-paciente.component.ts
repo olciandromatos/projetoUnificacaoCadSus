@@ -1,3 +1,4 @@
+import { Endereco } from './../../domain/Endereco';
 import { Sexo } from './../../domain/Sexo';
 import { ComumServiceService } from './../../comum-service.service';
 import { Estado } from './../../domain/Estado';
@@ -18,6 +19,7 @@ export class CadastrarPacienteComponent implements OnInit {
   municipio: Municipio = new Municipio;
   municipios: Municipio[] = new Array;
   sexo: Sexo[] = new Array;
+  endereco: Endereco = new Endereco;
 
   constructor(private servico: ComumServiceService) { }
 
@@ -39,8 +41,19 @@ export class CadastrarPacienteComponent implements OnInit {
     this.servico.getSexo().subscribe(resposta => this.sexo = resposta);
   }
 
+  cadastrarEndereco() {
+    this.servico.cadastrarEndereco(this.endereco).subscribe(resultado => {
+        alert('Cadastro salvo com sucesso!');
+        console.log(this.endereco);
+    });
+  }
+
   cadastrar() {
     this.servico.cadastrarPaciente(this.paciente).subscribe(resultado => {
+      this.cadastrarEndereco();
+      if (this.endereco.id != null) {
+        this.paciente.endereco.id === this.endereco.id;
+      }
         alert('Cadastro salvo com sucesso!');
         console.log(this.paciente);
     });

@@ -50,5 +50,6 @@
    <include file="db/changelog/043_add_column_table_medico.xml"/>
    <include file="db/changelog/044_add_column_table_medico_especialidade.xml"/>
    <include file="db/changelog/045_add_column_table_medico_endereco.xml"/>
+   <include file="db/changelog/046_rename_column_table_paciente_endereco.xml"/>
     
 </databaseChangeLog>
