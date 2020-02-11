@@ -20,6 +20,7 @@ public class Consulta {
 	private LocalDate horaConsulta = LocalDate.now();
 	private String relatoMedico;
 	private String relatoPaciente;
+	
 
 	@ManyToOne
 	@JoinColumn(name="seq_paciente")
