@@ -1,3 +1,4 @@
+
 <p-panel header="Consulta de paciente" [toggleable]="false">
     <form>
       <div class="ui-g">
@@ -11,17 +12,17 @@
       </div>
     </form>
   <div class="tabela">
-  <p-dataTable [style]="{'height':'100%'}">
+  <p-dataTable [value]="pacienteEncontrado" [style]="{'height':'100%'}">
       <p-column header="Nome">
           <ng-template let-paciente="rowData" pTemplate="body">
-              {{paciente.nome}}
+            {{paciente.nome}}
           </ng-template>
       </p-column>
 
       <p-column header="CPF">
-              <ng-template let-paciente="rowData" pTemplate="body">
-                  {{paciente.cpf}}
-              </ng-template>
+            <ng-template let-paciente="rowData" pTemplate="body" >
+                {{paciente.cpf}}
+            </ng-template>
       </p-column>
 
       <p-column header="E-mail">

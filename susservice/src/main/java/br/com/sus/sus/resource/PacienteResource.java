@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,9 +36,9 @@ public class PacienteResource {
 		return pacienteService.listarTodos();
 	}
 	
-	@PostMapping("/paciente/{cpf}")
-	public Optional<Paciente> buscarPorCPF(@RequestBody Paciente paciente) {
-		return pacienteService.porCPF(paciente.getCpf()); 
+	@GetMapping("{cpf}")
+	public List<Paciente> buscarPorCPF(@PathVariable("cpf") String cpf) {
+		return pacienteService.porCPF(cpf); 
 	}
 	
 	@PostMapping("/paciente")

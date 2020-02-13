@@ -49,6 +49,7 @@ export class CadastrarPacienteComponent implements OnInit {
   }
 
   cadastrar() {
+    //this.paciente.cpf = this.paciente.cpf.replace(/\D+/g, '');
     this.servico.cadastrarPaciente(this.paciente).subscribe(resultado => {
       this.cadastrarEndereco();
       if (this.endereco.id != null) {
