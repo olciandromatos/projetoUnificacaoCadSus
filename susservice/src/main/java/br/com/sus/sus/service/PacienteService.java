@@ -27,8 +27,8 @@ public class PacienteService {
 		return pacienteRepository.findAll();
 	}
 	
-	public Optional<Paciente> porCPF(String cpf){
-		Optional<Paciente> objetoPorCPF = pacienteRepository.findByCPF(cpf);
+	public List<Paciente> porCPF(String cpf){
+		List<Paciente> objetoPorCPF = pacienteRepository.findByCpf(cpf);
 		return objetoPorCPF;
 	}
 	

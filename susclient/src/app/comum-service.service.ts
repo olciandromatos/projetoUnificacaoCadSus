@@ -88,8 +88,8 @@ export class ComumServiceService {
     return this.http.post<Medicamento>('http://localhost:8080/api/medicamento', medicamento, httpOptions);
   }
 
-  public getPacientePorCPF(paciente: Paciente) {
-    return this.http.post('http://localhost:8080/api/paciente/cpf', paciente.cpf);
+  public getPacientePorCPF(paciente: Paciente):Observable<Paciente[]> {
+    return this.http.get<Paciente[]>(`http://localhost:8080/api/${paciente.cpf}`);
   }
 
   public cadastrarPaciente(paciente: Paciente) {
@@ -110,4 +110,6 @@ export class ComumServiceService {
     console.log('Nome ' + endereco.logradouro);
     return this.http.post('http://localhost:8080/api/endereco', endereco);
   }
+
+
 }
