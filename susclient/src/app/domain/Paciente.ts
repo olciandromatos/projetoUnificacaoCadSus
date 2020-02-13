@@ -9,6 +9,7 @@ export class Paciente {
   telefone: string;
   dataNascimento: string;
   acompanhante: string;
+  emAtendimento: boolean
   endereco: Endereco;
   sexo: Sexo;
 }

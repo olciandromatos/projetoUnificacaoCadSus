@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Consulta {
@@ -20,6 +21,10 @@ public class Consulta {
 	private LocalDate horaConsulta = LocalDate.now();
 	private String relatoMedico;
 	private String relatoPaciente;
+	
+	@OneToOne
+	@JoinColumn(name = "seq_triagem", referencedColumnName = "seq_triagem")
+	private Triagem triagem;
 
 	@ManyToOne
 	@JoinColumn(name="seq_paciente")
@@ -63,6 +68,14 @@ public class Consulta {
 	
 	public void setRelatoPaciente(String relatoPaciente) {
 		this.relatoPaciente = relatoPaciente;
+	}
+	
+	public Triagem getTriagem() {
+		return triagem;
+	}
+	
+	public void setTriagem(Triagem triagem) {
+		this.triagem = triagem;
 	}
 
 }

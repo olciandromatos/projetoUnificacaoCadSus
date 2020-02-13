@@ -3,7 +3,7 @@
     <div class="ui-g">
       <div class="ui-g-4 ui-fluid">
         <label for="nome">Nome completo: </label>
-        <input id="nome" type="text" [(ngModel)]="paciente.nome" name="nome" pInputText />
+        <input id="nome" type="text" [(ngModel)]="paciente.nome" name="nome" pInputText maxlength="100" minlength="4" required/>
       </div>
 
       <div class="ui-g-4 ui-fluid">
