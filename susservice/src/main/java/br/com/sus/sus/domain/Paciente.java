@@ -1,7 +1,9 @@
 package br.com.sus.sus.domain;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -29,8 +31,9 @@ public class Paciente implements Serializable{
 	private String dataNascimento;
 	private String acompanhante;
 	private boolean emAtendimento;
+	private LocalDateTime log  = LocalDateTime.now();
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "seq_endereco", referencedColumnName = "seq_endereco")
 	private Endereco endereco;
 	
@@ -115,6 +118,14 @@ public class Paciente implements Serializable{
 	
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+	
+	public LocalDateTime getLog() {
+		return log;
+	}
+	
+	public void setLog(LocalDateTime log) {
+		this.log = log;
 	}
 
 	@Override

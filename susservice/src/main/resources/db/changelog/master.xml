@@ -53,5 +53,6 @@
    <include file="db/changelog/046_rename_column_table_paciente_endereco.xml"/>
    <include file="db/changelog/047_alter_column_table_paciente_status.xml"/>
    <include file="db/changelog/048_add_constraint_table_consulta.xml"/>
+   <include file="db/changelog/049_add_column_table_paciente_log.xml"/>
     
 </databaseChangeLog>

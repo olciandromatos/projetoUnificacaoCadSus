@@ -19,8 +19,8 @@ public class Estado {
 	private String nome;
 	private String sigla;
 	
-	@OneToMany
-	private List<Municipio> municipios;
+//	@OneToMany
+//	private List<Municipio> municipios;
 	
 	public Long getId() {
 		return id;

@@ -69,6 +69,10 @@ export class ComumServiceService {
     return this.http.get<Medicamento[]>('http://localhost:8080/api/medicamento');
   }
 
+  public getCep(endereco: Endereco){
+    return this.http.get(`viacep.com.br/ws/${endereco.cep}/json/`);
+  }
+
   public cadastrarTriagem(triagem: Triagem): Observable<Triagem> {
     console.log('Codigo ' + triagem.id);
     console.log('peso ' + triagem.peso);

@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/router": "^6.0.0",
+    "@brunoc/ngx-viacep": "^2.1.2",
     "core-js": "^2.5.4",
     "jspdf": "^1.5.3",
     "primeicons": "^1.0.0",

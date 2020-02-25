@@ -15,6 +15,10 @@ public class PacienteService {
 	private PacienteRepository pacienteRepository;
 	
 	public Paciente cadastrar(Paciente paciente) {
+//		LocalDate dataNascimento = paciente.getDataNascimento();
+//		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+//		String dataNascimentoFormatado = dataNascimento.format(formatter);
+//		paciente.setDataNascimento(dataNascimentoFormatado);
 		return pacienteRepository.save(paciente);
 	}
 	
