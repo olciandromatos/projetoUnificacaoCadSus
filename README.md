@@ -29,6 +29,7 @@ Informação do sistema: Projeto para restruturação do sus atual, usado no ser
   
   Caso use linux baseado no ubuntu:
   -Instalar angular na versão 6 - npm install @angular/cli@6.0.0 e visite a pagina https://cli.angular.io/ e siga os passos.
+  - npm install @angular/cdk --save - não esqueçam de instalar este item.
   
   -Instalar nodejs na versão 8 -  https://nodejs.org/de/download/
   
