@@ -373,6 +373,10 @@ input:-webkit-autofill
 
 .img{
   border: 25px;
-  width: 590px;
+  margin: 33%;
+  max-width: 100%;
+  max-height: 50%;
+  width: auto;
+  height: auto;
 }
 
