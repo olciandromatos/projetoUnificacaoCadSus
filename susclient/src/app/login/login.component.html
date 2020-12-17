@@ -1,4 +1,4 @@
-<div class="main_content">
+<!-- <div class="main_content">
   <div>
     <span>Usuário</span>
     <hr/>
@@ -14,5 +14,28 @@
   </div>
   <hr/>
   <button pButton type="submit" (click)="login()" class="btn-save" label="Entrar" ></button>
+</div> -->
+
+<div class="container">
+  <div class="content first-content">
+      <div class="first-column">
+        <img class="img" src="https://image.freepik.com/vetores-gratis/ilustracao-do-conceito-de-medicos_114360-1515.jpg">
+      </div>    
+      <div class="second-column">
+          <h2 class="title title-second">Login - SUS</h2>
+          <div class="social-media">
+          </div>              
+              <label class="label-input" for="">
+                <i class="far fa-envelope icon-modify"></i>
+                  <input type="text" [(ngModel)]="usuario.usuario" placeholder="Ex: Fulando@gmail.com" pInputText />
+              </label>
+              
+              <label class="label-input" for="">
+                  <i class="fas fa-lock icon-modify"></i>
+                  <input type="password" [(ngModel)]="usuario.senha" placeholder="**************" pInputText />
+              </label>
+              <!-- root@gmail.com -->
+              <button type="submit" class="btn btn-second" (click)="login()">Entrar</button>
+      </div><!-- second column -->
 </div>
 
