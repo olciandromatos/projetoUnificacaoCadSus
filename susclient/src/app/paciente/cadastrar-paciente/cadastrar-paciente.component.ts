@@ -5,6 +5,7 @@ import { Estado } from './../../domain/Estado';
 import { Municipio } from './../../domain/Municipio';
 import { Component, OnInit } from '@angular/core';
 import { Paciente } from 'src/app/domain/Paciente';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastrar-paciente',
@@ -21,7 +22,7 @@ export class CadastrarPacienteComponent implements OnInit {
   sexo: Sexo[] = new Array;
   endereco: Endereco = new Endereco;
 
-  constructor(private servico: ComumServiceService) { }
+  constructor(private servico: ComumServiceService, private router: Router) { }
 
   ngOnInit() {
     this.listarEstado();
@@ -47,6 +48,10 @@ export class CadastrarPacienteComponent implements OnInit {
         console.log(this.endereco);
     });
   }
+
+redirect() {
+  return this.router.navigate([`login`]);
+}
 
   cadastrar() {
     //this.paciente.cpf = this.paciente.cpf.replace(/\D+/g, '');

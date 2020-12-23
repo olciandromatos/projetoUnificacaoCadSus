@@ -63,7 +63,7 @@
 
       <div class="botao">
         <button pButton type="submit" class="btn-save" [disabled]="!myForm.form.valid" label="Cadastrar" ></button>
-        <router-outlet></router-outlet>
+        <button pButton (click)="redirect()" type="submit" class="btn-voltar" label="Voltar" ></button>
       </div>
     </div>
   </form>
