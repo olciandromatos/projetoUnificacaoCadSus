@@ -1,0 +1,30 @@
+<p-panel header="Cadastro de Equipamento" [toggleable]="false">
+    <form>
+      <div class="ui-g">
+        <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Tipo do Equipamento: </label>
+          <input id="float-input" type="text" pInputText />
+        </div>
+        <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Destino: </label>
+          <input id="float-input" type="text" pInputText />
+        </div>
+        <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Tempo de Uso: </label>
+          <input id="tempoUso" type="text" pInputText />
+        </div>
+        <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Date: </label>
+          <p-calendar [(ngModel)]="value"></p-calendar>
+        </div>
+        <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Quantidade: </label>
+          <input id="quantidade" type="text" pInputText />
+        </div>
+      </div>
+      <div>
+        <button pButton type="submit" class="btn-save" label="Cadastrar Equipamento" ></button>
+      </div>
+    </form>
+  </p-panel>
+  

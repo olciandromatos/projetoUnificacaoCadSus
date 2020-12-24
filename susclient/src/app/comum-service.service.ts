@@ -13,6 +13,7 @@ import { Medico } from './domain/Medico';
 import { Pais } from './domain/Pais';
 import { StatusSaude } from './domain/StatusSaude';
 import { Medicamento } from './domain/Medicamento';
+import { Equipamento } from './domain/Equipamento';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -31,6 +32,10 @@ export class ComumServiceService {
 
   public getPaciente(): Observable<Paciente[]> {
     return this.http.get<Paciente[]>('http://localhost:8080/api/paciente');
+  }
+
+  public getEquipamentos(): Observable<Equipamento[]> {
+    return this.http.get<Equipamento[]>('http://localhost:8080/api/equipamento');
   }
 
   public getPacienteEmAtendimento(): Observable<Paciente[]> {
@@ -113,6 +118,11 @@ export class ComumServiceService {
     console.log('Codigo ' + endereco.id);
     console.log('Nome ' + endereco.logradouro);
     return this.http.post('http://localhost:8080/api/endereco', endereco);
+  }
+
+  public cadastrarEquipamento(equipamento: Equipamento) {
+    console.log(equipamento);
+    return this.http.post('http://localhost:8080/api/equipamento', equipamento);
   }
 
 
