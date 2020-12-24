@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.sus.sus.domain.Equipamento;
+import br.com.sus.sus.domain.Paciente;
 import br.com.sus.sus.repository.EquipamentoRepository;
 
 @Service
@@ -21,5 +22,16 @@ public class EquipamentoService {
 	public void setRepository(EquipamentoRepository repository) {
 		this.repository = repository;
 	}
+	
+	public Equipamento save(Equipamento equi) {
+		return repository.save(equi);
+	}
+	
+	public List<Equipamento> listarTodos(){
+		return repository.findAll();
+	}
+	
+	
+	
 
 }
