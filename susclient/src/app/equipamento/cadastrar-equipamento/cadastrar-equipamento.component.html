@@ -1,3 +1,81 @@
-<p>
-  cadastrar-equipamento works!
-</p>
+<p-panel header="Cadastro de Equipamento" [toggleable]="false">
+  <form (ngSubmit)="cadastrarEquipamento()">
+    <div class="ui-g">
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Tipo do Equipamento: </label>
+        <input id="nome" type="text" [(ngModel)]="equipamento.tipoEquipamento" name="tipoEquipamento" pInputText maxlength="100" minlength="4" required/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Destino: </label>
+        <input id="nome" type="text" [(ngModel)]="equipamento.destino" name="destino" pInputText maxlength="100" minlength="4" required/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Tempo de Uso: </label>
+        <input id="nome" type="text" [(ngModel)]="equipamento.tempoUso" name="tempoUso" pInputText maxlength="100" minlength="4" required/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Date: </label>
+        <input id="nome" type="date" [(ngModel)]="equipamento.dataRetirada" name="dataRetirada" pInputText required/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Quantidade: </label>
+        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="dataRetirada" pInputText required/>
+      </div>
+    </div>
+    <div>
+      <button pButton type="submit" class="btn-save" label="Cadastrar Equipamento" ></button>
+      <button pButton (click)="redirect()" type="submit" class="btn-voltar" label="Voltar" ></button>
+    </div>
+
+  </form>
+</p-panel>
+
+<div class="margin-top">
+  <p-panel header="Equipamentos" [toggleable]="false">
+    <p-dataTable [value]="Equipamento" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+
+        <ng-template pTemplate="caption">
+            <div class="ui-helper-clearfix">
+                <button type="button" pButton icon="fa fa-file" iconPos="left" label="Selection Only"  style="float:right"></button>
+            </div>
+        </ng-template>
+
+        <p-column header="Código">
+            <ng-template let-medicamento="rowData" pTemplate="body">
+                {{equipamento.id}}
+            </ng-template>
+        </p-column>
+
+        <p-column header="Nome">
+            <ng-template let-medicamento="rowData" pTemplate="body">
+                {{equipamento.tipoEquipamento}}
+            </ng-template>
+        </p-column>
+
+        <p-column header="Destino">
+          <ng-template let-medicamento="rowData" pTemplate="body">
+              {{equipamento.destino}}
+          </ng-template>
+        </p-column>
+
+        <p-column header="Tempo de Uso">
+          <ng-template let-medicamento="rowData" pTemplate="body">
+              {{equipamento.tempoUso}}
+          </ng-template>
+        </p-column>
+
+        <p-column header="Data Retirada">
+          <ng-template let-medicamento="rowData" pTemplate="body">
+              {{equipamento.dataRetirada}}
+          </ng-template>
+        </p-column>
+
+        <p-column header="Quantidade">
+            <ng-template let-medicamento="rowData" pTemplate="body">
+                {{medicamento.quantidade}}
+            </ng-template>
+        </p-column>
+
+      </p-dataTable>
+      {{ dt.totalRecords }} Equipamentos
+  </p-panel>
