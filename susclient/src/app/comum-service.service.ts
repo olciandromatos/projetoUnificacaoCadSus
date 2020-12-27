@@ -27,6 +27,7 @@ const httpOptions = {
 export class ComumServiceService {
 
   API  = 'http://localhost:8080/api/';
+  APIEquipamento  = 'http://localhost:8080/api/equipamento';
 
   constructor(private http: HttpClient) { }
 
@@ -35,7 +36,7 @@ export class ComumServiceService {
   }
 
   public getEquipamentos(): Observable<Equipamento[]> {
-    return this.http.get<Equipamento[]>('http://localhost:8080/api/equipamento');
+    return this.http.get<Equipamento[]>(this.APIEquipamento);
   }
 
   public getPacienteEmAtendimento(): Observable<Paciente[]> {

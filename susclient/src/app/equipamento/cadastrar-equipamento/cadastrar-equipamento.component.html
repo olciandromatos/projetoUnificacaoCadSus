@@ -24,7 +24,6 @@
     </div>
     <div>
       <button pButton type="submit" class="btn-save" label="Cadastrar Equipamento" ></button>
-      <button pButton (click)="redirect()" type="submit" class="btn-voltar" label="Voltar" ></button>
     </div>
 
   </form>
@@ -32,7 +31,7 @@
 
 <div class="margin-top">
   <p-panel header="Equipamentos" [toggleable]="false">
-    <p-dataTable [value]="Equipamento" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+    <p-dataTable [value]="equipamentos" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
 
         <ng-template pTemplate="caption">
             <div class="ui-helper-clearfix">
@@ -41,41 +40,40 @@
         </ng-template>
 
         <p-column header="Código">
-            <ng-template let-medicamento="rowData" pTemplate="body">
+            <ng-template let-equipamento="rowData" pTemplate="body">
                 {{equipamento.id}}
             </ng-template>
         </p-column>
 
         <p-column header="Nome">
-            <ng-template let-medicamento="rowData" pTemplate="body">
+            <ng-template let-equipamento="rowData" pTemplate="body">
                 {{equipamento.tipoEquipamento}}
             </ng-template>
         </p-column>
 
         <p-column header="Destino">
-          <ng-template let-medicamento="rowData" pTemplate="body">
+          <ng-template let-equipamento="rowData" pTemplate="body">
               {{equipamento.destino}}
           </ng-template>
         </p-column>
 
         <p-column header="Tempo de Uso">
-          <ng-template let-medicamento="rowData" pTemplate="body">
+          <ng-template let-equipamento="rowData" pTemplate="body">
               {{equipamento.tempoUso}}
           </ng-template>
         </p-column>
 
         <p-column header="Data Retirada">
-          <ng-template let-medicamento="rowData" pTemplate="body">
+          <ng-template let-equipamento="rowData" pTemplate="body">
               {{equipamento.dataRetirada}}
           </ng-template>
         </p-column>
 
         <p-column header="Quantidade">
-            <ng-template let-medicamento="rowData" pTemplate="body">
-                {{medicamento.quantidade}}
+            <ng-template let-equipamento="rowData" pTemplate="body">
+                {{equipamento.quantidade}}
             </ng-template>
         </p-column>
 
       </p-dataTable>
-      {{ dt.totalRecords }} Equipamentos
   </p-panel>
