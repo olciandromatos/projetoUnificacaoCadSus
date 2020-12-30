@@ -36,7 +36,22 @@ export class ComumServiceService {
   }
 
   public getEquipamentos(): Observable<Equipamento[]> {
-    return this.http.get<Equipamento[]>(this.APIEquipamento);
+    return this.http.get<Equipamento[]>('http://localhost:8080/api/equipamento');
+  }
+
+  readById(id: string): Observable<Equipamento> {
+    const url = `${this.APIEquipamento}/${id}`
+    return this.http.get<Equipamento>(url)
+  }
+
+  update(id: number, equipamento: Equipamento): Observable<Equipamento>{
+    const url = `${this.APIEquipamento}/${id}`
+    return this.http.put<Equipamento>(url, equipamento)
+  }
+
+  deletarEquipamento(id: number): Observable<Equipamento>{
+    const url = `${this.APIEquipamento}/${id}`;
+    return this.http.delete<Equipamento>(url);
   }
 
   public getPacienteEmAtendimento(): Observable<Paciente[]> {

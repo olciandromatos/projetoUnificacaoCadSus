@@ -38,5 +38,11 @@ export class CadastrarEquipamentoComponent implements OnInit {
     location.reload()
   }
 
+  delete(id: number){
+    return this.servico.deletarEquipamento(id).subscribe(res => {
+      alert(this.equipamento.tipoEquipamento +" deletado com sucesso");
+    }, )
+  }
+
   
 }

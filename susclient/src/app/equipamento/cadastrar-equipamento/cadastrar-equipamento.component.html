@@ -1,5 +1,5 @@
 <p-panel header="Cadastro de Equipamento" [toggleable]="false">
-  <form (ngSubmit)="cadastrarEquipamento()">
+  <form (ngSubmit)="cadastrarEquipamento()" #myForm="ngForm">
     <div class="ui-g">
       <div class="ui-g-4 ui-fluid">
         <label for="float-input">Tipo do Equipamento: </label>
@@ -23,14 +23,14 @@
       </div>
     </div>
     <div>
-      <button pButton type="submit" class="btn-save" label="Cadastrar Equipamento" ></button>
+      <button pButton type="submit" [disabled]="!myForm.form.valid" class="btn-save" label="Cadastrar Equipamento" ></button>
     </div>
 
   </form>
 </p-panel>
 
 <div class="margin-top">
-  <p-panel header="Equipamentos" [toggleable]="false">
+  <p-panel class="azul" header="Equipamentos" [toggleable]="false">
     <p-dataTable [value]="equipamentos" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
 
         <ng-template pTemplate="caption">
@@ -70,10 +70,17 @@
         </p-column>
 
         <p-column header="Quantidade">
-            <ng-template let-equipamento="rowData" pTemplate="body">
+            <ng-template let-equipamento="rowData" class="menu" pTemplate="body">
                 {{equipamento.quantidade}}
             </ng-template>
         </p-column>
 
+        <p-column header="Ação">
+          <ng-template let-equipamento="rowData" pTemplate="body">
+            <button class="edit" routerLink="/equipamento/update/{{equipamento.id}}" pButton pRipple label="Edit" icon="pi pi-check"></button> 
+            <button class="delete" routerLink="/equipamento/delete/{{equipamento.id}}"  pButton pRipple label="Delete" icon="pi pi-trash"></button>
+          </ng-template>         
+        </p-column>
+      
       </p-dataTable>
   </p-panel>

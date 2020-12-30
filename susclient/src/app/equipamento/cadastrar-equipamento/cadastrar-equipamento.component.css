@@ -1,6 +1,24 @@
 .btn-save{
     /* margin: 0 auto; */
     margin:0px 10px 0px 0px;
-    background: #58af9b;
+    background: #007ad9;
     margin-top: 20px;
 }
+
+.margin-top{
+    text-align: center;
+    background-color: #007ad9;
+}
+
+.edit{
+    margin:0 0 0 0;
+    border-radius: 20px;
+    width: 85px;
+}
+
+.delete{
+    margin:0 0 0 0;
+    border-radius: 20px;
+    width: 85px;    
+}
+

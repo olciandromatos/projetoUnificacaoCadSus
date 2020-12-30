@@ -1,0 +1,30 @@
+<p-panel class="centralizado" header="Confirmar exclusão do Equipamento" [toggleable]="false">
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Tipo do Equipamento: </label>
+        <input id="nome" type="text" [value]="equipamento.tipoEquipamento" name="tipoEquipamento" pInputText maxlength="100" minlength="4" disabled/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Destino: </label>
+        <input id="nome" type="text" [value]="equipamento.destino" name="destino" disabled pInputText maxlength="100" minlength="4"/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Tempo de Uso: </label>
+        <input id="nome" type="text" [value]="equipamento.tempoUso" name="tempoUso" disabled pInputText maxlength="100" minlength="4"/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Date: </label>
+        <input id="nome" type="date" disabled [value]="equipamento.dataRetirada" name="dataRetirada" pInputText/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Quantidade: </label>
+        <input id="quantidade" type="text" disabled [value]="equipamento.quantidade" name="dataRetirada" pInputText/>
+      </div>
+    </div>
+  </form>
+    <div class="div-btn-acoes">
+      <button pButton type="submit" (click)="delete()" class="btn-save" label="Excluir Equipamento" ></button>
+      <button pButton type="submit" routerLink="/equipamento" class="btn-save" label="Cancel" ></button>
+    </div>
+</p-panel>
