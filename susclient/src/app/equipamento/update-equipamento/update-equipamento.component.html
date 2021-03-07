@@ -19,12 +19,12 @@
       </div>
       <div class="ui-g-4 ui-fluid">
         <label for="float-input">Quantidade: </label>
-        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="dataRetirada" pInputText/>
+        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="quantidade" pInputText/>
       </div>
     </div>
   </form>
     <div>
       <button pButton type="submit" (click)="updateEquipamento()" class="btn-save" label="Editar Equipamento" ></button>
-      <button pButton type="submit" routerLink="/equipamento" class="btn-save" label="Cancel" ></button>
+      <button pButton type="submit" routerLink="/equipamento" class="btn-save" label="Voltar" ></button>
     </div>
 </p-panel>

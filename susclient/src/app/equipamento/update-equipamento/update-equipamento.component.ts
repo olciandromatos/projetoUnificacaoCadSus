@@ -15,9 +15,14 @@ export class UpdateEquipamentoComponent implements OnInit {
   constructor(private comumServiceService: ComumServiceService, private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id')
+    this.pesquisarEquipamentos();
+    console.log(this.equipamento);
+  }
+
+  pesquisarEquipamentos() {
+    const id = this.route.snapshot.paramMap.get('id');
     this.comumServiceService.readById(id).subscribe(equipamento => {
-      this.equipamento = equipamento;
+    this.equipamento = equipamento;
     });
   }
 
@@ -26,12 +31,16 @@ export class UpdateEquipamentoComponent implements OnInit {
     this.comumServiceService.update(Number(id), this.equipamento).subscribe(data => {
       this.equipamento = data;
       alert("Equipamento atualizado com sucesso!");
-      this.cancel();
+      this.load();
     });
   }
 
   cancel(): void{
     this.router.navigate(['/equipamento']);
+  }
+
+  load() {
+    location.reload()
   }
 
 

@@ -1,24 +1,28 @@
-<p-panel header="Lista de medicos" [toggleable]="true">
+<p-panel header="Lista de medicos" [toggleable]="true" class="center">
   <p-dataTable [value]="medicos" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
-      <p-column header="Nome">
+    <p-column header="Id">
+        <ng-template let-medico="rowData" pTemplate="body">
+            {{medico.id}}
+        </ng-template>
+    </p-column>  
+    <p-column header="Nome">
           <ng-template let-medico="rowData" pTemplate="body">
               {{medico.nome}}
           </ng-template>
       </p-column>
-
       <p-column header="CRM">
               <ng-template let-medico="rowData" pTemplate="body">
                   {{medico.crm}}
                   <!-- {{pessoa.estado?.nome}} -->
               </ng-template>
       </p-column>
-
       <p-column header="Ação">
           <ng-template pTemplate="body">
-              <button pButtom class="btn btn-danger botao" pTooltip="Excluir" tooltipPosition="top"><i class="pi pi-trash"></i></button>
-              <button pButtom class="btn btn-primary"  pTooltip="Editar" tooltipPosition="top"><i class="pi pi-pencil"></i></button>
-        </ng-template>
+              <button class="edit" routerLink="/medico/update/{{medico.id}}"  pButton pRipple label="Editar" icon="pi pi-pencil"></button> 
+              <button class="delete" routerLink="delete/{{medico.id}}" pButton pRipple label="Deletar" icon="pi pi-times" severity="danger"></button>
+            
+            </ng-template>
       </p-column>
     </p-dataTable>
-    {{ dt.totalRecords }} Registros
+   
 </p-panel>

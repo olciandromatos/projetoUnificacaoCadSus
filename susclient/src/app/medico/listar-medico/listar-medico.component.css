@@ -1,0 +1,15 @@
+.center{
+    text-align: center;
+}
+
+.edit{
+    margin:0 0 0 0;
+    border-radius: 20px;
+    width: 85px;
+}
+
+.delete{
+    margin:0 0 0 0;
+    border-radius: 20px;
+    width: 85px;    
+}

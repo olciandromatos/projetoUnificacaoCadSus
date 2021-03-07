@@ -12,12 +12,16 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 
 import { ListarMedicoComponent } from './listar-medico/listar-medico.component';
 import { CadastrarMedicoComponent } from './cadastrar-medico/cadastrar-medico.component';
+import { UpdateMedicoComponent } from './update-medico/update-medico.component';
+import { DeleteMedicoComponent } from './delete-medico/delete-medico.component';
 
 @NgModule({
   declarations: [
     ListarMedicoComponent,
     CadastrarPacienteComponent,
-    CadastrarMedicoComponent
+    CadastrarMedicoComponent,
+    UpdateMedicoComponent,
+    DeleteMedicoComponent
   ],
   imports: [
     BrowserModule,

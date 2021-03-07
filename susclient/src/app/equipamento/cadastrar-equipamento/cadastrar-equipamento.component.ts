@@ -25,8 +25,8 @@ export class CadastrarEquipamentoComponent implements OnInit {
   cadastrarEquipamento() {
     console.log(this.equipamento);
     alert('Equipamento cadastrado com sucesso!');
-    this.load();
     this.servico.cadastrarEquipamento(this.equipamento).subscribe(resultado => {
+    this.load();
     });
   }
 

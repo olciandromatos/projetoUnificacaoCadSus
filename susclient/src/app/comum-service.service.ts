@@ -28,6 +28,7 @@ export class ComumServiceService {
 
   API  = 'http://localhost:8080/api/';
   APIEquipamento  = 'http://localhost:8080/api/equipamento';
+  APIMedico = 'http://localhost:8080/api/medico';
 
   constructor(private http: HttpClient) { }
 
@@ -60,6 +61,21 @@ export class ComumServiceService {
 
   public getMedicos(): Observable<Medico[]> {
     return this.http.get<Medico[]>('http://localhost:8080/api/medico');
+  }
+
+  readByIdMedico(id: string): Observable<Medico> {
+    const url = `${this.APIMedico}/${id}`
+    return this.http.get<Medico>(url)
+  }
+
+  updateMedico(id: number, medico: Medico): Observable<Medico>{
+    const url = `${this.APIMedico}/${id}`
+    return this.http.put<Medico>(url, medico)
+  }
+
+  deleteMedico(id: number): Observable<Medico>{
+    const url = `${this.APIMedico}/${id}`;
+    return this.http.delete<Medico>(url);
   }
 
   public getEstados(): Observable<Estado[]> {
@@ -137,8 +153,13 @@ export class ComumServiceService {
   }
 
   public cadastrarEquipamento(equipamento: Equipamento) {
-    console.log(equipamento);
+    console.log('Id Equipamento ' + equipamento.id);
     return this.http.post('http://localhost:8080/api/equipamento', equipamento);
+  }
+
+  public cadastrarMedcio(medico: Medico) {
+    console.log('Id Medico ' + medico.id);
+    return this.http.post('http://localhost:8080/api/medico', medico);
   }
 
 

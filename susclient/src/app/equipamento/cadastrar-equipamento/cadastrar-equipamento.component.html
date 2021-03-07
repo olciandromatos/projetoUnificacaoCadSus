@@ -15,17 +15,16 @@
       </div>
       <div class="ui-g-4 ui-fluid">
         <label for="float-input">Date: </label>
-        <input id="nome" type="date" [(ngModel)]="equipamento.dataRetirada" name="dataRetirada" pInputText required/>
+        <p-calendar id="nome" [(ngModel)]="equipamento.dataRetirada" name="dataRetirada" required [showIcon]="true"></p-calendar>
       </div>
       <div class="ui-g-4 ui-fluid">
         <label for="float-input">Quantidade: </label>
-        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="dataRetirada" pInputText required/>
+        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="quantidade" pInputText required/>
       </div>
     </div>
     <div>
       <button pButton type="submit" [disabled]="!myForm.form.valid" class="btn-save" label="Cadastrar Equipamento" ></button>
     </div>
-
   </form>
 </p-panel>
 
@@ -37,7 +36,7 @@
             <div class="ui-helper-clearfix">
                 <button type="button" pButton icon="fa fa-file" iconPos="left" label="Selection Only"  style="float:right"></button>
             </div>
-        </ng-template>
+        </ng-template> 
 
         <p-column header="Código">
             <ng-template let-equipamento="rowData" pTemplate="body">
@@ -69,16 +68,16 @@
           </ng-template>
         </p-column>
 
-        <p-column header="Quantidade">
+        <p-column header="Quantidades">
             <ng-template let-equipamento="rowData" class="menu" pTemplate="body">
-                {{equipamento.quantidade}}
+              {{equipamento.quantidade}}
             </ng-template>
         </p-column>
 
         <p-column header="Ação">
           <ng-template let-equipamento="rowData" pTemplate="body">
-            <button class="edit" routerLink="/equipamento/update/{{equipamento.id}}" pButton pRipple label="Edit" icon="pi pi-check"></button> 
-            <button class="delete" routerLink="/equipamento/delete/{{equipamento.id}}"  pButton pRipple label="Delete" icon="pi pi-trash"></button>
+            <button class="edit" routerLink="/equipamento/update/{{equipamento.id}}" pButton pRipple label="Editar" icon="pi pi-pencil"></button> 
+            <button class="delete" routerLink="/equipamento/delete/{{equipamento.id}}"  pButton pRipple label="Deletar" icon="pi pi-times" severity="danger"></button>
           </ng-template>         
         </p-column>
       

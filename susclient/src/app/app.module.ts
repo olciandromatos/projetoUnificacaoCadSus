@@ -34,6 +34,8 @@ import { RelatorioMedicoComponent } from './relatorio/relatorio-medico/relatorio
 import { LoginComponent } from './login/login.component';
 import { UpdateEquipamentoComponent } from './equipamento/update-equipamento/update-equipamento.component';
 import { DeleteComponentComponent } from './equipamento/delete-component/delete-component.component'
+import { UpdateMedicoComponent } from './medico/update-medico/update-medico.component';
+import { DeleteMedicoComponent } from './medico/delete-medico/delete-medico.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { DeleteComponentComponent } from './equipamento/delete-component/delete-
     RelatorioMedicoComponent,
     LoginComponent,
     UpdateEquipamentoComponent,
-    DeleteComponentComponent
+    DeleteComponentComponent,
+    UpdateMedicoComponent,
+    DeleteMedicoComponent
     
   ],
   imports: [
