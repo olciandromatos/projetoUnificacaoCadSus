@@ -1,6 +1,7 @@
 package br.com.sus.sus.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,12 +15,44 @@ public class EquipamentoService {
 	private EquipamentoRepository repository;
 	
 	public List<Equipamento> getEquipamentos(){
-		return repository.findAll();
+		return repository.findByOrderByIdAsc();
 	}
 	
 	@Autowired
 	public void setRepository(EquipamentoRepository repository) {
 		this.repository = repository;
 	}
+	
+	public Equipamento save(Equipamento equi) {
+		return repository.save(equi);
+	}
+	
+	public List<Equipamento> listarTodos(){
+		return repository.findAll();
+	}
+	
+	public void deletarEquipamento(Long id) {
+		repository.deleteById(id);
+	}
+	
+	public Optional<Equipamento> getById(Long id) {
+		return repository.findById(id);
+	}
+
+	public Equipamento alterarEquipamento(Long id, Equipamento equipamentoNovo) {
+		
+		Optional<Equipamento> p = repository.findById(id);
+		Equipamento equi = p.get();
+		equi.setId(id);
+		equi.setDataRetirada(equipamentoNovo.getDataRetirada());
+		equi.setDestino(equipamentoNovo.getDestino());
+		equi.setTipoEquipamento(equipamentoNovo.getTipoEquipamento());
+		equi.setTempoUso(equipamentoNovo.getTempoUso());
+		equi.setQuantidade(equipamentoNovo.getQuantidade());
+		return repository.save(equi);
+	}
+	
+	
+	
 
 }

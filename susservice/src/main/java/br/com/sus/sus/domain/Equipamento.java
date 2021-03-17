@@ -19,6 +19,8 @@ public class Equipamento {
 	private String destino;
 	private String tempoUso;
 	private LocalDate dataRetirada = LocalDate.now();
+	@Column()
+	private Integer quantidade;
 
 	public Long getId() {
 		return id;
@@ -58,6 +60,14 @@ public class Equipamento {
 	
 	public void setDataRetirada(LocalDate dataRetirada) {
 		this.dataRetirada = dataRetirada;
+	}
+
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
 	}
 
 }
