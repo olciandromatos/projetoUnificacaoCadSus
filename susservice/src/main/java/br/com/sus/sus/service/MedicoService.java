@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.sus.sus.domain.Equipamento;
 import br.com.sus.sus.domain.Medico;
 import br.com.sus.sus.repository.MedicoRepository;
 

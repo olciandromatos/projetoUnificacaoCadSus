@@ -52,9 +52,6 @@ public class EquipamentoService {
 		return repository.save(equi);
 	}
 	
-	
-	
-
 	public Equipamento buscarEquipamento(Long equipe) {
 		Optional<Equipamento> equipamento = repository.findById(equipe);
 		return equipamento.orElse(null);
@@ -62,11 +59,7 @@ public class EquipamentoService {
 
 	public Equipamento atualizaEquipamento(Equipamento equipe) {
 		Optional<Equipamento> equipeNew = repository.findById(equipe.getId());
-		return repository.save(equipe);
-	}
-
-	public void deletarEquipamento(Long id) {
-		repository.deleteById(id);
+		return repository.save(equipeNew);
 	}
 	
 	public Equipamento salvarEquipamento(Equipamento equipe) {
