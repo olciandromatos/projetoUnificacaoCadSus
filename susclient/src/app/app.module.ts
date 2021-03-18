@@ -32,6 +32,10 @@ import { ConsultaComponent } from './consulta/consulta.component';
 import { RelatorioPacienteComponent } from './relatorio/relatorio-paciente/relatorio-paciente.component';
 import { RelatorioMedicoComponent } from './relatorio/relatorio-medico/relatorio-medico.component';
 import { LoginComponent } from './login/login.component';
+import { UpdateEquipamentoComponent } from './equipamento/update-equipamento/update-equipamento.component';
+import { DeleteComponentComponent } from './equipamento/delete-component/delete-component.component'
+import { UpdateMedicoComponent } from './medico/update-medico/update-medico.component';
+import { DeleteMedicoComponent } from './medico/delete-medico/delete-medico.component';
 
 
 @NgModule({
@@ -51,6 +55,11 @@ import { LoginComponent } from './login/login.component';
     RelatorioPacienteComponent,
     RelatorioMedicoComponent,
     LoginComponent,
+    UpdateEquipamentoComponent,
+    DeleteComponentComponent,
+    UpdateMedicoComponent,
+    DeleteMedicoComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { RelatorioPacienteComponent } from './relatorio/relatorio-paciente/relatorio-paciente.component';
 import { LoginComponent } from './login/login.component';
+import { UpdateEquipamentoComponent } from './equipamento/update-equipamento/update-equipamento.component';
+import { DeleteComponentComponent } from './equipamento/delete-component/delete-component.component';
+import { UpdateMedicoComponent } from './medico/update-medico/update-medico.component';
+import { DeleteMedicoComponent } from './medico/delete-medico/delete-medico.component';
 
 const APP_ROUTES: Routes = [
   { path: '', component: LoginComponent},
@@ -22,7 +26,11 @@ const APP_ROUTES: Routes = [
   { path: 'relatorio-medico', component: RelatorioMedicoComponent},
   { path: 'equipamento', component: CadastrarEquipamentoComponent},
   { path: 'logout', component: LoginComponent},
-  { path: 'login', component: ListarPacienteComponent}
+  { path: 'login', component: ListarPacienteComponent},
+  { path: 'equipamento/update/:id', component: UpdateEquipamentoComponent},
+  { path: 'equipamento/delete/:id', component: DeleteComponentComponent},
+  { path: 'medico/update/:id', component: UpdateMedicoComponent},
+  { path: 'medico/delete/:id', component: DeleteMedicoComponent},
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);

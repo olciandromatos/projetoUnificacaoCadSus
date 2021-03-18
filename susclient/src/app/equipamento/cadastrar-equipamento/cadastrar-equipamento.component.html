@@ -1,5 +1,5 @@
 <p-panel header="Cadastro de Equipamento" [toggleable]="false">
-  <form (ngSubmit)="cadastrarEquipamento()">
+  <form (ngSubmit)="cadastrarEquipamento()" #myForm="ngForm">
     <div class="ui-g">
       <div class="ui-g-4 ui-fluid">
         <label for="float-input">Tipo do Equipamento: </label>
@@ -15,67 +15,71 @@
       </div>
       <div class="ui-g-4 ui-fluid">
         <label for="float-input">Date: </label>
-        <input id="nome" type="date" [(ngModel)]="equipamento.dataRetirada" name="dataRetirada" pInputText required/>
+        <p-calendar id="nome" [(ngModel)]="equipamento.dataRetirada" name="dataRetirada" required [showIcon]="true"></p-calendar>
       </div>
       <div class="ui-g-4 ui-fluid">
         <label for="float-input">Quantidade: </label>
-        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="dataRetirada" pInputText required/>
+        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="quantidade" pInputText required/>
       </div>
     </div>
     <div>
-      <button pButton type="submit" class="btn-save" label="Cadastrar Equipamento" ></button>
-      <button pButton (click)="redirect()" type="submit" class="btn-voltar" label="Voltar" ></button>
+      <button pButton type="submit" [disabled]="!myForm.form.valid" class="btn-save" label="Cadastrar Equipamento" ></button>
     </div>
-
   </form>
 </p-panel>
 
 <div class="margin-top">
-  <p-panel header="Equipamentos" [toggleable]="false">
-    <p-dataTable [value]="Equipamento" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
+  <p-panel class="azul" header="Equipamentos" [toggleable]="false">
+    <p-dataTable [value]="equipamentos" paginator="true" [rows]="10" [style]="{'height':'100%'}" [globalFilter]="" #dt>
 
         <ng-template pTemplate="caption">
             <div class="ui-helper-clearfix">
                 <button type="button" pButton icon="fa fa-file" iconPos="left" label="Selection Only"  style="float:right"></button>
             </div>
-        </ng-template>
+        </ng-template> 
 
         <p-column header="Código">
-            <ng-template let-medicamento="rowData" pTemplate="body">
+            <ng-template let-equipamento="rowData" pTemplate="body">
                 {{equipamento.id}}
             </ng-template>
         </p-column>
 
         <p-column header="Nome">
-            <ng-template let-medicamento="rowData" pTemplate="body">
+            <ng-template let-equipamento="rowData" pTemplate="body">
                 {{equipamento.tipoEquipamento}}
             </ng-template>
         </p-column>
 
         <p-column header="Destino">
-          <ng-template let-medicamento="rowData" pTemplate="body">
+          <ng-template let-equipamento="rowData" pTemplate="body">
               {{equipamento.destino}}
           </ng-template>
         </p-column>
 
         <p-column header="Tempo de Uso">
-          <ng-template let-medicamento="rowData" pTemplate="body">
+          <ng-template let-equipamento="rowData" pTemplate="body">
               {{equipamento.tempoUso}}
           </ng-template>
         </p-column>
 
         <p-column header="Data Retirada">
-          <ng-template let-medicamento="rowData" pTemplate="body">
+          <ng-template let-equipamento="rowData" pTemplate="body">
               {{equipamento.dataRetirada}}
           </ng-template>
         </p-column>
 
-        <p-column header="Quantidade">
-            <ng-template let-medicamento="rowData" pTemplate="body">
-                {{medicamento.quantidade}}
+        <p-column header="Quantidades">
+            <ng-template let-equipamento="rowData" class="menu" pTemplate="body">
+              {{equipamento.quantidade}}
             </ng-template>
         </p-column>
 
+        <p-column header="Ação">
+          <ng-template let-equipamento="rowData" pTemplate="body">
+            <button class="edit" routerLink="/equipamento/update/{{equipamento.id}}" pButton pRipple label="Editar" icon="pi pi-pencil"></button> 
+            <button class="delete" routerLink="/equipamento/delete/{{equipamento.id}}"  pButton pRipple label="Deletar" icon="pi pi-times" severity="danger"></button>
+          </ng-template>         
+        </p-column>
+      
       </p-dataTable>
-      {{ dt.totalRecords }} Equipamentos
   </p-panel>

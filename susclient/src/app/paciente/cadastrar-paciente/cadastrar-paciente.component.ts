@@ -61,7 +61,7 @@ redirect() {
         if (this.endereco.id != null) {
           this.paciente.endereco.id === this.endereco.id;
         }
-        
+        return this.router.navigate([`login`]);
     });
   }
 

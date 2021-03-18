@@ -11,16 +11,22 @@ import { Equipamento } from 'src/app/domain/Equipamento';
 export class CadastrarEquipamentoComponent implements OnInit {
 
   equipamento: Equipamento = new Equipamento;
+  equipamentos: Equipamento[] = new Array;
   value: Date;
   constructor(private servico: ComumServiceService, private router: Router) { }
 
   ngOnInit() {
+    this.servico.getEquipamentos().subscribe(equipamentos =>{
+      console.log(equipamentos);
+      this.equipamentos = equipamentos;
+    })
   }
 
   cadastrarEquipamento() {
     console.log(this.equipamento);
     alert('Equipamento cadastrado com sucesso!');
     this.servico.cadastrarEquipamento(this.equipamento).subscribe(resultado => {
+    this.load();
     });
   }
 
@@ -28,5 +34,15 @@ export class CadastrarEquipamentoComponent implements OnInit {
     return this.router.navigate([`login`]);
   }
 
+  load() {
+    location.reload()
+  }
 
+  delete(id: number){
+    return this.servico.deletarEquipamento(id).subscribe(res => {
+      alert(this.equipamento.tipoEquipamento +" deletado com sucesso");
+    }, )
+  }
+
+  
 }

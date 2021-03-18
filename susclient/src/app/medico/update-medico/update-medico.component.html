@@ -1,0 +1,72 @@
+<p-panel header="Editar Médico" [toggleable]="false">
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-4 ui-fluid">
+        <label for="nome">Nome completo: </label>
+        <input id="nome" name="nome" [(ngModel)]="medico.nome" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label for="crm">CRM: </label>
+        <input id="crm" [(ngModel)]="medico.crm" name="crm" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+        <label for="telefone">Telefone: </label>
+        <p-inputMask id="telefone" type="text" name="telefone" [(ngModel)]="medico.telefone" placeholder="(99) 99999-9999" mask="(99) 99999-9999" ></p-inputMask>
+      </div>
+
+      <div class="ui-g-6 ui-fluid">
+        <label for="email">E-mail: </label>
+        <input id="email" type="email" name="email" [(ngModel)]="medico.email" placeholder="Ex:fulano@gmail.com" pInputText />
+      </div>
+
+      <div class="ui-g-6 ui-fluid">
+          <label for="nascimento">Data de Nascimento: </label>
+          <p-inputMask id="nascimento" name="nascimento"  type="text" [(ngModel)]="medico.dataNascimento" mask="99/99/9999" ></p-inputMask>
+        </div>
+
+      <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Logradouro: </label>
+          <input id="float-input" name="logradouro" type="text" placeholder="Ex: Rua, quadra" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Número: </label>
+          <input id="float-input" name="numero" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-4 ui-fluid">
+          <label for="float-input">Complemento: </label>
+          <input id="float-input" name="complemento" type="text" pInputText />
+      </div>
+
+      <div class="ui-g-3 ui-fluid">
+        <label for="float-input">Pais: </label>
+        <p-dropdown id="float-input" [options]="paises" placeholder="Selecione um dos paises" optionLabel="nome"></p-dropdown>
+      </div>
+
+      <div class="ui-g-3 ui-fluid">
+          <label for="float-input">Estado: </label>
+          <p-dropdown id="float-input" [options]="estados" placeholder="Selecione um dos estados" optionLabel="nome"></p-dropdown>
+      </div>
+
+      <div class="ui-g-3 ui-fluid">
+          <label for="float-input">Municipio: </label>
+          <p-dropdown id="float-input" [options]="municipios" placeholder="Selecione um dos municipios" optionLabel="nome"></p-dropdown>
+      </div>
+
+      <div class="ui-g-3 ui-fluid">
+          <label for="especialidade">Especialidade: </label>
+          <p-dropdown id="especialidade" name="especialidade" [(ngModel)]="medico.especialidade" [options]="especialidades" placeholder="Selecione um das especialidades" optionLabel="descricao"></p-dropdown>
+      </div>
+
+       <div>
+        <button pButton type="submit" class="btn-save" (click)="updateMedico()" label="Editar medico" ></button>
+        <button pButton type="submit" class="btn-save" routerLink="/medico" label="Cancelar" ></button>
+      </div>
+    </div>
+  </form> 
+</p-panel>
+ 
+

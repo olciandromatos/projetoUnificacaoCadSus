@@ -53,7 +53,12 @@ export class CadastrarMedicoComponent implements OnInit {
       console.log(this.medico.crm);
       console.log(this.medico.telefone);
       console.log(this.medico.dataNascimento);
+      this.load();
     });
+  }
+
+  load() {
+    location.reload()
   }
 
 }

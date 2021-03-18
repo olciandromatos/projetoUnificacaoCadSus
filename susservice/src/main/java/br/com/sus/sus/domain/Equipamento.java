@@ -1,5 +1,6 @@
 package br.com.sus.sus.domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -9,16 +10,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Equipamento {
-
+public class Equipamento implements Serializable{
+	private static final long serialVersionUID = 1L;
+	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="seq_equipamento", unique=true, nullable=false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "seq_equipamento", unique = true, nullable = false)
 	private Long id;
 	private String tipoEquipamento;
 	private String destino;
 	private String tempoUso;
 	private LocalDate dataRetirada = LocalDate.now();
+
 	@Column()
 	private Integer quantidade;
 
@@ -53,11 +56,11 @@ public class Equipamento {
 	public void setTempoUso(String tempoUso) {
 		this.tempoUso = tempoUso;
 	}
-	
+
 	public LocalDate getDataRetirada() {
 		return dataRetirada;
 	}
-	
+
 	public void setDataRetirada(LocalDate dataRetirada) {
 		this.dataRetirada = dataRetirada;
 	}

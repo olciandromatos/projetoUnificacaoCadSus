@@ -1,0 +1,30 @@
+<p-panel class="centralizado" header="Editar de Equipamento" [toggleable]="false">
+  <form>
+    <div class="ui-g">
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Tipo do Equipamento: </label>
+        <input id="nome" type="text" [(ngModel)]="equipamento.tipoEquipamento" name="tipoEquipamento" pInputText maxlength="100" minlength="4"/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Destino: </label>
+        <input id="nome" type="text" [(ngModel)]="equipamento.destino" name="destino" pInputText maxlength="100" minlength="4"/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Tempo de Uso: </label>
+        <input id="nome" type="text" [(ngModel)]="equipamento.tempoUso" name="tempoUso" pInputText maxlength="100" minlength="4"/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Date: </label>
+        <input id="nome" type="date" [(ngModel)]="equipamento.dataRetirada" name="dataRetirada" pInputText/>
+      </div>
+      <div class="ui-g-4 ui-fluid">
+        <label for="float-input">Quantidade: </label>
+        <input id="quantidade" type="text" [(ngModel)]="equipamento.quantidade" name="quantidade" pInputText/>
+      </div>
+    </div>
+  </form>
+    <div>
+      <button pButton type="submit" (click)="updateEquipamento()" class="btn-save" label="Editar Equipamento" ></button>
+      <button pButton type="submit" routerLink="/equipamento" class="btn-save" label="Voltar" ></button>
+    </div>
+</p-panel>
