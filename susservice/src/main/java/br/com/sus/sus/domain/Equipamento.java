@@ -21,6 +21,8 @@ public class Equipamento implements Serializable{
 	private String destino;
 	private String tempoUso;
 	private LocalDate dataRetirada = LocalDate.now();
+
+	@Column()
 	private Integer quantidade;
 
 	public Long getId() {
